@@ -5,7 +5,7 @@
 # Source code repository: https://github.com/coolsnowwolf/lede / Branch: master
 #========================================================================================================================
 
-name: Build-OpenWrt-lede
+name: Build-OpenWrt-Lede
 
 on:
   repository_dispatch:
@@ -143,8 +143,8 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           打包时间1：${{ env.DATE }} 
-          打包时间2：${{ compile.DEVICE_NAME }} 
-          打包时间3：${{ compile.FILE_DATE }} 
+          打包时间2：${{ steps.compile.DEVICE_NAME }} 
+          打包时间3：${{ steps.compile.FILE_DATE }} 
           更新信息：${{ env.useVersionInfo }}
           ${{ env.PRODUCT_NAME }} 打包完成
 
