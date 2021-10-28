@@ -1,6 +1,6 @@
 # OpenWrt for Amlogic S9xxx STB
 
-View Chinese description  |  [查看中文说明](README.cn.md)
+View Chinese description  |  [查看中文说明](README.md)
 
 Support `github.com One-stop compilation`, `Use GitHub Action to packaging`, `Use github.com Releases rootfs file to packaging`, `Local packaging`. including OpenWrt firmware install to EMMC and update related functions. Support Amlogic S9xxx STB are ***`s922x, s905x3, s905x2, s912, s905d, s905x, s905w`***, etc. such as ***`Belink GT-King, Belink GT-King Pro, UGOOS AM6 Plus, X96-Max+, HK1-Box, H96-Max-X3, Phicomm-N1, Octopus-Planet, Fiberhome HG680P, ZTE B860H`***, etc.
 

@@ -1,6 +1,6 @@
 # 可以安装在 Amlogic S9xxx 系列机顶盒中使用的 OpenWrt 系统
 
-查看英文说明 | [View English description](README.md)
+查看英文说明 | [View English description](README.cn.md)
 
 支持github.com一站式完整编译（从自定义软件包进行编译，到打包固件，完全在giuhub.com一站式完成）；支持在自己的仓库进行个性化软件包选择编译，仅单独引入 GitHub Action 进行固件打包；支持从 github.com 的 `Releases` 中使用已有的 `openwrt-armvirt-64-default-rootfs.tar.gz` 文件直接进行固件打包；支持本地化打包（在本地Ubuntu等环境中进行固件打包）。支持的Amlogic S9xxx系列型号有 ***`s922x, s905x3, s905x2, s912, s905d, s905x, s905w`*** 等，例如 ***`Belink GT-King, Belink GT-King Pro, UGOOS AM6 Plus, X96-Max+, HK1-Box, H96-Max-X3, Phicomm-N1, Octopus-Planet, Fiberhome HG680P, ZTE B860H`*** 等机顶盒。
 
