@@ -143,26 +143,21 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
           打包时间1：${{ env.DATE }} 
-          打包时间2：${{ steps.compile.DEVICE_NAME }} 
-          打包时间3：${{ steps.compile.FILE_DATE }} 
           更新信息：${{ env.useVersionInfo }}
-          ${{ env.PRODUCT_NAME }} 打包完成
-
+          ${{ env.PRODUCT_NAME }} 打包完成。
 
     - name: Check space usage
       if: (!cancelled())
       run: df -hT
 
-
     - name: Upload OpenWrt bin directory to Actions
       uses: actions/upload-artifact@v2
-      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
+      if: steps.compile.outputs.status == 'success' && !cancelled()
       with:
         name: openwrt_bin_armvirt_64_${{ env.FILE_DATE }}
         path: openwrt/bin
         retention-days: ${{ env.RECENT_LASTEST }}
         if-no-files-found: ignore
-
 
     - name: Organize armvirt files
       id: organize
