@@ -442,8 +442,8 @@ jobs:
           echo "::warning file=Firmware-Cowtransfer.com::$(cat cowtransfer.log | grep https)"
           echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
 
-      - name: Generate release tag
-        id: tag
+      - name: Generate release Tag
+        id: tag-release
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
           echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean1"
