@@ -224,7 +224,6 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy package/na
 
 #添加额外软件包
 # git clone https://github.com/immortalwrt/luci-app-unblockneteasemusic package/luci-app-unblockneteasemusic
-# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 svn co https://github.com/jerrykuku/lua-maxminddb/trunk package/lua-maxminddb
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk package/luci-app-vssr
@@ -233,6 +232,12 @@ svn co https://github.com/project-lede/luci-app-godproxy/trunk package/luci-app-
 # svn co https://github.com/openwrt/luci/trunk/modules/luci-mod-dashboard feeds/luci/modules/luci-mod-dashboard
 # svn co https://github.com/openwrt/packages/trunk/libs/libfido2 package/libfido2
 # svn co https://github.com/openwrt/packages/trunk/libs/libcbor package/libcbor
+
+
+# 添加京东自动签到 luci-app-jd-dailybonus
+rm -rf package/lean/luci-app-jd-dailybonus
+svn co https://github.com/jerrykuku/luci-app-jd-dailybonus/trunk package/luci-app-jd-dailybonus
+
 
 # 编译 po2lmo (如果有po2lmo可跳过)
 # pushd package/luci-app-openclash/tools/po2lmo
@@ -245,6 +250,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/t
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-filebrowser package/luci-app-filebrowser
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/filebrowser package/filebrowser
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lienol/luci-app-fileassistant package/luci-app-fileassistant
+
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-core package/xray-core
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/xray-plugin package/xray-plugin
@@ -258,8 +264,6 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/v2
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-plugin package/v2ray-plugin
 # svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin package/v2ray-plugin
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/simple-obfs package/simple-obfs
-
-
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan package/trojan
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/hysteria package/hysteria
 
