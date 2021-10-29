@@ -96,7 +96,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Copy config files
-      run: mkdir -p ./openwrt/files && cp -f -a ./$ROOT_DIR/files/ openwrt
+      run: mkdir -p ./openwrt/files && cp -f -a ./$ROOT_DIR/etc/ openwrt/files && cp -f -a ./router-config/files/ openwrt
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
