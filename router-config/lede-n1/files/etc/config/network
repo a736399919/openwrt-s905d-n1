@@ -16,7 +16,6 @@ config interface 'lan'
 	option _orig_bridge 'true'
 	option ip6assign '64'
 	option ip6ifaceid '::254'
-	option ifname 'docker0 dummy0 erspan0'
 	option ipaddr '192.168.2.254'
 
 config interface 'wan'

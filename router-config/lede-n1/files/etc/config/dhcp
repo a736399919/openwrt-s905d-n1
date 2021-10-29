@@ -20,8 +20,7 @@ config dnsmasq
 	option nonegcache '1'
 	option mini_ttl '0'
 	list server '127.0.0.1#6053'
-	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
-	option noresolv '0'
+	option noresolv '1'
 
 config dhcp 'lan'
 	option interface 'lan'
@@ -179,4 +178,8 @@ config srvhost
 	option port '1688'
 	option class '0'
 	option weight '100'
+
+config domain
+	option name 'e.vmess.com'
+	option ip '192.168.2.5'
 
