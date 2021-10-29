@@ -246,8 +246,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-go package/tro
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/trojan-plus package/trojan-plus
 
 # 添加luci-app-filebrowser
-svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/luci-app-filebrowser package/luci-app-filebrowser
-svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw/filebrowser package/filebrowser
+svn co https://github.com/Lienol/openwrt-package/trunk/luci-app-filebrowser package/luci-app-filebrowser
 
 # svn co https://github.com/project-openwrt/openwrt/trunk/package/lienol/luci-app-fileassistant package/luci-app-fileassistant
 
