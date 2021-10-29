@@ -5,7 +5,7 @@
 # Source code repository: https://github.com/coolsnowwolf/lede / Branch: master
 #========================================================================================================================
 
-name: Build-OpenWrt-Lede-2021
+name: Build-OpenWrt-Lede-2021-1
 
 on:
   repository_dispatch:
@@ -16,6 +16,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  ROOT_DIR: router-config/lede-n1
   FEEDS_CONF: router-config/lede-n1/feeds.conf.default
   CONFIG_FILE: router-config/lede-n1/.config
   DIY_P1_SH: router-config/lede-n1/diy-part1.sh
@@ -95,7 +96,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Copy config files
-      run: mkdir -p ./openwrt/files && cp -f -a ./router-config/files/ openwrt
+      run: mkdir -p ./openwrt/files && cp -f -a ./$ROOT_DIR/files/ openwrt
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
