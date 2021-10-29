@@ -157,7 +157,7 @@ jobs:
         echo "WET_URL=$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> $GITHUB_ENV
 
     - name: Generate release tag
-      id: tag
+      id: tag-build
       if: steps.Build.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
