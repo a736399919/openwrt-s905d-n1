@@ -37,6 +37,13 @@ jobs:
   Build:
     runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
+    outputs:
+      OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
+      PLATFORM: ${{ steps.compile.outputs.PLATFORM }}
+      TARGET: ${{ steps.compile.outputs.TARGET }}
+      SUBTARGET: ${{ steps.compile.outputs.SUBTARGET }}
+      FIRMWARE: ${{ steps.compile.outputs.FIRMWARE }}
+      GENERATE_STATUS: ${{ steps.generate.outputs.GENERATE_STATUS }}
 
     steps:
     - name: Checkout
@@ -87,14 +94,16 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
-
     - name: Copy config files
       run: mkdir -p ./openwrt/files && cp -f -a ./router-config/lede-n1/files/ openwrt
-
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
+    - name: MOD index file
+      run: |
+         cd $OPENWRTROOT/package/lean/autocore/files/arm
+         sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://t.me/vpei"><%:电报交流群%></a></td></tr>' index.htm
 
     - name: Load custom configuration
       run: |
@@ -104,14 +113,11 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-
     - name: Install feeds first
       run: cd openwrt && ./scripts/feeds install -a
 
-
     - name: Install feeds second
       run: cd openwrt && ./scripts/feeds install -a
-
 
     - name: Download package
       id: package
@@ -121,7 +127,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
 
     - name: Compile the firmware
       id: compile
@@ -134,7 +139,6 @@ jobs:
         echo "FILE_DATE=$(date +"%Y.%m.%d.%H%M")" >> $GITHUB_ENV
         echo "BIN_FILE_PATH=$GITHUB_WORKSPACE/openwrt/bin/targets" >> 
         echo "::set-output name=status::success"
-
 
     - name: Upload artifact to Actions
       uses: kittaakos/upload-artifact-as-is@master
@@ -232,7 +236,6 @@ jobs:
         echo "PACKAGED_OUTPUTPATH=${PWD}/out" >> $GITHUB_ENV
         echo "PACKAGED_OUTPUTDATE=$(date +"%Y.%m.%d.%H%M")" >> $GITHUB_ENV
         echo "::set-output name=status::success"
-
 
     #- name: Build OpenWrt firmware
       #id: Buildfirmware
@@ -381,7 +384,8 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-20.04
-    if: github.repository == 'DHDAXCW/NanoPi-R4S-2021'
+    #if: github.repository == 'vpei/openwrt-s905d-n1'
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
         uses: actions/checkout@main
