@@ -100,11 +100,6 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    #- name: MOD index file
-      #run: |
-         #cd $OPENWRTROOT/package/lean/autocore/files/arm
-         #sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:Telegram %></td><td><a href="https://t.me/vpei"><%:电报交流群%></a></td></tr>' index.htm
-
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
