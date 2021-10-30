@@ -14,10 +14,9 @@ config dnsmasq
 	option boguspriv '0'
 	option localservice '0'
 	option rebind_protection '0'
-	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
-	list server '127.0.0.1#6053'
 	option port '53'
 	option nonwildcard '0'
+	option resolvfile '/tmp/resolv.conf.d/resolv.conf.auto'
 	option noresolv '0'
 
 config dhcp 'lan'
@@ -164,16 +163,16 @@ config host
 	option mac '00:22:6D:63:E5:67'
 	option ip '192.168.3.198'
 
-config srvhost
-	option srv '_vlmcs._tcp'
-	option target 'FX-NET'
-	option port '1688'
-	option class '0'
-	option weight '100'
-
 config dhcp 'zerotier'
 	option start '100'
 	option leasetime '12h'
 	option limit '150'
 	option interface 'zerotier'
+
+config srvhost
+	option srv '_vlmcs._tcp'
+	option target 'X-NET'
+	option port '1688'
+	option class '0'
+	option weight '100'
 
