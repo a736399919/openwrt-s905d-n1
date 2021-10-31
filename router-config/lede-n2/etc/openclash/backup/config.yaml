@@ -131,77 +131,69 @@ proxies:
   - {name: "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub", server: 128.14.157.112, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 128.14.157.112}, udp: true}
   - {name: "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub", server: www.gov.hk, port: 443, type: vmess, uuid: ef7b953f-09af-4ca9-a074-14665d235010, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /home, ws-headers: {Host: cvm.365edu.cf}, udp: true}
   - {name: "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub", server: www.gov.hk, port: 8443, type: vmess, uuid: 813cb315-4ae8-44e1-e85d-ae90dd5233b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /html, ws-headers: {Host: hax.cfyes.team}, udp: true}
-  - {name: "[SS] Pool__03", server: 5.253.207.53, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
-  - {name: "[SS] Pool__04", server: 82.102.26.93, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn, udp: true}
-  - {name: "[SS] Pool__05", server: 193.29.107.123, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
-  - {name: "[SS] Pool__08", server: 86.106.137.147, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
-  - {name: "[SS] Pool__09", server: 185.225.28.93, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
-  - {name: "[SS] Pool__18", server: 185.166.84.81, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH, udp: true}
-  - {name: "[SS] Pool__19", server: 185.99.3.102, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ, udp: true}
-  - {name: "[SS] Pool__22", server: 5.253.207.51, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6, udp: true}
-  - {name: "[SS] Pool__24", server: 82.102.26.93, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK, udp: true}
-  - {name: "[SS] Pool__25", server: 193.29.107.123, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
-  - {name: "[SS] Pool__34", server: 89.249.73.197, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB, udp: true}
-  - {name: "[SS] Pool__46", server: 82.102.26.93, port: 42185, type: ss, cipher: aes-256-gcm, password: FaTG4zALZru72gxjgSHQ7Jdh, udp: true}
-  - {name: "[SS] Pool__52", server: 91.219.215.19, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
-  - {name: "[SS] Pool__53", server: 191.96.13.200, port: 36460, type: ss, cipher: aes-256-gcm, password: yUXad7DGF8L5cTShEpnp2N6z, udp: true}
-  - {name: "[SS] Pool__67", server: 45.129.32.8, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe, udp: true}
-  - {name: "[SS] _01", server: 27.131.164.100, port: 44945, type: ss, cipher: aes-256-gcm, password: F5bKkb9ggkLx4JbQrbLn7LjZ, udp: true}
-  - {name: "[SS] _02", server: 172.104.206.241, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _06", server: 134.195.196.163, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _07", server: 198.57.27.241, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _10", server: 51.77.53.200, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _11", server: 172.99.190.230, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _12", server: 167.88.63.99, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _13", server: 167.88.63.108, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _14", server: 134.195.196.110, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _15", server: 198.57.27.218, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _16", server: 134.195.196.79, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _17", server: 172.107.233.234, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _20", server: 134.195.198.252, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _21", server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _23", server: 38.107.226.241, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _26", server: 134.195.196.133, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _27", server: 62.212.239.53, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ, udp: true}
-  - {name: "[SS] _28", server: 134.195.196.154, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _29", server: 198.57.27.233, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _30", server: 134.195.198.178, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _31", server: 134.195.196.147, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _32", server: 198.57.27.241, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _33", server: 134.195.196.97, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _35", server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _36", server: 146.70.27.12, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
-  - {name: "[SS] _37", server: 62.212.239.53, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B, udp: true}
-  - {name: "[SS] _38", server: 134.195.196.154, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _39", server: 198.57.27.225, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _40", server: 134.195.196.165, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _41", server: 134.195.198.250, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _42", server: 134.195.198.252, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _43", server: 38.107.226.146, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _44", server: 172.99.190.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _45", server: 172.99.190.186, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _47", server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _48", server: 172.99.190.158, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _49", server: 167.88.63.28, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _50", server: 134.195.196.163, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _51", server: 38.39.192.74, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _54", server: 167.88.63.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _55", server: 167.88.63.60, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _56", server: 167.88.63.89, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _57", server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _58", server: 167.88.63.61, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _59", server: 167.88.63.119, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _60", server: 134.195.196.81, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _61", server: 38.107.226.149, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _62", server: 134.195.198.95, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _63", server: 134.195.198.95, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _64", server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _65", server: 167.88.63.11, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _66", server: 167.88.63.119, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _68", server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] _69", server: 198.57.27.225, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] _70", server: 167.88.63.99, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] _71", server: 167.88.63.82, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] Pool__04", server: 191.96.13.200, port: 36460, type: ss, cipher: aes-256-gcm, password: yUXad7DGF8L5cTShEpnp2N6z, udp: true}
+  - {name: "[SS] Pool__07", server: 66.115.177.141, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
+  - {name: "[SS] Pool__16", server: 185.225.28.93, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
+  - {name: "[SS] Pool__23", server: 45.129.32.8, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe, udp: true}
+  - {name: "[SS] Pool__26", server: 82.102.26.93, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK, udp: true}
+  - {name: "[SS] Pool__27", server: 86.106.137.147, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
+  - {name: "[SS] Pool__30", server: 89.249.73.197, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB, udp: true}
+  - {name: "[SS] Pool__31", server: 193.29.107.123, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
+  - {name: "[SS] Pool__32", server: 193.29.107.123, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq, udp: true}
+  - {name: "[SS] Pool__37", server: 194.39.127.191, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD, udp: true}
+  - {name: "[SS] Pool__43", server: 185.166.84.81, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH, udp: true}
+  - {name: "[SS] Pool__45", server: 5.253.207.51, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6, udp: true}
+  - {name: "[SS] _01", server: 134.195.196.163, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _02", server: 167.88.63.60, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _03", server: 167.88.63.119, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _05", server: 146.70.27.12, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
+  - {name: "[SS] _06", server: 167.88.63.61, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _08", server: 134.195.198.95, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _09", server: 134.195.198.252, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _10", server: 172.107.233.234, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _11", server: 134.195.196.147, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _12", server: 172.99.190.230, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _13", server: 134.195.198.95, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _14", server: 51.77.53.200, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _15", server: 38.39.192.74, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _17", server: 38.107.226.241, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _18", server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _19", server: 167.88.63.89, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _20", server: 27.131.164.100, port: 44945, type: ss, cipher: aes-256-gcm, password: F5bKkb9ggkLx4JbQrbLn7LjZ, udp: true}
+  - {name: "[SS] _21", server: 172.99.190.186, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _22", server: 172.99.190.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _24", server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _25", server: 62.212.239.53, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B, udp: true}
+  - {name: "[SS] _28", server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _29", server: 38.107.226.146, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _33", server: 134.195.196.163, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _34", server: 167.88.63.28, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _35", server: 134.195.196.110, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _36", server: 134.195.196.79, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] _38", server: 198.57.27.241, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _39", server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _40", server: 134.195.196.133, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _41", server: 167.88.63.119, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _42", server: 38.107.226.146, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] _44", server: 167.88.63.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] _46", server: 167.88.63.82, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] v2cross.com", server: 134.195.196.50, port: 3306, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: "[SS] v2cross.com 2", server: 172.105.172.41, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] v2cross.com 3", server: 172.105.172.41, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] v2cross.com 4", server: 172.105.172.41, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] v2cross.com 5", server: 172.99.190.35, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] v2cross.com 6", server: 172.99.190.139, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] v2cross.com 7", server: 172.99.190.139, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[Trojan] v2cross.com", server: t5.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t5.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] v2cross.com 2", server: t3.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t3.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[SS] v2cross.com 8", server: 172.99.190.139, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[VMess] v2cross.com", server: v2.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.com}, udp: true}
+  - {name: "[VMess] v2cross.com 2", server: www.gov.hk, port: 8443, type: vmess, uuid: 813cb315-4ae8-44e1-e85d-ae90dd5233b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /html, ws-headers: {Host: hax.cfyes.team}, udp: true}
+  - {name: "[Trojan] v2cross.com 3", server: t2.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t2.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] v2cross.com 3", server: v2.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.com}, udp: true}
+  - {name: "[Trojan] v2cross.com 4", server: t1.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t1.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[VMess] v2cross.com 4", server: v1.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}, udp: true}
+  - {name: "[VMess] v2cross.com 5", server: v1.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__01", server: 146.70.27.12, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__02", server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__03", server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
@@ -223,21 +215,19 @@ proxies:
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__19", server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__20", server: 198.57.27.218, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__21", server: 172.105.55.72, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 付费推荐:dlj.tf/ssrsub__21 2", server: 172.105.55.72, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 付费推荐:dlj.tf/ssrsub__22", server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 挪威-46.29.218.6", server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 挪威-46.29.218.6 2", server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 挪威-46.29.218.6", server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 挪威-46.29.218.6 2", server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[SS] 挪威-46.29.218.6 3", server: 46.29.218.6, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.11", server: 167.88.63.11, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.11 2", server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 挪威-46.29.218.6 4", server: 46.29.218.6, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.11", server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.11 2", server: 167.88.63.11, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 瑞典-167.88.63.119", server: 167.88.63.119, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.119 2", server: 167.88.63.119, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.82", server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.82", server: 167.88.63.82, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 瑞典-167.88.63.82 2", server: 167.88.63.82, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.82 3", server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.99", server: 167.88.63.99, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 瑞典-167.88.63.99 2", server: 167.88.63.99, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
-  - {name: "[SS] 🇦🇺 澳大利亚-172.105.172.37", server: 172.105.172.37, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.82 3", server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.99", server: 167.88.63.99, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 瑞典-167.88.63.99 2", server: 167.88.63.99, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 🇨🇦 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub", server: 45.62.231.180, port: 153, type: ss, cipher: aes-128-gcm, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, udp: true}
   - {name: "[SS] 🇨🇦 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub", server: 45.62.233.134, port: 153, type: ss, cipher: aes-128-gcm, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, udp: true}
   - {name: "[SS] 🇨🇦 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub", server: 45.62.246.171, port: 153, type: ss, cipher: aes-128-gcm, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, udp: true}
@@ -252,17 +242,16 @@ proxies:
   - {name: "[VMess] 🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub", server: v10.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v10.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇨🇦 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub", server: v9.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v9.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub", server: v10.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v10.ssrsub.com}, udp: true}
+  - {name: "[SS] 🇨🇦 加拿大-134.195.196.193", server: 134.195.196.193, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: "[SS] 🇨🇦 加拿大-134.195.196.50", server: 134.195.196.50, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 🇨🇦 加拿大-146.70.27.12", server: 146.70.27.12, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp, udp: true}
   - {name: "[SS] 🇨🇦 加拿大-198.57.27.218", server: 198.57.27.218, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 🇨🇦 加拿大-198.57.27.225", server: 198.57.27.225, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 🇨🇦 加拿大-198.57.27.225:2375", server: 198.57.27.225, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 🇬🇧 英国-89.46.223.239", server: 89.46.223.239, port: 50168, type: ss, cipher: aes-256-gcm, password: WCuz7yrfZSCQQXSNrtGPz2HT, udp: true}
   - {name: "[SS] 🇭🇰 香港-118.107.244.110", server: 118.107.244.110, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com", server: hk1kte-node.aiqiche123.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8638, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: ray, ws-headers: {Host: hk1kte-node.aiqiche123.com}, udp: true}
   - {name: "[VMess] 🇭🇰 香港-www.gov.hk", server: www.gov.hk, port: 443, type: vmess, uuid: ef7b953f-09af-4ca9-a074-14665d235010, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /home, ws-headers: {Host: cvm.365edu.cf}, udp: true}
-  - {name: "[SS] 🇮🇳 印度-172.105.38.55", server: 172.105.38.55, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇮🇳 印度-172.105.38.55 2", server: 172.105.38.55, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇮🇳 印度-172.105.38.55 3", server: 172.105.38.55, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇮🇳 印度-172.105.59.32", server: 172.105.59.32, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[Trojan] 🇯🇵 日本-45.66.134.219", server: 45.66.134.219, port: 443, type: trojan, password: 28d98f761aca9d636f44db62544628eb, skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇷🇺 @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub", server: 45.89.229.223, port: 153, type: ss, cipher: aes-128-gcm, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, udp: true}
   - {name: "[SS] 🇷🇺 @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub", server: 193.38.51.192, port: 153, type: ss, cipher: aes-128-gcm, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, udp: true}
@@ -289,12 +278,17 @@ proxies:
   - {name: "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub", server: v5.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub 2", server: v5.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub", server: v7.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v7.ssrsub.com}, udp: true}
-  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_72", server: t7.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t7.ssrsub.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_73", server: t3.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t3.ssrsub.com, skip-cert-verify: true, udp: true}
-  - {name: "[Trojan] 🇷🇺 俄罗斯-t3.ssrsub.com", server: t3.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t3.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_50", server: t3.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t3.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_51", server: t7.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t7.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_52", server: t7.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t7.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_53", server: t5.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t5.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_54", server: t3.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t3.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_55", server: t4.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t4.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_56", server: t5.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t5.ssrsub.com, skip-cert-verify: true, udp: true}
+  - {name: "[Trojan] 🇷🇺 Relay_-🇷🇺RU_58", server: t4.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t4.ssrsub.com, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇷🇺 俄罗斯-t7.ssrsub.com", server: t7.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t7.ssrsub.com, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇷🇺 俄罗斯T5-t5.ssrsub.com", server: t5.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t5.ssrsub.com, skip-cert-verify: true, udp: true}
-  - {name: "[VMess] 🇷🇺 俄罗斯V6-v7.ssrsub.com", server: v7.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v7.ssrsub.com}, udp: true}
+  - {name: "[VMess] 🇷🇺 俄罗斯V11-v3.ssrsub.com", server: v3.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v3.ssrsub.com}, udp: true}
   - {name: "[Trojan] 🇺🇸 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub", server: t1.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t1.ssrsub.com, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub", server: t2.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t2.ssrsub.com, skip-cert-verify: true, udp: true}
   - {name: "[Trojan] 🇺🇸 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub", server: t2.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t2.ssrsub.com, skip-cert-verify: true, udp: true}
@@ -303,17 +297,23 @@ proxies:
   - {name: "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub", server: v2.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub", server: v2.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v2.ssrsub.com}, udp: true}
   - {name: "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub", server: v1.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}, udp: true}
+  - {name: "[VMess] 🇺🇸 Relay_-🇺🇸US_47", server: v1.ssrsub.com, port: 159, type: vmess, uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}, udp: true}
+  - {name: "[VMess] 🇺🇸 Relay_-🇺🇸US_48", server: v1.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}, udp: true}
+  - {name: "[VMess] 🇺🇸 Relay_-🇺🇸US_49", server: uusss1111.liuwei01.tk, port: 443, type: vmess, uuid: 0fab5928-9d70-4666-b351-5debff8a15de, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /liuwei, ws-headers: {Host: uusss1111.liuwei01.tk}, udp: true}
+  - {name: "[Trojan] 🇺🇸 Relay_-🇺🇸US_57", server: t1.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t1.ssrsub.com, skip-cert-verify: true, udp: true}
   - {name: "[SS] 🇺🇸 洛杉矶-172.99.190.158", server: 172.99.190.158, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[VMess] 🇺🇸 美国-128.14.157.112", server: 128.14.157.112, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8634, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /ray, ws-headers: {Host: 128.14.157.112}, udp: true}
   - {name: "[SS] 🇺🇸 美国-172.99.190.149", server: 172.99.190.149, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 🇺🇸 美国-172.99.190.149 2", server: 172.99.190.149, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[SS] 🇺🇸 美国-172.99.190.153", server: 172.99.190.153, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
   - {name: "[SS] 🇺🇸 美国-172.99.190.158", server: 172.99.190.158, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
-  - {name: "[SS] 🇺🇸 美国-172.99.190.35", server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 美国-172.99.190.35 2", server: 172.99.190.35, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇺🇸 美国-172.99.190.35", server: 172.99.190.35, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇺🇸 美国-172.99.190.35 2", server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] 🇺🇸 美国-172.99.190.35 3", server: 172.99.190.35, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
   - {name: "[SS] 🇺🇸 美国-198.57.27.218", server: 198.57.27.218, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 美国-38.107.226.146", server: 38.107.226.146, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
-  - {name: "[SS] 🇺🇸 美国-45.79.122.28", server: 45.79.122.28, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
+  - {name: "[SS] 🇺🇸 美国-38.107.226.146", server: 38.107.226.146, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: "[SS] 🇺🇸 美国-38.107.226.146 2", server: 38.107.226.146, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true}
+  - {name: "[SS] 🇺🇸 美国-38.107.226.146 3", server: 38.107.226.146, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27, udp: true}
   - {name: "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com", server: us2fgh-node.aiqiche123.com, port: 13723, type: vmess, uuid: a90597c1-bab3-4217-ad6f-0838675c8633, alterId: 10, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: ray, ws-headers: {Host: us2fgh-node.aiqiche123.com}, udp: true}
   - {name: "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com", server: t1.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t1.ssrsub.com, skip-cert-verify: true, udp: true}
 proxy-groups:
@@ -344,77 +344,69 @@ proxy-groups:
       - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-      - "[SS] Pool__03"
       - "[SS] Pool__04"
-      - "[SS] Pool__05"
-      - "[SS] Pool__08"
-      - "[SS] Pool__09"
-      - "[SS] Pool__18"
-      - "[SS] Pool__19"
-      - "[SS] Pool__22"
-      - "[SS] Pool__24"
-      - "[SS] Pool__25"
-      - "[SS] Pool__34"
-      - "[SS] Pool__46"
-      - "[SS] Pool__52"
-      - "[SS] Pool__53"
-      - "[SS] Pool__67"
+      - "[SS] Pool__07"
+      - "[SS] Pool__16"
+      - "[SS] Pool__23"
+      - "[SS] Pool__26"
+      - "[SS] Pool__27"
+      - "[SS] Pool__30"
+      - "[SS] Pool__31"
+      - "[SS] Pool__32"
+      - "[SS] Pool__37"
+      - "[SS] Pool__43"
+      - "[SS] Pool__45"
       - "[SS] _01"
       - "[SS] _02"
+      - "[SS] _03"
+      - "[SS] _05"
       - "[SS] _06"
-      - "[SS] _07"
+      - "[SS] _08"
+      - "[SS] _09"
       - "[SS] _10"
       - "[SS] _11"
       - "[SS] _12"
       - "[SS] _13"
       - "[SS] _14"
       - "[SS] _15"
-      - "[SS] _16"
       - "[SS] _17"
+      - "[SS] _18"
+      - "[SS] _19"
       - "[SS] _20"
       - "[SS] _21"
-      - "[SS] _23"
-      - "[SS] _26"
-      - "[SS] _27"
+      - "[SS] _22"
+      - "[SS] _24"
+      - "[SS] _25"
       - "[SS] _28"
       - "[SS] _29"
-      - "[SS] _30"
-      - "[SS] _31"
-      - "[SS] _32"
       - "[SS] _33"
+      - "[SS] _34"
       - "[SS] _35"
       - "[SS] _36"
-      - "[SS] _37"
       - "[SS] _38"
       - "[SS] _39"
       - "[SS] _40"
       - "[SS] _41"
       - "[SS] _42"
-      - "[SS] _43"
       - "[SS] _44"
-      - "[SS] _45"
-      - "[SS] _47"
-      - "[SS] _48"
-      - "[SS] _49"
-      - "[SS] _50"
-      - "[SS] _51"
-      - "[SS] _54"
-      - "[SS] _55"
-      - "[SS] _56"
-      - "[SS] _57"
-      - "[SS] _58"
-      - "[SS] _59"
-      - "[SS] _60"
-      - "[SS] _61"
-      - "[SS] _62"
-      - "[SS] _63"
-      - "[SS] _64"
-      - "[SS] _65"
-      - "[SS] _66"
-      - "[SS] _68"
-      - "[SS] _69"
-      - "[SS] _70"
-      - "[SS] _71"
+      - "[SS] _46"
+      - "[SS] v2cross.com"
+      - "[SS] v2cross.com 2"
+      - "[SS] v2cross.com 3"
+      - "[SS] v2cross.com 4"
+      - "[SS] v2cross.com 5"
+      - "[SS] v2cross.com 6"
+      - "[SS] v2cross.com 7"
+      - "[Trojan] v2cross.com"
+      - "[Trojan] v2cross.com 2"
+      - "[SS] v2cross.com 8"
+      - "[VMess] v2cross.com"
+      - "[VMess] v2cross.com 2"
+      - "[Trojan] v2cross.com 3"
+      - "[VMess] v2cross.com 3"
+      - "[Trojan] v2cross.com 4"
+      - "[VMess] v2cross.com 4"
+      - "[VMess] v2cross.com 5"
       - "[SS] 付费推荐:dlj.tf/ssrsub__01"
       - "[SS] 付费推荐:dlj.tf/ssrsub__02"
       - "[SS] 付费推荐:dlj.tf/ssrsub__03"
@@ -436,21 +428,19 @@ proxy-groups:
       - "[SS] 付费推荐:dlj.tf/ssrsub__19"
       - "[SS] 付费推荐:dlj.tf/ssrsub__20"
       - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-      - "[SS] 付费推荐:dlj.tf/ssrsub__21 2"
       - "[SS] 付费推荐:dlj.tf/ssrsub__22"
       - "[SS] 挪威-46.29.218.6"
       - "[SS] 挪威-46.29.218.6 2"
       - "[SS] 挪威-46.29.218.6 3"
+      - "[SS] 挪威-46.29.218.6 4"
       - "[SS] 瑞典-167.88.63.11"
       - "[SS] 瑞典-167.88.63.11 2"
       - "[SS] 瑞典-167.88.63.119"
-      - "[SS] 瑞典-167.88.63.119 2"
       - "[SS] 瑞典-167.88.63.82"
       - "[SS] 瑞典-167.88.63.82 2"
       - "[SS] 瑞典-167.88.63.82 3"
       - "[SS] 瑞典-167.88.63.99"
       - "[SS] 瑞典-167.88.63.99 2"
-      - "[SS] 🇦🇺 澳大利亚-172.105.172.37"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
@@ -465,17 +455,16 @@ proxy-groups:
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
+      - "[SS] 🇨🇦 加拿大-134.195.196.193"
+      - "[SS] 🇨🇦 加拿大-134.195.196.50"
       - "[SS] 🇨🇦 加拿大-146.70.27.12"
       - "[SS] 🇨🇦 加拿大-198.57.27.218"
       - "[SS] 🇨🇦 加拿大-198.57.27.225"
       - "[SS] 🇨🇦 加拿大-198.57.27.225:2375"
       - "[SS] 🇬🇧 英国-89.46.223.239"
       - "[SS] 🇭🇰 香港-118.107.244.110"
+      - "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com"
       - "[VMess] 🇭🇰 香港-www.gov.hk"
-      - "[SS] 🇮🇳 印度-172.105.38.55"
-      - "[SS] 🇮🇳 印度-172.105.38.55 2"
-      - "[SS] 🇮🇳 印度-172.105.38.55 3"
-      - "[SS] 🇮🇳 印度-172.105.59.32"
       - "[Trojan] 🇯🇵 日本-45.66.134.219"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
@@ -502,12 +491,17 @@ proxy-groups:
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub 2"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_72"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_73"
-      - "[Trojan] 🇷🇺 俄罗斯-t3.ssrsub.com"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_50"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_51"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_52"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_53"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_54"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_55"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_56"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_58"
       - "[Trojan] 🇷🇺 俄罗斯-t7.ssrsub.com"
       - "[Trojan] 🇷🇺 俄罗斯T5-t5.ssrsub.com"
-      - "[VMess] 🇷🇺 俄罗斯V6-v7.ssrsub.com"
+      - "[VMess] 🇷🇺 俄罗斯V11-v3.ssrsub.com"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
@@ -516,6 +510,10 @@ proxy-groups:
       - "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_47"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_48"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_49"
+      - "[Trojan] 🇺🇸 Relay_-🇺🇸US_57"
       - "[SS] 🇺🇸 洛杉矶-172.99.190.158"
       - "[VMess] 🇺🇸 美国-128.14.157.112"
       - "[SS] 🇺🇸 美国-172.99.190.149"
@@ -524,9 +522,11 @@ proxy-groups:
       - "[SS] 🇺🇸 美国-172.99.190.158"
       - "[SS] 🇺🇸 美国-172.99.190.35"
       - "[SS] 🇺🇸 美国-172.99.190.35 2"
+      - "[SS] 🇺🇸 美国-172.99.190.35 3"
       - "[SS] 🇺🇸 美国-198.57.27.218"
       - "[SS] 🇺🇸 美国-38.107.226.146"
-      - "[SS] 🇺🇸 美国-45.79.122.28"
+      - "[SS] 🇺🇸 美国-38.107.226.146 2"
+      - "[SS] 🇺🇸 美国-38.107.226.146 3"
       - "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com"
       - "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com"
   - name: ♻️ 自动选择
@@ -545,77 +545,69 @@ proxy-groups:
       - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-      - "[SS] Pool__03"
       - "[SS] Pool__04"
-      - "[SS] Pool__05"
-      - "[SS] Pool__08"
-      - "[SS] Pool__09"
-      - "[SS] Pool__18"
-      - "[SS] Pool__19"
-      - "[SS] Pool__22"
-      - "[SS] Pool__24"
-      - "[SS] Pool__25"
-      - "[SS] Pool__34"
-      - "[SS] Pool__46"
-      - "[SS] Pool__52"
-      - "[SS] Pool__53"
-      - "[SS] Pool__67"
+      - "[SS] Pool__07"
+      - "[SS] Pool__16"
+      - "[SS] Pool__23"
+      - "[SS] Pool__26"
+      - "[SS] Pool__27"
+      - "[SS] Pool__30"
+      - "[SS] Pool__31"
+      - "[SS] Pool__32"
+      - "[SS] Pool__37"
+      - "[SS] Pool__43"
+      - "[SS] Pool__45"
       - "[SS] _01"
       - "[SS] _02"
+      - "[SS] _03"
+      - "[SS] _05"
       - "[SS] _06"
-      - "[SS] _07"
+      - "[SS] _08"
+      - "[SS] _09"
       - "[SS] _10"
       - "[SS] _11"
       - "[SS] _12"
       - "[SS] _13"
       - "[SS] _14"
       - "[SS] _15"
-      - "[SS] _16"
       - "[SS] _17"
+      - "[SS] _18"
+      - "[SS] _19"
       - "[SS] _20"
       - "[SS] _21"
-      - "[SS] _23"
-      - "[SS] _26"
-      - "[SS] _27"
+      - "[SS] _22"
+      - "[SS] _24"
+      - "[SS] _25"
       - "[SS] _28"
       - "[SS] _29"
-      - "[SS] _30"
-      - "[SS] _31"
-      - "[SS] _32"
       - "[SS] _33"
+      - "[SS] _34"
       - "[SS] _35"
       - "[SS] _36"
-      - "[SS] _37"
       - "[SS] _38"
       - "[SS] _39"
       - "[SS] _40"
       - "[SS] _41"
       - "[SS] _42"
-      - "[SS] _43"
       - "[SS] _44"
-      - "[SS] _45"
-      - "[SS] _47"
-      - "[SS] _48"
-      - "[SS] _49"
-      - "[SS] _50"
-      - "[SS] _51"
-      - "[SS] _54"
-      - "[SS] _55"
-      - "[SS] _56"
-      - "[SS] _57"
-      - "[SS] _58"
-      - "[SS] _59"
-      - "[SS] _60"
-      - "[SS] _61"
-      - "[SS] _62"
-      - "[SS] _63"
-      - "[SS] _64"
-      - "[SS] _65"
-      - "[SS] _66"
-      - "[SS] _68"
-      - "[SS] _69"
-      - "[SS] _70"
-      - "[SS] _71"
+      - "[SS] _46"
+      - "[SS] v2cross.com"
+      - "[SS] v2cross.com 2"
+      - "[SS] v2cross.com 3"
+      - "[SS] v2cross.com 4"
+      - "[SS] v2cross.com 5"
+      - "[SS] v2cross.com 6"
+      - "[SS] v2cross.com 7"
+      - "[Trojan] v2cross.com"
+      - "[Trojan] v2cross.com 2"
+      - "[SS] v2cross.com 8"
+      - "[VMess] v2cross.com"
+      - "[VMess] v2cross.com 2"
+      - "[Trojan] v2cross.com 3"
+      - "[VMess] v2cross.com 3"
+      - "[Trojan] v2cross.com 4"
+      - "[VMess] v2cross.com 4"
+      - "[VMess] v2cross.com 5"
       - "[SS] 付费推荐:dlj.tf/ssrsub__01"
       - "[SS] 付费推荐:dlj.tf/ssrsub__02"
       - "[SS] 付费推荐:dlj.tf/ssrsub__03"
@@ -637,21 +629,19 @@ proxy-groups:
       - "[SS] 付费推荐:dlj.tf/ssrsub__19"
       - "[SS] 付费推荐:dlj.tf/ssrsub__20"
       - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-      - "[SS] 付费推荐:dlj.tf/ssrsub__21 2"
       - "[SS] 付费推荐:dlj.tf/ssrsub__22"
       - "[SS] 挪威-46.29.218.6"
       - "[SS] 挪威-46.29.218.6 2"
       - "[SS] 挪威-46.29.218.6 3"
+      - "[SS] 挪威-46.29.218.6 4"
       - "[SS] 瑞典-167.88.63.11"
       - "[SS] 瑞典-167.88.63.11 2"
       - "[SS] 瑞典-167.88.63.119"
-      - "[SS] 瑞典-167.88.63.119 2"
       - "[SS] 瑞典-167.88.63.82"
       - "[SS] 瑞典-167.88.63.82 2"
       - "[SS] 瑞典-167.88.63.82 3"
       - "[SS] 瑞典-167.88.63.99"
       - "[SS] 瑞典-167.88.63.99 2"
-      - "[SS] 🇦🇺 澳大利亚-172.105.172.37"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
@@ -666,17 +656,16 @@ proxy-groups:
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
+      - "[SS] 🇨🇦 加拿大-134.195.196.193"
+      - "[SS] 🇨🇦 加拿大-134.195.196.50"
       - "[SS] 🇨🇦 加拿大-146.70.27.12"
       - "[SS] 🇨🇦 加拿大-198.57.27.218"
       - "[SS] 🇨🇦 加拿大-198.57.27.225"
       - "[SS] 🇨🇦 加拿大-198.57.27.225:2375"
       - "[SS] 🇬🇧 英国-89.46.223.239"
       - "[SS] 🇭🇰 香港-118.107.244.110"
+      - "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com"
       - "[VMess] 🇭🇰 香港-www.gov.hk"
-      - "[SS] 🇮🇳 印度-172.105.38.55"
-      - "[SS] 🇮🇳 印度-172.105.38.55 2"
-      - "[SS] 🇮🇳 印度-172.105.38.55 3"
-      - "[SS] 🇮🇳 印度-172.105.59.32"
       - "[Trojan] 🇯🇵 日本-45.66.134.219"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
@@ -703,12 +692,17 @@ proxy-groups:
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub 2"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_72"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_73"
-      - "[Trojan] 🇷🇺 俄罗斯-t3.ssrsub.com"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_50"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_51"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_52"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_53"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_54"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_55"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_56"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_58"
       - "[Trojan] 🇷🇺 俄罗斯-t7.ssrsub.com"
       - "[Trojan] 🇷🇺 俄罗斯T5-t5.ssrsub.com"
-      - "[VMess] 🇷🇺 俄罗斯V6-v7.ssrsub.com"
+      - "[VMess] 🇷🇺 俄罗斯V11-v3.ssrsub.com"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
@@ -717,6 +711,10 @@ proxy-groups:
       - "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_47"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_48"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_49"
+      - "[Trojan] 🇺🇸 Relay_-🇺🇸US_57"
       - "[SS] 🇺🇸 洛杉矶-172.99.190.158"
       - "[VMess] 🇺🇸 美国-128.14.157.112"
       - "[SS] 🇺🇸 美国-172.99.190.149"
@@ -725,9 +723,11 @@ proxy-groups:
       - "[SS] 🇺🇸 美国-172.99.190.158"
       - "[SS] 🇺🇸 美国-172.99.190.35"
       - "[SS] 🇺🇸 美国-172.99.190.35 2"
+      - "[SS] 🇺🇸 美国-172.99.190.35 3"
       - "[SS] 🇺🇸 美国-198.57.27.218"
       - "[SS] 🇺🇸 美国-38.107.226.146"
-      - "[SS] 🇺🇸 美国-45.79.122.28"
+      - "[SS] 🇺🇸 美国-38.107.226.146 2"
+      - "[SS] 🇺🇸 美国-38.107.226.146 3"
       - "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com"
       - "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com"
   - name: 🔯 故障转移
@@ -746,77 +746,69 @@ proxy-groups:
       - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-      - "[SS] Pool__03"
       - "[SS] Pool__04"
-      - "[SS] Pool__05"
-      - "[SS] Pool__08"
-      - "[SS] Pool__09"
-      - "[SS] Pool__18"
-      - "[SS] Pool__19"
-      - "[SS] Pool__22"
-      - "[SS] Pool__24"
-      - "[SS] Pool__25"
-      - "[SS] Pool__34"
-      - "[SS] Pool__46"
-      - "[SS] Pool__52"
-      - "[SS] Pool__53"
-      - "[SS] Pool__67"
+      - "[SS] Pool__07"
+      - "[SS] Pool__16"
+      - "[SS] Pool__23"
+      - "[SS] Pool__26"
+      - "[SS] Pool__27"
+      - "[SS] Pool__30"
+      - "[SS] Pool__31"
+      - "[SS] Pool__32"
+      - "[SS] Pool__37"
+      - "[SS] Pool__43"
+      - "[SS] Pool__45"
       - "[SS] _01"
       - "[SS] _02"
+      - "[SS] _03"
+      - "[SS] _05"
       - "[SS] _06"
-      - "[SS] _07"
+      - "[SS] _08"
+      - "[SS] _09"
       - "[SS] _10"
       - "[SS] _11"
       - "[SS] _12"
       - "[SS] _13"
       - "[SS] _14"
       - "[SS] _15"
-      - "[SS] _16"
       - "[SS] _17"
+      - "[SS] _18"
+      - "[SS] _19"
       - "[SS] _20"
       - "[SS] _21"
-      - "[SS] _23"
-      - "[SS] _26"
-      - "[SS] _27"
+      - "[SS] _22"
+      - "[SS] _24"
+      - "[SS] _25"
       - "[SS] _28"
       - "[SS] _29"
-      - "[SS] _30"
-      - "[SS] _31"
-      - "[SS] _32"
       - "[SS] _33"
+      - "[SS] _34"
       - "[SS] _35"
       - "[SS] _36"
-      - "[SS] _37"
       - "[SS] _38"
       - "[SS] _39"
       - "[SS] _40"
       - "[SS] _41"
       - "[SS] _42"
-      - "[SS] _43"
       - "[SS] _44"
-      - "[SS] _45"
-      - "[SS] _47"
-      - "[SS] _48"
-      - "[SS] _49"
-      - "[SS] _50"
-      - "[SS] _51"
-      - "[SS] _54"
-      - "[SS] _55"
-      - "[SS] _56"
-      - "[SS] _57"
-      - "[SS] _58"
-      - "[SS] _59"
-      - "[SS] _60"
-      - "[SS] _61"
-      - "[SS] _62"
-      - "[SS] _63"
-      - "[SS] _64"
-      - "[SS] _65"
-      - "[SS] _66"
-      - "[SS] _68"
-      - "[SS] _69"
-      - "[SS] _70"
-      - "[SS] _71"
+      - "[SS] _46"
+      - "[SS] v2cross.com"
+      - "[SS] v2cross.com 2"
+      - "[SS] v2cross.com 3"
+      - "[SS] v2cross.com 4"
+      - "[SS] v2cross.com 5"
+      - "[SS] v2cross.com 6"
+      - "[SS] v2cross.com 7"
+      - "[Trojan] v2cross.com"
+      - "[Trojan] v2cross.com 2"
+      - "[SS] v2cross.com 8"
+      - "[VMess] v2cross.com"
+      - "[VMess] v2cross.com 2"
+      - "[Trojan] v2cross.com 3"
+      - "[VMess] v2cross.com 3"
+      - "[Trojan] v2cross.com 4"
+      - "[VMess] v2cross.com 4"
+      - "[VMess] v2cross.com 5"
       - "[SS] 付费推荐:dlj.tf/ssrsub__01"
       - "[SS] 付费推荐:dlj.tf/ssrsub__02"
       - "[SS] 付费推荐:dlj.tf/ssrsub__03"
@@ -838,21 +830,19 @@ proxy-groups:
       - "[SS] 付费推荐:dlj.tf/ssrsub__19"
       - "[SS] 付费推荐:dlj.tf/ssrsub__20"
       - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-      - "[SS] 付费推荐:dlj.tf/ssrsub__21 2"
       - "[SS] 付费推荐:dlj.tf/ssrsub__22"
       - "[SS] 挪威-46.29.218.6"
       - "[SS] 挪威-46.29.218.6 2"
       - "[SS] 挪威-46.29.218.6 3"
+      - "[SS] 挪威-46.29.218.6 4"
       - "[SS] 瑞典-167.88.63.11"
       - "[SS] 瑞典-167.88.63.11 2"
       - "[SS] 瑞典-167.88.63.119"
-      - "[SS] 瑞典-167.88.63.119 2"
       - "[SS] 瑞典-167.88.63.82"
       - "[SS] 瑞典-167.88.63.82 2"
       - "[SS] 瑞典-167.88.63.82 3"
       - "[SS] 瑞典-167.88.63.99"
       - "[SS] 瑞典-167.88.63.99 2"
-      - "[SS] 🇦🇺 澳大利亚-172.105.172.37"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
@@ -867,17 +857,16 @@ proxy-groups:
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
+      - "[SS] 🇨🇦 加拿大-134.195.196.193"
+      - "[SS] 🇨🇦 加拿大-134.195.196.50"
       - "[SS] 🇨🇦 加拿大-146.70.27.12"
       - "[SS] 🇨🇦 加拿大-198.57.27.218"
       - "[SS] 🇨🇦 加拿大-198.57.27.225"
       - "[SS] 🇨🇦 加拿大-198.57.27.225:2375"
       - "[SS] 🇬🇧 英国-89.46.223.239"
       - "[SS] 🇭🇰 香港-118.107.244.110"
+      - "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com"
       - "[VMess] 🇭🇰 香港-www.gov.hk"
-      - "[SS] 🇮🇳 印度-172.105.38.55"
-      - "[SS] 🇮🇳 印度-172.105.38.55 2"
-      - "[SS] 🇮🇳 印度-172.105.38.55 3"
-      - "[SS] 🇮🇳 印度-172.105.59.32"
       - "[Trojan] 🇯🇵 日本-45.66.134.219"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
@@ -904,12 +893,17 @@ proxy-groups:
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub 2"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_72"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_73"
-      - "[Trojan] 🇷🇺 俄罗斯-t3.ssrsub.com"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_50"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_51"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_52"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_53"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_54"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_55"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_56"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_58"
       - "[Trojan] 🇷🇺 俄罗斯-t7.ssrsub.com"
       - "[Trojan] 🇷🇺 俄罗斯T5-t5.ssrsub.com"
-      - "[VMess] 🇷🇺 俄罗斯V6-v7.ssrsub.com"
+      - "[VMess] 🇷🇺 俄罗斯V11-v3.ssrsub.com"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
@@ -918,6 +912,10 @@ proxy-groups:
       - "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_47"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_48"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_49"
+      - "[Trojan] 🇺🇸 Relay_-🇺🇸US_57"
       - "[SS] 🇺🇸 洛杉矶-172.99.190.158"
       - "[VMess] 🇺🇸 美国-128.14.157.112"
       - "[SS] 🇺🇸 美国-172.99.190.149"
@@ -926,9 +924,11 @@ proxy-groups:
       - "[SS] 🇺🇸 美国-172.99.190.158"
       - "[SS] 🇺🇸 美国-172.99.190.35"
       - "[SS] 🇺🇸 美国-172.99.190.35 2"
+      - "[SS] 🇺🇸 美国-172.99.190.35 3"
       - "[SS] 🇺🇸 美国-198.57.27.218"
       - "[SS] 🇺🇸 美国-38.107.226.146"
-      - "[SS] 🇺🇸 美国-45.79.122.28"
+      - "[SS] 🇺🇸 美国-38.107.226.146 2"
+      - "[SS] 🇺🇸 美国-38.107.226.146 3"
       - "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com"
       - "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com"
   - name: 🔮 负载均衡
@@ -948,77 +948,69 @@ proxy-groups:
       - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
       - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-      - "[SS] Pool__03"
       - "[SS] Pool__04"
-      - "[SS] Pool__05"
-      - "[SS] Pool__08"
-      - "[SS] Pool__09"
-      - "[SS] Pool__18"
-      - "[SS] Pool__19"
-      - "[SS] Pool__22"
-      - "[SS] Pool__24"
-      - "[SS] Pool__25"
-      - "[SS] Pool__34"
-      - "[SS] Pool__46"
-      - "[SS] Pool__52"
-      - "[SS] Pool__53"
-      - "[SS] Pool__67"
+      - "[SS] Pool__07"
+      - "[SS] Pool__16"
+      - "[SS] Pool__23"
+      - "[SS] Pool__26"
+      - "[SS] Pool__27"
+      - "[SS] Pool__30"
+      - "[SS] Pool__31"
+      - "[SS] Pool__32"
+      - "[SS] Pool__37"
+      - "[SS] Pool__43"
+      - "[SS] Pool__45"
       - "[SS] _01"
       - "[SS] _02"
+      - "[SS] _03"
+      - "[SS] _05"
       - "[SS] _06"
-      - "[SS] _07"
+      - "[SS] _08"
+      - "[SS] _09"
       - "[SS] _10"
       - "[SS] _11"
       - "[SS] _12"
       - "[SS] _13"
       - "[SS] _14"
       - "[SS] _15"
-      - "[SS] _16"
       - "[SS] _17"
+      - "[SS] _18"
+      - "[SS] _19"
       - "[SS] _20"
       - "[SS] _21"
-      - "[SS] _23"
-      - "[SS] _26"
-      - "[SS] _27"
+      - "[SS] _22"
+      - "[SS] _24"
+      - "[SS] _25"
       - "[SS] _28"
       - "[SS] _29"
-      - "[SS] _30"
-      - "[SS] _31"
-      - "[SS] _32"
       - "[SS] _33"
+      - "[SS] _34"
       - "[SS] _35"
       - "[SS] _36"
-      - "[SS] _37"
       - "[SS] _38"
       - "[SS] _39"
       - "[SS] _40"
       - "[SS] _41"
       - "[SS] _42"
-      - "[SS] _43"
       - "[SS] _44"
-      - "[SS] _45"
-      - "[SS] _47"
-      - "[SS] _48"
-      - "[SS] _49"
-      - "[SS] _50"
-      - "[SS] _51"
-      - "[SS] _54"
-      - "[SS] _55"
-      - "[SS] _56"
-      - "[SS] _57"
-      - "[SS] _58"
-      - "[SS] _59"
-      - "[SS] _60"
-      - "[SS] _61"
-      - "[SS] _62"
-      - "[SS] _63"
-      - "[SS] _64"
-      - "[SS] _65"
-      - "[SS] _66"
-      - "[SS] _68"
-      - "[SS] _69"
-      - "[SS] _70"
-      - "[SS] _71"
+      - "[SS] _46"
+      - "[SS] v2cross.com"
+      - "[SS] v2cross.com 2"
+      - "[SS] v2cross.com 3"
+      - "[SS] v2cross.com 4"
+      - "[SS] v2cross.com 5"
+      - "[SS] v2cross.com 6"
+      - "[SS] v2cross.com 7"
+      - "[Trojan] v2cross.com"
+      - "[Trojan] v2cross.com 2"
+      - "[SS] v2cross.com 8"
+      - "[VMess] v2cross.com"
+      - "[VMess] v2cross.com 2"
+      - "[Trojan] v2cross.com 3"
+      - "[VMess] v2cross.com 3"
+      - "[Trojan] v2cross.com 4"
+      - "[VMess] v2cross.com 4"
+      - "[VMess] v2cross.com 5"
       - "[SS] 付费推荐:dlj.tf/ssrsub__01"
       - "[SS] 付费推荐:dlj.tf/ssrsub__02"
       - "[SS] 付费推荐:dlj.tf/ssrsub__03"
@@ -1040,21 +1032,19 @@ proxy-groups:
       - "[SS] 付费推荐:dlj.tf/ssrsub__19"
       - "[SS] 付费推荐:dlj.tf/ssrsub__20"
       - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-      - "[SS] 付费推荐:dlj.tf/ssrsub__21 2"
       - "[SS] 付费推荐:dlj.tf/ssrsub__22"
       - "[SS] 挪威-46.29.218.6"
       - "[SS] 挪威-46.29.218.6 2"
       - "[SS] 挪威-46.29.218.6 3"
+      - "[SS] 挪威-46.29.218.6 4"
       - "[SS] 瑞典-167.88.63.11"
       - "[SS] 瑞典-167.88.63.11 2"
       - "[SS] 瑞典-167.88.63.119"
-      - "[SS] 瑞典-167.88.63.119 2"
       - "[SS] 瑞典-167.88.63.82"
       - "[SS] 瑞典-167.88.63.82 2"
       - "[SS] 瑞典-167.88.63.82 3"
       - "[SS] 瑞典-167.88.63.99"
       - "[SS] 瑞典-167.88.63.99 2"
-      - "[SS] 🇦🇺 澳大利亚-172.105.172.37"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇨🇦 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
@@ -1069,17 +1059,16 @@ proxy-groups:
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇨🇦 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
+      - "[SS] 🇨🇦 加拿大-134.195.196.193"
+      - "[SS] 🇨🇦 加拿大-134.195.196.50"
       - "[SS] 🇨🇦 加拿大-146.70.27.12"
       - "[SS] 🇨🇦 加拿大-198.57.27.218"
       - "[SS] 🇨🇦 加拿大-198.57.27.225"
       - "[SS] 🇨🇦 加拿大-198.57.27.225:2375"
       - "[SS] 🇬🇧 英国-89.46.223.239"
       - "[SS] 🇭🇰 香港-118.107.244.110"
+      - "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com"
       - "[VMess] 🇭🇰 香港-www.gov.hk"
-      - "[SS] 🇮🇳 印度-172.105.38.55"
-      - "[SS] 🇮🇳 印度-172.105.38.55 2"
-      - "[SS] 🇮🇳 印度-172.105.38.55 3"
-      - "[SS] 🇮🇳 印度-172.105.59.32"
       - "[Trojan] 🇯🇵 日本-45.66.134.219"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
       - "[SS] 🇷🇺 @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
@@ -1106,12 +1095,17 @@ proxy-groups:
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub 2"
       - "[VMess] 🇷🇺 @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_72"
-      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_73"
-      - "[Trojan] 🇷🇺 俄罗斯-t3.ssrsub.com"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_50"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_51"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_52"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_53"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_54"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_55"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_56"
+      - "[Trojan] 🇷🇺 Relay_-🇷🇺RU_58"
       - "[Trojan] 🇷🇺 俄罗斯-t7.ssrsub.com"
       - "[Trojan] 🇷🇺 俄罗斯T5-t5.ssrsub.com"
-      - "[VMess] 🇷🇺 俄罗斯V6-v7.ssrsub.com"
+      - "[VMess] 🇷🇺 俄罗斯V11-v3.ssrsub.com"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
       - "[Trojan] 🇺🇸 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
@@ -1120,6 +1114,10 @@ proxy-groups:
       - "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_47"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_48"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_49"
+      - "[Trojan] 🇺🇸 Relay_-🇺🇸US_57"
       - "[SS] 🇺🇸 洛杉矶-172.99.190.158"
       - "[VMess] 🇺🇸 美国-128.14.157.112"
       - "[SS] 🇺🇸 美国-172.99.190.149"
@@ -1128,9 +1126,11 @@ proxy-groups:
       - "[SS] 🇺🇸 美国-172.99.190.158"
       - "[SS] 🇺🇸 美国-172.99.190.35"
       - "[SS] 🇺🇸 美国-172.99.190.35 2"
+      - "[SS] 🇺🇸 美国-172.99.190.35 3"
       - "[SS] 🇺🇸 美国-198.57.27.218"
       - "[SS] 🇺🇸 美国-38.107.226.146"
-      - "[SS] 🇺🇸 美国-45.79.122.28"
+      - "[SS] 🇺🇸 美国-38.107.226.146 2"
+      - "[SS] 🇺🇸 美国-38.107.226.146 3"
       - "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com"
       - "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com"
   - name: 📲 电报消息
@@ -1320,6 +1320,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "[SS] 🇭🇰 香港-118.107.244.110"
+      - "[VMess] 🇭🇰 香港-hk1kte-node.aiqiche123.com"
       - "[VMess] 🇭🇰 香港-www.gov.hk"
   - name: 🇯🇵 日本节点
     type: url-test
@@ -1342,6 +1343,10 @@ proxy-groups:
       - "[VMess] 🇺🇸 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
       - "[VMess] 🇺🇸 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_47"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_48"
+      - "[VMess] 🇺🇸 Relay_-🇺🇸US_49"
+      - "[Trojan] 🇺🇸 Relay_-🇺🇸US_57"
       - "[SS] 🇺🇸 洛杉矶-172.99.190.158"
       - "[VMess] 🇺🇸 美国-128.14.157.112"
       - "[SS] 🇺🇸 美国-172.99.190.149"
@@ -1350,9 +1355,11 @@ proxy-groups:
       - "[SS] 🇺🇸 美国-172.99.190.158"
       - "[SS] 🇺🇸 美国-172.99.190.35"
       - "[SS] 🇺🇸 美国-172.99.190.35 2"
+      - "[SS] 🇺🇸 美国-172.99.190.35 3"
       - "[SS] 🇺🇸 美国-198.57.27.218"
       - "[SS] 🇺🇸 美国-38.107.226.146"
-      - "[SS] 🇺🇸 美国-45.79.122.28"
+      - "[SS] 🇺🇸 美国-38.107.226.146 2"
+      - "[SS] 🇺🇸 美国-38.107.226.146 3"
       - "[VMess] 🇺🇸 美国-us2fgh-node.aiqiche123.com"
       - "[Trojan] 🇺🇸 美国T9-t1.ssrsub.com"
   - name: 🇨🇳 台湾节点
