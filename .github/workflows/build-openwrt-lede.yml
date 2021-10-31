@@ -10,31 +10,41 @@ name: Build OpenWrt lede
 on:
   repository_dispatch:
   workflow_dispatch:
-  schedule:
-    - cron: '0 17 * * 0'
+  #schedule:
+    #- cron: '0 17 * * 0'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  ROOT_DIR: router-config/lede-master
   FEEDS_CONF: router-config/lede-master/feeds.conf.default
   CONFIG_FILE: router-config/lede-master/.config
   DIY_P1_SH: router-config/lede-master/diy-part1.sh
   DIY_P2_SH: router-config/lede-master/diy-part2.sh
-  UPLOAD_BIN_DIR: false
-  UPLOAD_ARMVIRT: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_BIN_DIR: true
+  UPLOAD_ARMVIRT: true
+  UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: true
+  UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
-  UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: false
   DELETE_RELEASE: true
   DELETE_ARTIFACTS: true
   RECENT_LASTEST: 3
   TZ: Asia/Shanghai
+  FILE_NAME: armv8_mini
+  PRODUCT_NAME: ARMv8_mini
 
 jobs:
   build:
     runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
+    outputs:
+      OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
+      PLATFORM: ${{ steps.compile.outputs.PLATFORM }}
+      TARGET: ${{ steps.compile.outputs.TARGET }}
+      SUBTARGET: ${{ steps.compile.outputs.SUBTARGET }}
+      FIRMWARE: ${{ steps.compile.outputs.FIRMWARE }}
+      GENERATE_STATUS: ${{ steps.generate.outputs.GENERATE_STATUS }}
 
     steps:
     - name: Checkout
@@ -68,11 +78,11 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
+    - name: Copy config files
+      run: mkdir -p ./openwrt/files && cp -f -a ./$ROOT_DIR/etc/ openwrt/files && cp -f -a ./router-config/files/ openwrt
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
@@ -81,6 +91,12 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+
+    - name: Install feeds first
+      run: cd openwrt && ./scripts/feeds install -a
+
+    - name: Install feeds second
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Download package
       id: package
