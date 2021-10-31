@@ -30,6 +30,7 @@ env:
   DELETE_RELEASE: true
   DELETE_ARTIFACTS: true
   RECENT_LASTEST: 3
+  KEEP_MININUM_RELEASE : 3
   TZ: Asia/Shanghai
   FILE_NAME: armv8_mini
   PRODUCT_NAME: ARMv8_mini
@@ -138,19 +139,19 @@ jobs:
 
     - name: Upload artifact to Actions
       uses: kittaakos/upload-artifact-as-is@master
-      if: steps.Build.outputs.status == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       with:
         path: ${{ env.BIN_FILE_PATH }}/
 
     - name: Upload OpenWrt Firmware to cowtransfer
-      if: steps.Build.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
         curl -fsSL git.io/file-transfer | sh
         ./transfer cow --block 2621440 -s -p 64 --no-progress ${{ env.BIN_FILE_PATH }}/{openwrt_s9xxx_*,openwrt_n1_*} 2>&1 | tee cowtransfer.log
         echo "COW_URL=$(cat cowtransfer.log | grep https | cut -f3 -d" ")" >> $GITHUB_ENV
 
     - name: Upload OpenWrt Firmware to WeTransfer
-      if: steps.Build.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${{ env.BIN_FILE_PATH }}/{openwrt_s9xxx_*,openwrt_n1_*} 2>&1 | tee wetransfer.log
@@ -158,7 +159,7 @@ jobs:
 
     - name: Generate release tag
       id: tag-build
-      if: steps.Build.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
@@ -167,11 +168,11 @@ jobs:
 
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
-      if: steps.tag.outputs.status == 'success' && !cancelled()
+      if: steps.tag-build.outputs.status == 'success' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
+        tag_name: openwrt_s9xxx_lede_${{ steps.tag-build.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
@@ -192,7 +193,7 @@ jobs:
 
     - name: Upload OpenWrt bin directory to Actions
       uses: actions/upload-artifact@v2
-      if: steps.compile.outputs.status == 'success' && !cancelled()
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true' && !cancelled()
       with:
         name: openwrt_bin_armvirt_64_${{ env.FILE_DATE }}
         path: openwrt/bin
@@ -385,7 +386,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
-        
+
       - name: Restore Variables
         run: |
           echo "OPENWRTROOT=$(echo '${{needs.Build.outputs.OPENWRTROOT}}')" >> $GITHUB_ENV
@@ -397,13 +398,13 @@ jobs:
 
       - name: Download Bin Folder
         uses: actions/download-artifact@v2
-        if: env.GENERATE_STATUS == 'success'
+        #if: env.GENERATE_STATUS == 'success'
         with:
           name: bin-archive
           path: openwrt/bin
 
       - name: Deploy Packages-Server
-        if: env.GENERATE_STATUS == 'success'
+        #if: env.GENERATE_STATUS == 'success'
         run: |
           mkdir -p server/web/snapshots/targets/$TARGET/$SUBTARGET
           cp -r $OPENWRTROOT/bin/packages server/web/snapshots
@@ -414,7 +415,7 @@ jobs:
 
       - name: Organize Files
         id: organize
-        if: env.GENERATE_STATUS == 'success'
+        #if: env.GENERATE_STATUS == 'success'
         run: |
           cd ${FIRMWARE}
           rm -rf packages
@@ -443,7 +444,7 @@ jobs:
 
       - name: Generate release Tag
         id: tag-release
-        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+        if: steps.organize.outputs.ORGANIZE_STATUS == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
           echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean1"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
@@ -454,12 +455,12 @@ jobs:
 
       - name: Upload firmware to release
         uses: softprops/action-gh-release@v1
-        if: steps.tag.outputs.status == 'success' && !cancelled()
+        if: steps.tag-release.outputs.status == 'success' && !cancelled()
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} NanoPi-R4S formal edition_Docker版_全插件
-          tag_name: ${{ steps.tag.outputs.release_tag }}
+          name: ${{ steps.tag-release.outputs.release_date }} NanoPi-R4S formal edition_Docker版_全插件
+          tag_name: ${{ steps.tag-release.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
 
@@ -478,6 +479,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
 
+      - name: Delete older workflow runs and artifacts
+        uses: Mattraks/delete-workflow-runs@main
+        if: env.DELETE_ARTIFACTS == 'true'
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: ${{ env.KEEP_DAY }}
+          keep_minimum_runs: ${{ env.KEEP_MININUM_RUNS }}
+
       - name: Delete Artifacts
         uses: geekyeggo/delete-artifact@v1
         with:
@@ -491,7 +501,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            name: ${{ steps.tag.outputs.release_date }} NanoPi-R4S formal edition_Docker版 - 全插件
-            tag_name: ${{ steps.tag.outputs.release_tag }}
+            name: ${{ steps.tag-release.outputs.release_date }} NanoPi-R4S formal edition_Docker版 - 全插件
+            tag_name: ${{ steps.tag-release.outputs.release_tag }}
             body_path: release.txt
             files: ${{ env.FIRMWARE }}/*
