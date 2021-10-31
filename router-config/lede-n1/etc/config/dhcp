@@ -166,19 +166,6 @@ config host
 	option mac '00:22:6D:63:E5:67'
 	option ip '192.168.2.198'
 
-config dhcp 'zerotier'
-	option start '100'
-	option leasetime '12h'
-	option limit '150'
-	option interface 'zerotier'
-
-config srvhost
-	option srv '_vlmcs._tcp'
-	option target 'F-NET'
-	option port '1688'
-	option class '0'
-	option weight '100'
-
 config domain
 	option name 'e.vmess.com'
 	option ip '192.168.2.5'
