@@ -2,4 +2,3 @@
 0 4 * * * /etc/coremark.sh
 53 5 * * * sh /usr/share/jd-dailybonus/newapp.sh -w
 1 9 * * * sh /usr/share/jd-dailybonus/newapp.sh -u
-0 6 * * * lua /usr/share/passwall/rule_update.lua log > /dev/null 2>&1 &

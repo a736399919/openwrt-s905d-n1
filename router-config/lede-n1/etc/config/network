@@ -17,6 +17,8 @@ config interface 'lan'
 	option ip6assign '64'
 	option ip6ifaceid '::254'
 	option ipaddr '192.168.2.254'
+	option stp '1'
+	option igmp_snooping '1'
 
 config interface 'wan'
 	option proto 'dhcp'
