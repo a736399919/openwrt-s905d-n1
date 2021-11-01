@@ -305,6 +305,7 @@ jobs:
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
+        echo "::set-output name=GENERATE_STATUS::success"
 
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
@@ -380,7 +381,7 @@ jobs:
 
     - name: Upload Bin Folder
       uses: actions/upload-artifact@main
-      if: steps.generate.outputs.GENERATE_STATUS == 'success'
+      if: steps.tag.outputs.GENERATE_STATUS == 'success'
       with:
         name: bin-archive
         path: openwrt/bin
