@@ -1,0 +1,2975 @@
+---
+mixed-port: 7893
+allow-lan: true
+mode: rule
+log-level: silent
+external-controller: 0.0.0.0:9090
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 192.168.5.254
+  - "[fe80::2276:93ff:fe3d:55e9]:53"
+  - dhcp://"eth0"
+  - " 8.8.8.8"
+  - 80.80.80.80
+  - 208.67.222.222
+  - 223.5.5.5
+  fallback:
+  - https://doh.pub/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.rubyfish.cn/dns-query
+  - tls://1.1.1.1:853
+  - "[2606:4700:4700::1111]:53"
+  - "[2001:4860:4860::8888]:53"
+  listen: 0.0.0.0:7874
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  default-nameserver:
+  - 192.168.5.254
+  - "[fe80::2276:93ff:fe3d:55e9]:53"
+  - 80.80.80.80
+  - 208.67.222.222
+  - 223.5.5.5
+  - "[2606:4700:4700::1111]:53"
+  - "[2001:4860:4860::8888]:53"
+proxies:
+- name: "BE \U0001F1E7\U0001F1EA Brussels 1"
+  server: 91.90.123.213
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Brussels 2"
+  server: 91.90.123.141
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Brussels 3"
+  server: 91.90.123.187
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Brussels 4"
+  server: 91.90.123.211
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Antwerp 1"
+  server: 188.95.55.115
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Antwerp 2"
+  server: 188.95.55.125
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Antwerp 3"
+  server: 188.95.55.123
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BE \U0001F1E7\U0001F1EA Antwerp 4"
+  server: 188.95.55.108
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LU \U0001F1F1\U0001F1FA Luxembourg 1"
+  server: 185.153.151.164
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LU \U0001F1F1\U0001F1FA Luxembourg 2"
+  server: 95.85.66.40
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LU \U0001F1F1\U0001F1FA Luxembourg 3"
+  server: 95.85.66.38
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LU \U0001F1F1\U0001F1FA Luxembourg 4"
+  server: 185.153.151.179
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NO \U0001F1F3\U0001F1F4 Oslo 1"
+  server: 91.219.215.67
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NO \U0001F1F3\U0001F1F4 Oslo 2"
+  server: 91.219.215.36
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NO \U0001F1F3\U0001F1F4 Oslo 3"
+  server: 91.219.215.38
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NO \U0001F1F3\U0001F1F4 Oslo 4"
+  server: 91.219.215.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Gdansk 1"
+  server: 5.133.8.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Gdansk 2"
+  server: 5.187.49.148
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Gdansk 3"
+  server: 5.133.14.198
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Gdansk 4"
+  server: 5.187.49.147
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Warsaw 1"
+  server: 5.253.206.67
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Warsaw 2"
+  server: 185.246.208.106
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Warsaw 3"
+  server: 185.246.208.108
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PL \U0001F1F5\U0001F1F1 Warsaw 4"
+  server: 185.246.208.107
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Paris 1"
+  server: 84.17.43.183
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Paris 2"
+  server: 143.244.57.81
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Paris 3"
+  server: 143.244.57.118
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Paris 4"
+  server: 143.244.56.228
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Marseille 1"
+  server: 185.166.84.79
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Marseille 2"
+  server: 185.166.84.73
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Marseille 3"
+  server: 138.199.16.142
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Marseille 4"
+  server: 138.199.16.130
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Bordeaux 1"
+  server: 185.108.106.24
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Bordeaux 2"
+  server: 185.108.106.106
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Bordeaux 3"
+  server: 185.108.106.174
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FR \U0001F1EB\U0001F1F7 Bordeaux 4"
+  server: 185.108.106.154
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Berlin 1"
+  server: 193.29.106.163
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Berlin 2"
+  server: 193.29.106.165
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Berlin 3"
+  server: 193.29.106.123
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Berlin 4"
+  server: 193.29.106.133
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Frankfurt am Main 1"
+  server: 138.199.19.169
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Frankfurt am Main 2"
+  server: 156.146.33.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Frankfurt am Main 3"
+  server: 138.199.19.167
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DE \U0001F1E9\U0001F1EA Frankfurt am Main 4"
+  server: 138.199.19.162
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AZ \U0001F1E6\U0001F1FF Baku 1"
+  server: 94.20.154.61
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AZ \U0001F1E6\U0001F1FF Baku 2"
+  server: 62.212.239.51
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AZ \U0001F1E6\U0001F1FF Baku 3"
+  server: 62.212.239.45
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AZ \U0001F1E6\U0001F1FF Baku 4"
+  server: 62.212.239.67
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NL \U0001F1F3\U0001F1F1 Amsterdam 1"
+  server: 143.244.42.90
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NL \U0001F1F3\U0001F1F1 Amsterdam 2"
+  server: 212.102.35.204
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NL \U0001F1F3\U0001F1F1 Amsterdam 3"
+  server: 143.244.42.76
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NL \U0001F1F3\U0001F1F1 Amsterdam 4"
+  server: 143.244.42.91
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DK \U0001F1E9\U0001F1F0 Copenhagen 1"
+  server: 193.29.107.219
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DK \U0001F1E9\U0001F1F0 Copenhagen 2"
+  server: 193.29.107.195
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DK \U0001F1E9\U0001F1F0 Copenhagen 3"
+  server: 193.29.107.181
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DK \U0001F1E9\U0001F1F0 Copenhagen 4"
+  server: 89.45.7.53
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Rome 1"
+  server: 82.102.26.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Rome 2"
+  server: 82.102.26.62
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Rome 3"
+  server: 82.102.26.115
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Rome 4"
+  server: 37.120.207.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Milan 1"
+  server: 84.17.58.190
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Milan 2"
+  server: 212.102.54.162
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Milan 3"
+  server: 212.102.54.181
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IT \U0001F1EE\U0001F1F9 Milan 4"
+  server: 212.102.54.150
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FI \U0001F1EB\U0001F1EE Helsinki 1"
+  server: 196.196.203.101
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FI \U0001F1EB\U0001F1EE Helsinki 2"
+  server: 196.196.203.85
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FI \U0001F1EB\U0001F1EE Helsinki 3"
+  server: 196.196.203.107
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "FI \U0001F1EB\U0001F1EE Helsinki 4"
+  server: 196.196.203.141
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CH \U0001F1E8\U0001F1ED Zurich 1"
+  server: 156.146.62.57
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CH \U0001F1E8\U0001F1ED Zurich 2"
+  server: 156.146.62.41
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CH \U0001F1E8\U0001F1ED Zurich 3"
+  server: 156.146.62.51
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CH \U0001F1E8\U0001F1ED Zurich 4"
+  server: 156.146.62.46
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TR \U0001F1F9\U0001F1F7 Istanbul 1"
+  server: 107.150.94.43
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TR \U0001F1F9\U0001F1F7 Istanbul 2"
+  server: 107.150.94.45
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TR \U0001F1F9\U0001F1F7 Istanbul 3"
+  server: 107.150.94.21
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TR \U0001F1F9\U0001F1F7 Istanbul 4"
+  server: 107.150.94.19
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AL \U0001F1E6\U0001F1F1 Tirana 1"
+  server: 31.171.155.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AL \U0001F1E6\U0001F1F1 Tirana 2"
+  server: 31.171.153.115
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AL \U0001F1E6\U0001F1F1 Tirana 3"
+  server: 31.171.153.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AL \U0001F1E6\U0001F1F1 Tirana 4"
+  server: 31.171.154.219
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DZ \U0001F1E9\U0001F1FF Algiers 1"
+  server: 62.197.144.3
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DZ \U0001F1E9\U0001F1FF Algiers 2"
+  server: 62.197.144.4
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DZ \U0001F1E9\U0001F1FF Algiers 3"
+  server: 62.197.144.5
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "DZ \U0001F1E9\U0001F1FF Algiers 4"
+  server: 62.197.144.6
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AT \U0001F1E6\U0001F1F9 Vienna 1"
+  server: 146.70.28.93
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AT \U0001F1E6\U0001F1F9 Vienna 2"
+  server: 146.70.28.94
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AT \U0001F1E6\U0001F1F9 Vienna 3"
+  server: 89.187.168.56
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AT \U0001F1E6\U0001F1F9 Vienna 4"
+  server: 146.70.28.91
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HR \U0001F1ED\U0001F1F7 Zagreb 1"
+  server: 176.222.34.119
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HR \U0001F1ED\U0001F1F7 Zagreb 2"
+  server: 89.164.99.109
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HR \U0001F1ED\U0001F1F7 Zagreb 3"
+  server: 89.164.99.136
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HR \U0001F1ED\U0001F1F7 Zagreb 4"
+  server: 89.164.99.111
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CY \U0001F1E8\U0001F1FE Nicosia 1"
+  server: 195.47.194.99
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CY \U0001F1E8\U0001F1FE Nicosia 2"
+  server: 195.47.194.98
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CY \U0001F1E8\U0001F1FE Nicosia 3"
+  server: 195.47.194.97
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CY \U0001F1E8\U0001F1FE Nicosia 4"
+  server: 195.47.194.96
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "EE \U0001F1EA\U0001F1EA Tallinn 1"
+  server: 185.174.159.138
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "EE \U0001F1EA\U0001F1EA Tallinn 2"
+  server: 185.174.159.137
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "EE \U0001F1EA\U0001F1EA Tallinn 3"
+  server: 185.174.159.136
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "EE \U0001F1EA\U0001F1EA Tallinn 4"
+  server: 185.174.159.139
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IE \U0001F1EE\U0001F1EA Dublin 1"
+  server: 5.157.13.118
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IE \U0001F1EE\U0001F1EA Dublin 2"
+  server: 5.157.13.115
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IE \U0001F1EE\U0001F1EA Dublin 3"
+  server: 5.157.13.116
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IE \U0001F1EE\U0001F1EA Dublin 4"
+  server: 5.157.13.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LV \U0001F1F1\U0001F1FB Riga 1"
+  server: 188.92.78.152
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LV \U0001F1F1\U0001F1FB Riga 2"
+  server: 188.92.78.153
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LV \U0001F1F1\U0001F1FB Riga 3"
+  server: 188.92.78.210
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "LV \U0001F1F1\U0001F1FB Riga 4"
+  server: 91.203.69.178
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Lisbon 1"
+  server: 91.250.240.148
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Lisbon 2"
+  server: 91.205.230.134
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Lisbon 3"
+  server: 91.205.230.132
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Lisbon 4"
+  server: 91.205.230.131
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Porto 1"
+  server: 194.39.127.153
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Porto 2"
+  server: 194.39.127.154
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Porto 3"
+  server: 194.39.127.163
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PT \U0001F1F5\U0001F1F9 Porto 4"
+  server: 194.39.127.181
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RO \U0001F1F7\U0001F1F4 Bucharest 1"
+  server: 185.102.217.194
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RO \U0001F1F7\U0001F1F4 Bucharest 2"
+  server: 185.102.217.195
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RO \U0001F1F7\U0001F1F4 Bucharest 3"
+  server: 185.102.217.196
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RO \U0001F1F7\U0001F1F4 Bucharest 4"
+  server: 185.102.217.197
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RU \U0001F1F7\U0001F1FA Moscow 1"
+  server: 92.38.138.139
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RU \U0001F1F7\U0001F1FA Moscow 2"
+  server: 92.38.138.151
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RU \U0001F1F7\U0001F1FA Moscow 3"
+  server: 92.38.138.141
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RU \U0001F1F7\U0001F1FA Moscow 4"
+  server: 92.38.138.150
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RS \U0001F1F7\U0001F1F8 Belgrade 1"
+  server: 152.89.160.147
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RS \U0001F1F7\U0001F1F8 Belgrade 2"
+  server: 152.89.160.211
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RS \U0001F1F7\U0001F1F8 Belgrade 3"
+  server: 152.89.160.148
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "RS \U0001F1F7\U0001F1F8 Belgrade 4"
+  server: 152.89.160.149
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SK \U0001F1F8\U0001F1F0 Bratislava 1"
+  server: 185.76.8.215
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SK \U0001F1F8\U0001F1F0 Bratislava 2"
+  server: 185.76.8.211
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SK \U0001F1F8\U0001F1F0 Bratislava 3"
+  server: 185.76.8.217
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SK \U0001F1F8\U0001F1F0 Bratislava 4"
+  server: 185.76.8.213
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SI \U0001F1F8\U0001F1EE Ljubljana 1"
+  server: 195.158.249.61
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SI \U0001F1F8\U0001F1EE Ljubljana 2"
+  server: 195.158.249.40
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SI \U0001F1F8\U0001F1EE Ljubljana 3"
+  server: 195.158.249.42
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SI \U0001F1F8\U0001F1EE Ljubljana 4"
+  server: 195.158.249.50
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Barcelona 1"
+  server: 82.102.26.155
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Barcelona 2"
+  server: 185.188.61.84
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Barcelona 3"
+  server: 185.188.61.85
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Barcelona 4"
+  server: 185.188.61.86
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Madrid 1"
+  server: 89.37.95.13
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Madrid 2"
+  server: 89.37.95.14
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Madrid 3"
+  server: 89.37.95.15
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Madrid 4"
+  server: 212.102.48.20
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Valencia 1"
+  server: 185.153.150.70
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Valencia 2"
+  server: 185.153.150.76
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Valencia 3"
+  server: 185.153.150.52
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ES \U0001F1EA\U0001F1F8 Valencia 4"
+  server: 185.153.150.53
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SE \U0001F1F8\U0001F1EA Stockholm 1"
+  server: 185.76.9.51
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SE \U0001F1F8\U0001F1EA Stockholm 2"
+  server: 185.76.9.52
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SE \U0001F1F8\U0001F1EA Stockholm 3"
+  server: 185.76.9.49
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SE \U0001F1F8\U0001F1EA Stockholm 4"
+  server: 185.76.9.55
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 London 1"
+  server: 185.134.22.115
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 London 2"
+  server: 185.38.148.232
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 London 3"
+  server: 185.16.206.69
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 London 4"
+  server: 5.226.139.232
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Glasgow 1"
+  server: 185.108.105.127
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Glasgow 2"
+  server: 185.108.105.57
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Glasgow 3"
+  server: 185.108.105.33
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Glasgow 4"
+  server: 185.108.105.82
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Manchester 1"
+  server: 89.238.130.253
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Manchester 2"
+  server: 194.37.98.220
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Manchester 3"
+  server: 192.145.126.131
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GB \U0001F1EC\U0001F1E7 Manchester 4"
+  server: 89.238.133.123
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Latham 1"
+  server: 45.43.19.92
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Latham 2"
+  server: 192.154.248.179
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Latham 3"
+  server: 45.43.19.68
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Latham 4"
+  server: 45.43.19.82
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Boston 1"
+  server: 173.237.207.54
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Boston 2"
+  server: 173.237.207.30
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Boston 3"
+  server: 173.237.207.44
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Boston 4"
+  server: 173.237.207.32
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Buffalo 1"
+  server: 172.93.153.148
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Buffalo 2"
+  server: 172.93.146.82
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Buffalo 3"
+  server: 64.44.42.164
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Buffalo 4"
+  server: 172.93.146.210
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 New York 1"
+  server: 84.17.35.111
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 New York 2"
+  server: 37.19.199.196
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 New York 3"
+  server: 84.17.35.103
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 New York 4"
+  server: 37.19.199.224
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Seattle 1"
+  server: 84.17.41.77
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Seattle 2"
+  server: 212.102.46.54
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Seattle 3"
+  server: 212.102.46.49
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Seattle 4"
+  server: 84.17.41.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Chicago 1"
+  server: 138.199.42.135
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Chicago 2"
+  server: 185.246.209.55
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Chicago 3"
+  server: 138.199.42.133
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Chicago 4"
+  server: 185.246.209.57
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Detroit 1"
+  server: 104.244.208.227
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Detroit 2"
+  server: 104.244.211.179
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Detroit 3"
+  server: 104.244.208.35
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Detroit 4"
+  server: 104.244.211.181
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Denver 1"
+  server: 212.102.44.87
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Denver 2"
+  server: 212.102.44.91
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Denver 3"
+  server: 212.102.44.71
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Denver 4"
+  server: 212.102.44.81
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Bend 1"
+  server: 154.16.168.186
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Bend 2"
+  server: 154.16.168.184
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Bend 3"
+  server: 45.43.14.73
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Bend 4"
+  server: 45.43.14.75
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Kansas City 1"
+  server: 198.204.230.59
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Kansas City 2"
+  server: 198.204.230.61
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Kansas City 3"
+  server: 198.204.230.58
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Kansas City 4"
+  server: 198.204.230.60
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Salt Lake City 1"
+  server: 104.200.131.7
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Salt Lake City 2"
+  server: 104.200.131.245
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Salt Lake City 3"
+  server: 104.200.131.233
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Salt Lake City 4"
+  server: 104.200.131.5
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 St. Louis 1"
+  server: 148.72.174.36
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 St. Louis 2"
+  server: 148.72.174.38
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 St. Louis 3"
+  server: 148.72.171.178
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 St. Louis 4"
+  server: 148.72.174.51
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Tampa 1"
+  server: 209.216.92.8
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Tampa 2"
+  server: 209.216.85.165
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Tampa 3"
+  server: 209.216.92.200
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Tampa 4"
+  server: 209.216.92.215
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Miami 1"
+  server: 212.102.61.148
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Miami 2"
+  server: 212.102.61.136
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Miami 3"
+  server: 89.38.227.173
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Miami 4"
+  server: 212.102.61.138
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Charlotte 1"
+  server: 155.254.29.163
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Charlotte 2"
+  server: 155.254.29.165
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Charlotte 3"
+  server: 154.16.171.213
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Charlotte 4"
+  server: 192.154.254.135
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Dallas 1"
+  server: 89.187.175.165
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Dallas 2"
+  server: 66.115.177.146
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Dallas 3"
+  server: 66.115.177.138
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Dallas 4"
+  server: 89.187.175.167
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Phoenix 1"
+  server: 199.58.187.25
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Phoenix 2"
+  server: 199.58.187.18
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Phoenix 3"
+  server: 172.98.87.37
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Phoenix 4"
+  server: 199.58.187.67
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Atlanta 1"
+  server: 45.134.140.17
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Atlanta 2"
+  server: 138.199.2.135
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Atlanta 3"
+  server: 45.134.140.4
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Atlanta 4"
+  server: 66.115.175.50
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Orlando 1"
+  server: 198.147.22.85
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Orlando 2"
+  server: 198.147.22.197
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Orlando 3"
+  server: 198.147.22.167
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Orlando 4"
+  server: 66.115.182.74
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Las Vegas 1"
+  server: 79.110.54.93
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Las Vegas 2"
+  server: 79.110.54.125
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Las Vegas 3"
+  server: 79.110.53.205
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Las Vegas 4"
+  server: 79.110.54.123
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Los Angeles 1"
+  server: 138.199.9.197
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Los Angeles 2"
+  server: 138.199.9.194
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Los Angeles 3"
+  server: 138.199.9.193
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Los Angeles 4"
+  server: 138.199.9.195
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Francisco 1"
+  server: 23.81.181.9
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Francisco 2"
+  server: 185.124.240.151
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Francisco 3"
+  server: 185.124.240.157
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Francisco 4"
+  server: 185.124.240.155
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Ashburn 1"
+  server: 37.19.220.201
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Ashburn 2"
+  server: 37.19.220.199
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Ashburn 3"
+  server: 37.19.220.196
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Ashburn 4"
+  server: 37.19.220.194
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Houston 1"
+  server: 199.10.64.165
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Houston 2"
+  server: 199.10.64.163
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Houston 3"
+  server: 199.10.64.149
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 Houston 4"
+  server: 199.10.64.179
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Jose 1"
+  server: 156.146.54.53
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Jose 2"
+  server: 156.146.54.54
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Jose 3"
+  server: 156.146.54.56
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "US \U0001F1FA\U0001F1F8 San Jose 4"
+  server: 156.146.54.57
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BA \U0001F1E7\U0001F1E6 Sarajevo"
+  server: 185.212.111.6
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BG \U0001F1E7\U0001F1EC Sofia"
+  server: 217.138.202.21
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CZ \U0001F1E8\U0001F1FF Prague"
+  server: 217.138.199.181
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GR \U0001F1EC\U0001F1F7 Athens"
+  server: 194.150.167.54
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HU \U0001F1ED\U0001F1FA Budapest"
+  server: 185.252.223.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IS \U0001F1EE\U0001F1F8 Reykjavik"
+  server: 45.133.193.219
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "MD \U0001F1F2\U0001F1E9 Chisinau"
+  server: 194.33.40.114
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "MK \U0001F1F2\U0001F1F0 Skopje"
+  server: 185.225.28.85
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "UA \U0001F1FA\U0001F1E6 Kyiv"
+  server: 156.146.50.102
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AR \U0001F1E6\U0001F1F7 Buenos Aires"
+  server: 91.206.168.64
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "BR \U0001F1E7\U0001F1F7 Sao Paulo"
+  server: 138.199.58.70
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CA \U0001F1E8\U0001F1E6 Montreal"
+  server: 91.245.254.131
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CA \U0001F1E8\U0001F1E6 Toronto"
+  server: 37.19.211.114
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CA \U0001F1E8\U0001F1E6 Vancouver"
+  server: 66.115.147.92
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CO \U0001F1E8\U0001F1F4 Bogota"
+  server: 45.129.32.32
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "CR \U0001F1E8\U0001F1F7 San Jose"
+  server: 176.227.241.35
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "MX \U0001F1F2\U0001F1FD Mexico City"
+  server: 194.41.112.16
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AU \U0001F1E6\U0001F1FA Perth"
+  server: 124.150.139.83
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AU \U0001F1E6\U0001F1FA Adelaide"
+  server: 45.248.79.37
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AU \U0001F1E6\U0001F1FA Brisbane"
+  server: 144.48.39.133
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AU \U0001F1E6\U0001F1FA Melbourne"
+  server: 103.192.80.245
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AU \U0001F1E6\U0001F1FA Sydney"
+  server: 180.149.228.179
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "HK \U0001F1ED\U0001F1F0 Hong Kong"
+  server: 212.102.42.89
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IN \U0001F1EE\U0001F1F3 Indore"
+  server: 103.39.132.187
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IN \U0001F1EE\U0001F1F3 Mumbai"
+  server: 129.227.219.24
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IN \U0001F1EE\U0001F1F3 Chennai"
+  server: 103.108.117.118
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ID \U0001F1EE\U0001F1E9 Jakarta"
+  server: 103.120.66.229
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "JP \U0001F1EF\U0001F1F5 Tokyo"
+  server: 89.187.160.132
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "KZ \U0001F1F0\U0001F1FF Oral"
+  server: 5.189.202.11
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "My \U0001F1F2\U0001F1FE Kuala Lumpur"
+  server: 111.90.140.136
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "Nz \U0001F1F3\U0001F1FF Auckland"
+  server: 180.149.231.117
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PH \U0001F1F5\U0001F1ED Manila"
+  server: 45.134.224.29
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "SG \U0001F1F8\U0001F1EC Singapore"
+  server: 89.187.163.195
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "KR \U0001F1F0\U0001F1F7 Seoul"
+  server: 27.255.77.197
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TW \U0001F1F9\U0001F1FC Taichung City"
+  server: 103.152.151.85
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "TH \U0001F1F9\U0001F1ED Bangkok"
+  server: 27.131.164.109
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "IL \U0001F1EE\U0001F1F1 Tel Aviv"
+  server: 87.239.255.109
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "NG \U0001F1F3\U0001F1EC Lagos"
+  server: 102.165.23.44
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "ZA \U0001F1FF\U0001F1E6 Johannesburg"
+  server: 102.165.47.134
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "AE \U0001F1E6\U0001F1EA Dubai"
+  server: 176.125.231.21
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PA \U0001F1F5\U0001F1E6 Panama"
+  server: 185.244.139.7
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "PE \U0001F1F5\U0001F1EA Lima"
+  server: 193.218.35.12
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "VE \U0001F1FB\U0001F1EA Caracas"
+  server: 45.149.3.5
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "GE \U0001F1EC\U0001F1EA Tbilisi"
+  server: 91.239.207.226
+  port: 31572
+  type: ss
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+proxy-groups:
+- name: "\U0001F525 Auto"
+  type: url-test
+  proxies:
+  - "BE \U0001F1E7\U0001F1EA Brussels 1"
+  - "BE \U0001F1E7\U0001F1EA Brussels 2"
+  - "BE \U0001F1E7\U0001F1EA Brussels 3"
+  - "BE \U0001F1E7\U0001F1EA Brussels 4"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 1"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 2"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 3"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 4"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 1"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 2"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 3"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 4"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 1"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 2"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 3"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 4"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 1"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 2"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 3"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 4"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 1"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 2"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 3"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 4"
+  - "FR \U0001F1EB\U0001F1F7 Paris 1"
+  - "FR \U0001F1EB\U0001F1F7 Paris 2"
+  - "FR \U0001F1EB\U0001F1F7 Paris 3"
+  - "FR \U0001F1EB\U0001F1F7 Paris 4"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 1"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 2"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 3"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 4"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 1"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 2"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 3"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 4"
+  - "DE \U0001F1E9\U0001F1EA Berlin 1"
+  - "DE \U0001F1E9\U0001F1EA Berlin 2"
+  - "DE \U0001F1E9\U0001F1EA Berlin 3"
+  - "DE \U0001F1E9\U0001F1EA Berlin 4"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 1"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 2"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 3"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 4"
+  - "AZ \U0001F1E6\U0001F1FF Baku 1"
+  - "AZ \U0001F1E6\U0001F1FF Baku 2"
+  - "AZ \U0001F1E6\U0001F1FF Baku 3"
+  - "AZ \U0001F1E6\U0001F1FF Baku 4"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 1"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 2"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 3"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 4"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 1"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 2"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 3"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 4"
+  - "IT \U0001F1EE\U0001F1F9 Rome 1"
+  - "IT \U0001F1EE\U0001F1F9 Rome 2"
+  - "IT \U0001F1EE\U0001F1F9 Rome 3"
+  - "IT \U0001F1EE\U0001F1F9 Rome 4"
+  - "IT \U0001F1EE\U0001F1F9 Milan 1"
+  - "IT \U0001F1EE\U0001F1F9 Milan 2"
+  - "IT \U0001F1EE\U0001F1F9 Milan 3"
+  - "IT \U0001F1EE\U0001F1F9 Milan 4"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 1"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 2"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 3"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 4"
+  - "CH \U0001F1E8\U0001F1ED Zurich 1"
+  - "CH \U0001F1E8\U0001F1ED Zurich 2"
+  - "CH \U0001F1E8\U0001F1ED Zurich 3"
+  - "CH \U0001F1E8\U0001F1ED Zurich 4"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 1"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 2"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 3"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 4"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 1"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 2"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 3"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 4"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 1"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 2"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 3"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 4"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 1"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 2"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 3"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 4"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 1"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 2"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 3"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 4"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 1"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 2"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 3"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 4"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 1"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 2"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 3"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 4"
+  - "IE \U0001F1EE\U0001F1EA Dublin 1"
+  - "IE \U0001F1EE\U0001F1EA Dublin 2"
+  - "IE \U0001F1EE\U0001F1EA Dublin 3"
+  - "IE \U0001F1EE\U0001F1EA Dublin 4"
+  - "LV \U0001F1F1\U0001F1FB Riga 1"
+  - "LV \U0001F1F1\U0001F1FB Riga 2"
+  - "LV \U0001F1F1\U0001F1FB Riga 3"
+  - "LV \U0001F1F1\U0001F1FB Riga 4"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 1"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 2"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 3"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 4"
+  - "PT \U0001F1F5\U0001F1F9 Porto 1"
+  - "PT \U0001F1F5\U0001F1F9 Porto 2"
+  - "PT \U0001F1F5\U0001F1F9 Porto 3"
+  - "PT \U0001F1F5\U0001F1F9 Porto 4"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 1"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 2"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 3"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 4"
+  - "RU \U0001F1F7\U0001F1FA Moscow 1"
+  - "RU \U0001F1F7\U0001F1FA Moscow 2"
+  - "RU \U0001F1F7\U0001F1FA Moscow 3"
+  - "RU \U0001F1F7\U0001F1FA Moscow 4"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 1"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 2"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 3"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 4"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 1"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 2"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 3"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 4"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 1"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 2"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 3"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 4"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 1"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 2"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 3"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 4"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 1"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 2"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 3"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 4"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 1"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 2"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 3"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 4"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 1"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 2"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 3"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 4"
+  - "GB \U0001F1EC\U0001F1E7 London 1"
+  - "GB \U0001F1EC\U0001F1E7 London 2"
+  - "GB \U0001F1EC\U0001F1E7 London 3"
+  - "GB \U0001F1EC\U0001F1E7 London 4"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 1"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 2"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 3"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 4"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 1"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 2"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 3"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 4"
+  - "US \U0001F1FA\U0001F1F8 Latham 1"
+  - "US \U0001F1FA\U0001F1F8 Latham 2"
+  - "US \U0001F1FA\U0001F1F8 Latham 3"
+  - "US \U0001F1FA\U0001F1F8 Latham 4"
+  - "US \U0001F1FA\U0001F1F8 Boston 1"
+  - "US \U0001F1FA\U0001F1F8 Boston 2"
+  - "US \U0001F1FA\U0001F1F8 Boston 3"
+  - "US \U0001F1FA\U0001F1F8 Boston 4"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 1"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 2"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 3"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 4"
+  - "US \U0001F1FA\U0001F1F8 New York 1"
+  - "US \U0001F1FA\U0001F1F8 New York 2"
+  - "US \U0001F1FA\U0001F1F8 New York 3"
+  - "US \U0001F1FA\U0001F1F8 New York 4"
+  - "US \U0001F1FA\U0001F1F8 Seattle 1"
+  - "US \U0001F1FA\U0001F1F8 Seattle 2"
+  - "US \U0001F1FA\U0001F1F8 Seattle 3"
+  - "US \U0001F1FA\U0001F1F8 Seattle 4"
+  - "US \U0001F1FA\U0001F1F8 Chicago 1"
+  - "US \U0001F1FA\U0001F1F8 Chicago 2"
+  - "US \U0001F1FA\U0001F1F8 Chicago 3"
+  - "US \U0001F1FA\U0001F1F8 Chicago 4"
+  - "US \U0001F1FA\U0001F1F8 Detroit 1"
+  - "US \U0001F1FA\U0001F1F8 Detroit 2"
+  - "US \U0001F1FA\U0001F1F8 Detroit 3"
+  - "US \U0001F1FA\U0001F1F8 Detroit 4"
+  - "US \U0001F1FA\U0001F1F8 Denver 1"
+  - "US \U0001F1FA\U0001F1F8 Denver 2"
+  - "US \U0001F1FA\U0001F1F8 Denver 3"
+  - "US \U0001F1FA\U0001F1F8 Denver 4"
+  - "US \U0001F1FA\U0001F1F8 Bend 1"
+  - "US \U0001F1FA\U0001F1F8 Bend 2"
+  - "US \U0001F1FA\U0001F1F8 Bend 3"
+  - "US \U0001F1FA\U0001F1F8 Bend 4"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 1"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 2"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 3"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 4"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 1"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 2"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 3"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 4"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 1"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 2"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 3"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 4"
+  - "US \U0001F1FA\U0001F1F8 Tampa 1"
+  - "US \U0001F1FA\U0001F1F8 Tampa 2"
+  - "US \U0001F1FA\U0001F1F8 Tampa 3"
+  - "US \U0001F1FA\U0001F1F8 Tampa 4"
+  - "US \U0001F1FA\U0001F1F8 Miami 1"
+  - "US \U0001F1FA\U0001F1F8 Miami 2"
+  - "US \U0001F1FA\U0001F1F8 Miami 3"
+  - "US \U0001F1FA\U0001F1F8 Miami 4"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 1"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 2"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 3"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 4"
+  - "US \U0001F1FA\U0001F1F8 Dallas 1"
+  - "US \U0001F1FA\U0001F1F8 Dallas 2"
+  - "US \U0001F1FA\U0001F1F8 Dallas 3"
+  - "US \U0001F1FA\U0001F1F8 Dallas 4"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 1"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 2"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 3"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 4"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 1"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 2"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 3"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 4"
+  - "US \U0001F1FA\U0001F1F8 Orlando 1"
+  - "US \U0001F1FA\U0001F1F8 Orlando 2"
+  - "US \U0001F1FA\U0001F1F8 Orlando 3"
+  - "US \U0001F1FA\U0001F1F8 Orlando 4"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 1"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 2"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 3"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 4"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 1"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 2"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 3"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 4"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 1"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 2"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 3"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 4"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 1"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 2"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 3"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 4"
+  - "US \U0001F1FA\U0001F1F8 Houston 1"
+  - "US \U0001F1FA\U0001F1F8 Houston 2"
+  - "US \U0001F1FA\U0001F1F8 Houston 3"
+  - "US \U0001F1FA\U0001F1F8 Houston 4"
+  - "US \U0001F1FA\U0001F1F8 San Jose 1"
+  - "US \U0001F1FA\U0001F1F8 San Jose 2"
+  - "US \U0001F1FA\U0001F1F8 San Jose 3"
+  - "US \U0001F1FA\U0001F1F8 San Jose 4"
+  - "BA \U0001F1E7\U0001F1E6 Sarajevo"
+  - "BG \U0001F1E7\U0001F1EC Sofia"
+  - "CZ \U0001F1E8\U0001F1FF Prague"
+  - "GR \U0001F1EC\U0001F1F7 Athens"
+  - "HU \U0001F1ED\U0001F1FA Budapest"
+  - "IS \U0001F1EE\U0001F1F8 Reykjavik"
+  - "MD \U0001F1F2\U0001F1E9 Chisinau"
+  - "MK \U0001F1F2\U0001F1F0 Skopje"
+  - "UA \U0001F1FA\U0001F1E6 Kyiv"
+  - "AR \U0001F1E6\U0001F1F7 Buenos Aires"
+  - "BR \U0001F1E7\U0001F1F7 Sao Paulo"
+  - "CA \U0001F1E8\U0001F1E6 Montreal"
+  - "CA \U0001F1E8\U0001F1E6 Toronto"
+  - "CA \U0001F1E8\U0001F1E6 Vancouver"
+  - "CO \U0001F1E8\U0001F1F4 Bogota"
+  - "CR \U0001F1E8\U0001F1F7 San Jose"
+  - "MX \U0001F1F2\U0001F1FD Mexico City"
+  - "AU \U0001F1E6\U0001F1FA Perth"
+  - "AU \U0001F1E6\U0001F1FA Adelaide"
+  - "AU \U0001F1E6\U0001F1FA Brisbane"
+  - "AU \U0001F1E6\U0001F1FA Melbourne"
+  - "AU \U0001F1E6\U0001F1FA Sydney"
+  - "HK \U0001F1ED\U0001F1F0 Hong Kong"
+  - "IN \U0001F1EE\U0001F1F3 Indore"
+  - "IN \U0001F1EE\U0001F1F3 Mumbai"
+  - "IN \U0001F1EE\U0001F1F3 Chennai"
+  - "ID \U0001F1EE\U0001F1E9 Jakarta"
+  - "JP \U0001F1EF\U0001F1F5 Tokyo"
+  - "KZ \U0001F1F0\U0001F1FF Oral"
+  - "My \U0001F1F2\U0001F1FE Kuala Lumpur"
+  - "Nz \U0001F1F3\U0001F1FF Auckland"
+  - "PH \U0001F1F5\U0001F1ED Manila"
+  - "SG \U0001F1F8\U0001F1EC Singapore"
+  - "KR \U0001F1F0\U0001F1F7 Seoul"
+  - "TW \U0001F1F9\U0001F1FC Taichung City"
+  - "TH \U0001F1F9\U0001F1ED Bangkok"
+  - "IL \U0001F1EE\U0001F1F1 Tel Aviv"
+  - "NG \U0001F1F3\U0001F1EC Lagos"
+  - "ZA \U0001F1FF\U0001F1E6 Johannesburg"
+  - "AE \U0001F1E6\U0001F1EA Dubai"
+  - "PA \U0001F1F5\U0001F1E6 Panama"
+  - "PE \U0001F1F5\U0001F1EA Lima"
+  - "VE \U0001F1FB\U0001F1EA Caracas"
+  - "GE \U0001F1EC\U0001F1EA Tbilisi"
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: "\U0001F530 Select"
+  type: select
+  proxies:
+  - "\U0001F525 Auto"
+  - "✅ Direct"
+  - "BE \U0001F1E7\U0001F1EA Brussels 1"
+  - "BE \U0001F1E7\U0001F1EA Brussels 2"
+  - "BE \U0001F1E7\U0001F1EA Brussels 3"
+  - "BE \U0001F1E7\U0001F1EA Brussels 4"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 1"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 2"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 3"
+  - "BE \U0001F1E7\U0001F1EA Antwerp 4"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 1"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 2"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 3"
+  - "LU \U0001F1F1\U0001F1FA Luxembourg 4"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 1"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 2"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 3"
+  - "NO \U0001F1F3\U0001F1F4 Oslo 4"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 1"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 2"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 3"
+  - "PL \U0001F1F5\U0001F1F1 Gdansk 4"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 1"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 2"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 3"
+  - "PL \U0001F1F5\U0001F1F1 Warsaw 4"
+  - "FR \U0001F1EB\U0001F1F7 Paris 1"
+  - "FR \U0001F1EB\U0001F1F7 Paris 2"
+  - "FR \U0001F1EB\U0001F1F7 Paris 3"
+  - "FR \U0001F1EB\U0001F1F7 Paris 4"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 1"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 2"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 3"
+  - "FR \U0001F1EB\U0001F1F7 Marseille 4"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 1"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 2"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 3"
+  - "FR \U0001F1EB\U0001F1F7 Bordeaux 4"
+  - "DE \U0001F1E9\U0001F1EA Berlin 1"
+  - "DE \U0001F1E9\U0001F1EA Berlin 2"
+  - "DE \U0001F1E9\U0001F1EA Berlin 3"
+  - "DE \U0001F1E9\U0001F1EA Berlin 4"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 1"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 2"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 3"
+  - "DE \U0001F1E9\U0001F1EA Frankfurt am Main 4"
+  - "AZ \U0001F1E6\U0001F1FF Baku 1"
+  - "AZ \U0001F1E6\U0001F1FF Baku 2"
+  - "AZ \U0001F1E6\U0001F1FF Baku 3"
+  - "AZ \U0001F1E6\U0001F1FF Baku 4"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 1"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 2"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 3"
+  - "NL \U0001F1F3\U0001F1F1 Amsterdam 4"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 1"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 2"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 3"
+  - "DK \U0001F1E9\U0001F1F0 Copenhagen 4"
+  - "IT \U0001F1EE\U0001F1F9 Rome 1"
+  - "IT \U0001F1EE\U0001F1F9 Rome 2"
+  - "IT \U0001F1EE\U0001F1F9 Rome 3"
+  - "IT \U0001F1EE\U0001F1F9 Rome 4"
+  - "IT \U0001F1EE\U0001F1F9 Milan 1"
+  - "IT \U0001F1EE\U0001F1F9 Milan 2"
+  - "IT \U0001F1EE\U0001F1F9 Milan 3"
+  - "IT \U0001F1EE\U0001F1F9 Milan 4"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 1"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 2"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 3"
+  - "FI \U0001F1EB\U0001F1EE Helsinki 4"
+  - "CH \U0001F1E8\U0001F1ED Zurich 1"
+  - "CH \U0001F1E8\U0001F1ED Zurich 2"
+  - "CH \U0001F1E8\U0001F1ED Zurich 3"
+  - "CH \U0001F1E8\U0001F1ED Zurich 4"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 1"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 2"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 3"
+  - "TR \U0001F1F9\U0001F1F7 Istanbul 4"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 1"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 2"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 3"
+  - "AL \U0001F1E6\U0001F1F1 Tirana 4"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 1"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 2"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 3"
+  - "DZ \U0001F1E9\U0001F1FF Algiers 4"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 1"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 2"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 3"
+  - "AT \U0001F1E6\U0001F1F9 Vienna 4"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 1"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 2"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 3"
+  - "HR \U0001F1ED\U0001F1F7 Zagreb 4"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 1"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 2"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 3"
+  - "CY \U0001F1E8\U0001F1FE Nicosia 4"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 1"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 2"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 3"
+  - "EE \U0001F1EA\U0001F1EA Tallinn 4"
+  - "IE \U0001F1EE\U0001F1EA Dublin 1"
+  - "IE \U0001F1EE\U0001F1EA Dublin 2"
+  - "IE \U0001F1EE\U0001F1EA Dublin 3"
+  - "IE \U0001F1EE\U0001F1EA Dublin 4"
+  - "LV \U0001F1F1\U0001F1FB Riga 1"
+  - "LV \U0001F1F1\U0001F1FB Riga 2"
+  - "LV \U0001F1F1\U0001F1FB Riga 3"
+  - "LV \U0001F1F1\U0001F1FB Riga 4"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 1"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 2"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 3"
+  - "PT \U0001F1F5\U0001F1F9 Lisbon 4"
+  - "PT \U0001F1F5\U0001F1F9 Porto 1"
+  - "PT \U0001F1F5\U0001F1F9 Porto 2"
+  - "PT \U0001F1F5\U0001F1F9 Porto 3"
+  - "PT \U0001F1F5\U0001F1F9 Porto 4"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 1"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 2"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 3"
+  - "RO \U0001F1F7\U0001F1F4 Bucharest 4"
+  - "RU \U0001F1F7\U0001F1FA Moscow 1"
+  - "RU \U0001F1F7\U0001F1FA Moscow 2"
+  - "RU \U0001F1F7\U0001F1FA Moscow 3"
+  - "RU \U0001F1F7\U0001F1FA Moscow 4"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 1"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 2"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 3"
+  - "RS \U0001F1F7\U0001F1F8 Belgrade 4"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 1"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 2"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 3"
+  - "SK \U0001F1F8\U0001F1F0 Bratislava 4"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 1"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 2"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 3"
+  - "SI \U0001F1F8\U0001F1EE Ljubljana 4"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 1"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 2"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 3"
+  - "ES \U0001F1EA\U0001F1F8 Barcelona 4"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 1"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 2"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 3"
+  - "ES \U0001F1EA\U0001F1F8 Madrid 4"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 1"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 2"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 3"
+  - "ES \U0001F1EA\U0001F1F8 Valencia 4"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 1"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 2"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 3"
+  - "SE \U0001F1F8\U0001F1EA Stockholm 4"
+  - "GB \U0001F1EC\U0001F1E7 London 1"
+  - "GB \U0001F1EC\U0001F1E7 London 2"
+  - "GB \U0001F1EC\U0001F1E7 London 3"
+  - "GB \U0001F1EC\U0001F1E7 London 4"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 1"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 2"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 3"
+  - "GB \U0001F1EC\U0001F1E7 Glasgow 4"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 1"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 2"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 3"
+  - "GB \U0001F1EC\U0001F1E7 Manchester 4"
+  - "US \U0001F1FA\U0001F1F8 Latham 1"
+  - "US \U0001F1FA\U0001F1F8 Latham 2"
+  - "US \U0001F1FA\U0001F1F8 Latham 3"
+  - "US \U0001F1FA\U0001F1F8 Latham 4"
+  - "US \U0001F1FA\U0001F1F8 Boston 1"
+  - "US \U0001F1FA\U0001F1F8 Boston 2"
+  - "US \U0001F1FA\U0001F1F8 Boston 3"
+  - "US \U0001F1FA\U0001F1F8 Boston 4"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 1"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 2"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 3"
+  - "US \U0001F1FA\U0001F1F8 Buffalo 4"
+  - "US \U0001F1FA\U0001F1F8 New York 1"
+  - "US \U0001F1FA\U0001F1F8 New York 2"
+  - "US \U0001F1FA\U0001F1F8 New York 3"
+  - "US \U0001F1FA\U0001F1F8 New York 4"
+  - "US \U0001F1FA\U0001F1F8 Seattle 1"
+  - "US \U0001F1FA\U0001F1F8 Seattle 2"
+  - "US \U0001F1FA\U0001F1F8 Seattle 3"
+  - "US \U0001F1FA\U0001F1F8 Seattle 4"
+  - "US \U0001F1FA\U0001F1F8 Chicago 1"
+  - "US \U0001F1FA\U0001F1F8 Chicago 2"
+  - "US \U0001F1FA\U0001F1F8 Chicago 3"
+  - "US \U0001F1FA\U0001F1F8 Chicago 4"
+  - "US \U0001F1FA\U0001F1F8 Detroit 1"
+  - "US \U0001F1FA\U0001F1F8 Detroit 2"
+  - "US \U0001F1FA\U0001F1F8 Detroit 3"
+  - "US \U0001F1FA\U0001F1F8 Detroit 4"
+  - "US \U0001F1FA\U0001F1F8 Denver 1"
+  - "US \U0001F1FA\U0001F1F8 Denver 2"
+  - "US \U0001F1FA\U0001F1F8 Denver 3"
+  - "US \U0001F1FA\U0001F1F8 Denver 4"
+  - "US \U0001F1FA\U0001F1F8 Bend 1"
+  - "US \U0001F1FA\U0001F1F8 Bend 2"
+  - "US \U0001F1FA\U0001F1F8 Bend 3"
+  - "US \U0001F1FA\U0001F1F8 Bend 4"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 1"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 2"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 3"
+  - "US \U0001F1FA\U0001F1F8 Kansas City 4"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 1"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 2"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 3"
+  - "US \U0001F1FA\U0001F1F8 Salt Lake City 4"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 1"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 2"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 3"
+  - "US \U0001F1FA\U0001F1F8 St. Louis 4"
+  - "US \U0001F1FA\U0001F1F8 Tampa 1"
+  - "US \U0001F1FA\U0001F1F8 Tampa 2"
+  - "US \U0001F1FA\U0001F1F8 Tampa 3"
+  - "US \U0001F1FA\U0001F1F8 Tampa 4"
+  - "US \U0001F1FA\U0001F1F8 Miami 1"
+  - "US \U0001F1FA\U0001F1F8 Miami 2"
+  - "US \U0001F1FA\U0001F1F8 Miami 3"
+  - "US \U0001F1FA\U0001F1F8 Miami 4"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 1"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 2"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 3"
+  - "US \U0001F1FA\U0001F1F8 Charlotte 4"
+  - "US \U0001F1FA\U0001F1F8 Dallas 1"
+  - "US \U0001F1FA\U0001F1F8 Dallas 2"
+  - "US \U0001F1FA\U0001F1F8 Dallas 3"
+  - "US \U0001F1FA\U0001F1F8 Dallas 4"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 1"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 2"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 3"
+  - "US \U0001F1FA\U0001F1F8 Phoenix 4"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 1"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 2"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 3"
+  - "US \U0001F1FA\U0001F1F8 Atlanta 4"
+  - "US \U0001F1FA\U0001F1F8 Orlando 1"
+  - "US \U0001F1FA\U0001F1F8 Orlando 2"
+  - "US \U0001F1FA\U0001F1F8 Orlando 3"
+  - "US \U0001F1FA\U0001F1F8 Orlando 4"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 1"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 2"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 3"
+  - "US \U0001F1FA\U0001F1F8 Las Vegas 4"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 1"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 2"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 3"
+  - "US \U0001F1FA\U0001F1F8 Los Angeles 4"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 1"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 2"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 3"
+  - "US \U0001F1FA\U0001F1F8 San Francisco 4"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 1"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 2"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 3"
+  - "US \U0001F1FA\U0001F1F8 Ashburn 4"
+  - "US \U0001F1FA\U0001F1F8 Houston 1"
+  - "US \U0001F1FA\U0001F1F8 Houston 2"
+  - "US \U0001F1FA\U0001F1F8 Houston 3"
+  - "US \U0001F1FA\U0001F1F8 Houston 4"
+  - "US \U0001F1FA\U0001F1F8 San Jose 1"
+  - "US \U0001F1FA\U0001F1F8 San Jose 2"
+  - "US \U0001F1FA\U0001F1F8 San Jose 3"
+  - "US \U0001F1FA\U0001F1F8 San Jose 4"
+  - "BA \U0001F1E7\U0001F1E6 Sarajevo"
+  - "BG \U0001F1E7\U0001F1EC Sofia"
+  - "CZ \U0001F1E8\U0001F1FF Prague"
+  - "GR \U0001F1EC\U0001F1F7 Athens"
+  - "HU \U0001F1ED\U0001F1FA Budapest"
+  - "IS \U0001F1EE\U0001F1F8 Reykjavik"
+  - "MD \U0001F1F2\U0001F1E9 Chisinau"
+  - "MK \U0001F1F2\U0001F1F0 Skopje"
+  - "UA \U0001F1FA\U0001F1E6 Kyiv"
+  - "AR \U0001F1E6\U0001F1F7 Buenos Aires"
+  - "BR \U0001F1E7\U0001F1F7 Sao Paulo"
+  - "CA \U0001F1E8\U0001F1E6 Montreal"
+  - "CA \U0001F1E8\U0001F1E6 Toronto"
+  - "CA \U0001F1E8\U0001F1E6 Vancouver"
+  - "CO \U0001F1E8\U0001F1F4 Bogota"
+  - "CR \U0001F1E8\U0001F1F7 San Jose"
+  - "MX \U0001F1F2\U0001F1FD Mexico City"
+  - "AU \U0001F1E6\U0001F1FA Perth"
+  - "AU \U0001F1E6\U0001F1FA Adelaide"
+  - "AU \U0001F1E6\U0001F1FA Brisbane"
+  - "AU \U0001F1E6\U0001F1FA Melbourne"
+  - "AU \U0001F1E6\U0001F1FA Sydney"
+  - "HK \U0001F1ED\U0001F1F0 Hong Kong"
+  - "IN \U0001F1EE\U0001F1F3 Indore"
+  - "IN \U0001F1EE\U0001F1F3 Mumbai"
+  - "IN \U0001F1EE\U0001F1F3 Chennai"
+  - "ID \U0001F1EE\U0001F1E9 Jakarta"
+  - "JP \U0001F1EF\U0001F1F5 Tokyo"
+  - "KZ \U0001F1F0\U0001F1FF Oral"
+  - "My \U0001F1F2\U0001F1FE Kuala Lumpur"
+  - "Nz \U0001F1F3\U0001F1FF Auckland"
+  - "PH \U0001F1F5\U0001F1ED Manila"
+  - "SG \U0001F1F8\U0001F1EC Singapore"
+  - "KR \U0001F1F0\U0001F1F7 Seoul"
+  - "TW \U0001F1F9\U0001F1FC Taichung City"
+  - "TH \U0001F1F9\U0001F1ED Bangkok"
+  - "IL \U0001F1EE\U0001F1F1 Tel Aviv"
+  - "NG \U0001F1F3\U0001F1EC Lagos"
+  - "ZA \U0001F1FF\U0001F1E6 Johannesburg"
+  - "AE \U0001F1E6\U0001F1EA Dubai"
+  - "PA \U0001F1F5\U0001F1E6 Panama"
+  - "PE \U0001F1F5\U0001F1EA Lima"
+  - "VE \U0001F1FB\U0001F1EA Caracas"
+  - "GE \U0001F1EC\U0001F1EA Tbilisi"
+- name: "✅ Direct"
+  type: select
+  proxies:
+  - DIRECT
+- name: "\U0001F6AB Intercept"
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+rule-providers:
+  iran:
+    type: http
+    behavior: classical
+    url: https://github.com/SamadiPour/iran-hosted-domains/releases/latest/download/clash_rules.yaml
+    path: "./rule_provider/iran.yaml"
+    interval: 432000
+rules:
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+- DOMAIN-SUFFIX,chdbits.co,DIRECT
+- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+- DOMAIN-SUFFIX,empornium.me,DIRECT
+- DOMAIN-SUFFIX,gazellegames.net,DIRECT
+- DOMAIN-SUFFIX,hdchina.org,DIRECT
+- DOMAIN-SUFFIX,hdsky.me,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,keepfrds.com,DIRECT
+- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+- DOMAIN-SUFFIX,m-team.cc,DIRECT
+- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+- DOMAIN-SUFFIX,ncore.cc,DIRECT
+- DOMAIN-SUFFIX,open.cd,DIRECT
+- DOMAIN-SUFFIX,ourbits.club,DIRECT
+- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+- DOMAIN-SUFFIX,privatehd.to,DIRECT
+- DOMAIN-SUFFIX,redacted.ch,DIRECT
+- DOMAIN-SUFFIX,springsunday.net,DIRECT
+- DOMAIN-SUFFIX,tjupt.org,DIRECT
+- DOMAIN-SUFFIX,totheglory.im,DIRECT
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
+- RULE-SET,iran,✅ Direct
+- "DOMAIN-SUFFIX,ad.com,\U0001F6AB Intercept"
+- SRC-IP-CIDR,192.168.1.201/32,✅ Direct
+- IP-CIDR,127.0.0.0/8,✅ Direct
+- "DST-PORT,80,\U0001F530 Select"
+- "DST-PORT,443,\U0001F530 Select"
+- "DST-PORT,22,\U0001F530 Select"
+- MATCH,DIRECT
+redir-port: 7892
+tproxy-port: 7895
+port: 7890
+socks-port: 7891
+secret: '123456'
+bind-address: "*"
+external-ui: "/usr/share/openclash/dashboard"
+ipv6: false
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+  - tcp://8.8.8.8:53
+  - tcp://8.8.4.4:53
+profile:
+  store-selected: true
+  store-fakeip: true
