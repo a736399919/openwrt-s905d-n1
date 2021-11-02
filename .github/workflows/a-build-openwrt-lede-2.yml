@@ -330,6 +330,7 @@ jobs:
         #token: ${{ secrets.RELEASES_TOKEN }}
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
+          有什么问题，可以加Telegram群讨论：[https://t.me/tt2048](https://t.me/tt2048)(安装Telegram后打开网址或者搜索tt2048)
           This is OpenWrt firmware for Amlogic S9xxx STB
           * Firmware information
           Default IP: 192.168.1.1
