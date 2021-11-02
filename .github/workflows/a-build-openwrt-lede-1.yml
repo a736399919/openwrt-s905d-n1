@@ -16,11 +16,11 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  ROOT_DIR: router-config/openwrt-n1
-  FEEDS_CONF: router-config/openwrt-n1/feeds.conf.default
-  CONFIG_FILE: router-config/openwrt-n1/.config
-  DIY_P1_SH: router-config/openwrt-n1/diy-part1.sh
-  DIY_P2_SH: router-config/openwrt-n1/diy-part2.sh
+  ROOT_DIR: router-config/lede-n1
+  FEEDS_CONF: router-config/lede-n1/feeds.conf.default
+  CONFIG_FILE: router-config/lede-n1/.config
+  DIY_P1_SH: router-config/lede-n1/diy-part1.sh
+  DIY_P2_SH: router-config/lede-n1/diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_ARMVIRT: true
   UPLOAD_FIRMWARE: true
@@ -69,7 +69,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone -b $REPO_BRANCH --depth 1 $REPO_URL openwrt
+        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         # --depth 1 --branch（或者-b） main 克隆某个指定分支的最近一次commit
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
