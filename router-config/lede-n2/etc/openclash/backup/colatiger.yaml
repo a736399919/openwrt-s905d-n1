@@ -5,79 +5,77 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: _01, server: 27.131.164.100, port: 44945, type: ss, cipher: aes-256-gcm, password: F5bKkb9ggkLx4JbQrbLn7LjZ}
-  - {name: _02, server: 172.104.206.241, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: Pool__03, server: 5.253.207.53, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: Pool__04, server: 82.102.26.93, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
-  - {name: Pool__05, server: 193.29.107.123, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: _06, server: 134.195.196.163, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _07, server: 198.57.27.241, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: Pool__08, server: 86.106.137.147, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
-  - {name: Pool__09, server: 185.225.28.93, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: _10, server: 51.77.53.200, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _11, server: 172.99.190.230, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _12, server: 167.88.63.99, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _13, server: 167.88.63.108, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _14, server: 134.195.196.110, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _15, server: 198.57.27.218, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _16, server: 134.195.196.79, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _17, server: 172.107.233.234, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: Pool__18, server: 185.166.84.81, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
-  - {name: Pool__19, server: 185.99.3.102, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: _20, server: 134.195.198.252, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _21, server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: Pool__22, server: 5.253.207.51, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
-  - {name: _23, server: 38.107.226.241, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _01, server: 198.57.27.241, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _02, server: 134.195.198.178, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _03, server: 198.57.27.218, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _04, server: 167.88.63.108, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _05, server: 134.195.196.163, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _06, server: 167.88.63.99, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _07, server: 134.195.196.79, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _08, server: 134.195.196.147, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _09, server: 134.195.198.252, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _10, server: 167.88.63.11, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _11, server: 38.107.226.241, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _12, server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _13, server: 167.88.63.119, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _14, server: 167.88.63.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _15, server: 198.57.27.233, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _16, server: 172.99.190.230, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _17, server: 134.195.196.110, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__18, server: 193.29.107.123, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: _19, server: 198.57.27.225, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _20, server: 198.57.27.241, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: Pool__21, server: 5.253.207.53, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: Pool__22, server: 191.96.13.200, port: 36460, type: ss, cipher: aes-256-gcm, password: yUXad7DGF8L5cTShEpnp2N6z}
+  - {name: Pool__23, server: 185.166.84.81, port: 38742, type: ss, cipher: aes-256-gcm, password: DKXfWwc4ebscpXTKpbt85rSH}
   - {name: Pool__24, server: 82.102.26.93, port: 46642, type: ss, cipher: aes-256-gcm, password: gYL83DQWXuDbxmZAVVtUTXaK}
-  - {name: Pool__25, server: 193.29.107.123, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: _26, server: 134.195.196.133, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _27, server: 62.212.239.53, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
-  - {name: _28, server: 134.195.196.154, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _29, server: 198.57.27.233, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _30, server: 134.195.198.178, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _31, server: 134.195.196.147, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _32, server: 198.57.27.241, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _33, server: 134.195.196.97, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: Pool__34, server: 89.249.73.197, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
-  - {name: _35, server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _36, server: 146.70.27.12, port: 40093, type: ss, cipher: aes-256-gcm, password: x23Z4LGkGDkThZ9Kaz4DURQp}
-  - {name: _37, server: 62.212.239.53, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B}
-  - {name: _38, server: 134.195.196.154, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _39, server: 198.57.27.225, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _40, server: 134.195.196.165, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _41, server: 134.195.198.250, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _42, server: 134.195.198.252, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _43, server: 38.107.226.146, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _44, server: 172.99.190.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _45, server: 172.99.190.186, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: Pool__46, server: 82.102.26.93, port: 42185, type: ss, cipher: aes-256-gcm, password: FaTG4zALZru72gxjgSHQ7Jdh}
-  - {name: _47, server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _48, server: 172.99.190.158, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _49, server: 167.88.63.28, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _50, server: 134.195.196.163, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _51, server: 38.39.192.74, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: Pool__52, server: 91.219.215.19, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
-  - {name: Pool__53, server: 191.96.13.200, port: 36460, type: ss, cipher: aes-256-gcm, password: yUXad7DGF8L5cTShEpnp2N6z}
-  - {name: _54, server: 167.88.63.107, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _55, server: 167.88.63.60, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _56, server: 167.88.63.89, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _57, server: 167.88.63.11, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _58, server: 167.88.63.61, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _59, server: 167.88.63.119, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _60, server: 134.195.196.81, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _61, server: 38.107.226.149, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _62, server: 134.195.198.95, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _63, server: 134.195.198.95, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _64, server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _65, server: 167.88.63.11, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _66, server: 167.88.63.119, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: Pool__67, server: 45.129.32.8, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
-  - {name: _68, server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
-  - {name: _69, server: 198.57.27.225, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
-  - {name: _70, server: 167.88.63.99, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: _71, server: 167.88.63.82, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
-  - {name: 🇷🇺 Relay_-🇷🇺RU_72, server: t7.ssrsub.com, port: 844, type: trojan, password: 52f31fcb-f948-4f71-bca8-795fdcf7b754, sni: t7.ssrsub.com}
-  - {name: 🇷🇺 Relay_-🇷🇺RU_73, server: t3.ssrsub.com, port: 844, type: trojan, password: f5487ee3-aef5-436f-adf9-673b1afe2ff7, sni: t3.ssrsub.com}
+  - {name: Pool__25, server: 82.102.26.93, port: 38620, type: ss, cipher: aes-256-gcm, password: Kquv5UhvZXNMemAQy8DxZ7qn}
+  - {name: _26, server: 38.107.226.146, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _27, server: 134.195.196.97, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__28, server: 193.29.107.123, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: Pool__29, server: 86.106.137.147, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: _30, server: 167.88.63.82, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: Pool__31, server: 185.99.3.102, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: _32, server: 172.99.190.35, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: Pool__33, server: 91.219.215.19, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: _34, server: 134.195.198.250, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _35, server: 134.195.196.154, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__36, server: 185.225.28.93, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: _37, server: 46.29.218.6, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: Pool__38, server: 82.102.26.93, port: 42185, type: ss, cipher: aes-256-gcm, password: FaTG4zALZru72gxjgSHQ7Jdh}
+  - {name: _39, server: 46.29.218.6, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__40, server: 5.253.207.51, port: 33992, type: ss, cipher: aes-256-gcm, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: _41, server: 62.212.239.53, port: 50024, type: ss, cipher: aes-256-gcm, password: b2jDPHUQxCNa2KmGHZjy7C4B}
+  - {name: _42, server: 62.212.239.53, port: 48938, type: ss, cipher: aes-256-gcm, password: 4ejJ8n5ddLuYDUHGXJre2ufJ}
+  - {name: _43, server: 27.131.164.100, port: 44945, type: ss, cipher: aes-256-gcm, password: F5bKkb9ggkLx4JbQrbLn7LjZ}
+  - {name: _44, server: 134.195.196.133, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _45, server: 167.88.63.82, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__46, server: 194.39.127.191, port: 39772, type: ss, cipher: aes-256-gcm, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: _47, server: 172.107.233.234, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _48, server: 51.77.53.200, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: Pool__49, server: 45.129.32.8, port: 33998, type: ss, cipher: aes-256-gcm, password: NHwQTPLCfaTMSqTnU3mjcSxe}
+  - {name: Pool__50, server: 89.249.73.197, port: 49396, type: ss, cipher: aes-256-gcm, password: BdRWC38L5JUDMTYNNxJGcUwB}
+  - {name: _51, server: 72.140.224.197, port: 802, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao}
+  - {name: _52, server: 167.88.63.89, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _53, server: 134.195.196.165, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _54, server: 134.195.196.163, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _55, server: 134.195.198.95, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: Pool__56, server: 66.115.177.141, port: 31944, type: ss, cipher: aes-256-gcm, password: aYNeKDMzYQYw4KbUbJA8Wszq}
+  - {name: _57, server: 38.107.226.149, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _58, server: 167.88.63.119, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _59, server: 134.195.196.81, port: 8091, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _60, server: 167.88.63.60, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _61, server: 134.195.198.95, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _62, server: 167.88.63.61, port: 7306, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _63, server: 167.88.63.28, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _64, server: 167.88.63.82, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP}
+  - {name: _65, server: 38.39.192.74, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _66, server: 172.99.190.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _67, server: 172.99.190.35, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: _68, server: 172.99.190.186, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7}
+  - {name: _69, server: 38.107.226.146, port: 8090, type: ss, cipher: aes-256-gcm, password: PCnnH6SQSnfoS27}
+  - {name: 🇺🇲 Relay_-🇺🇸US_70, server: www.gov.hk, port: 8443, type: vmess, uuid: 813cb315-4ae8-44e1-e85d-ae90dd5233b6, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /html, ws-headers: {Host: www.gov.hk}}
+  - {name: 🇺🇲 Relay_-🇺🇸US_71, server: v1.ssrsub.com, port: 159, type: vmess, uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -86,13 +84,13 @@ proxy-groups:
       - DIRECT
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -102,28 +100,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -132,14 +130,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -150,13 +148,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -165,13 +161,13 @@ proxy-groups:
     proxies:
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -181,28 +177,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -211,14 +207,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -229,13 +225,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -244,13 +238,13 @@ proxy-groups:
       - 🎯 全球直连
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -260,28 +254,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -290,14 +284,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -308,13 +302,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: 📲 电报信息
     type: select
     proxies:
@@ -322,13 +314,13 @@ proxy-groups:
       - 🎯 全球直连
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -338,28 +330,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -368,14 +360,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -386,13 +378,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -400,13 +390,13 @@ proxy-groups:
       - 🚀 节点选择
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -416,28 +406,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -446,14 +436,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -464,13 +454,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -478,13 +466,13 @@ proxy-groups:
       - 🎯 全球直连
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -494,28 +482,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -524,14 +512,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -542,13 +530,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -557,13 +543,13 @@ proxy-groups:
       - ♻️ 自动选择
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -573,28 +559,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -603,14 +589,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -621,13 +607,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -652,13 +636,13 @@ proxy-groups:
       - ♻️ 自动选择
       - _01
       - _02
-      - Pool__03
-      - Pool__04
-      - Pool__05
+      - _03
+      - _04
+      - _05
       - _06
       - _07
-      - Pool__08
-      - Pool__09
+      - _08
+      - _09
       - _10
       - _11
       - _12
@@ -668,28 +652,28 @@ proxy-groups:
       - _16
       - _17
       - Pool__18
-      - Pool__19
+      - _19
       - _20
-      - _21
+      - Pool__21
       - Pool__22
-      - _23
+      - Pool__23
       - Pool__24
       - Pool__25
       - _26
       - _27
-      - _28
-      - _29
+      - Pool__28
+      - Pool__29
       - _30
-      - _31
+      - Pool__31
       - _32
-      - _33
-      - Pool__34
+      - Pool__33
+      - _34
       - _35
-      - _36
+      - Pool__36
       - _37
-      - _38
+      - Pool__38
       - _39
-      - _40
+      - Pool__40
       - _41
       - _42
       - _43
@@ -698,14 +682,14 @@ proxy-groups:
       - Pool__46
       - _47
       - _48
-      - _49
-      - _50
+      - Pool__49
+      - Pool__50
       - _51
-      - Pool__52
-      - Pool__53
+      - _52
+      - _53
       - _54
       - _55
-      - _56
+      - Pool__56
       - _57
       - _58
       - _59
@@ -716,13 +700,11 @@ proxy-groups:
       - _64
       - _65
       - _66
-      - Pool__67
+      - _67
       - _68
       - _69
-      - _70
-      - _71
-      - 🇷🇺 Relay_-🇷🇺RU_72
-      - 🇷🇺 Relay_-🇷🇺RU_73
+      - 🇺🇲 Relay_-🇺🇸US_70
+      - 🇺🇲 Relay_-🇺🇸US_71
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
