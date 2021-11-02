@@ -118,8 +118,8 @@ jobs:
       if: steps.build.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true' && !cancelled()
       with:
         name: openwrt_bin_armvirt_64_${{ env.FILE_DATE }}
-        path: openwrt/bin
-        #path: ${{ env.PACKAGED_OUTPUTPATH }}/
+        #path: openwrt/bin
+        path: ${{ env.PACKAGED_OUTPUTPATH }}/
         retention-days: ${{ env.RECENT_LASTEST }}
         if-no-files-found: ignore
 
