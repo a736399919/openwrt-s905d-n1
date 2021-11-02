@@ -5,7 +5,7 @@
 # Source code repository: https://github.com/coolsnowwolf/lede / Branch: master
 #========================================================================================================================
 
-name: Build-OpenWrt-Lede-2021-2-is-ok
+name: A-Build-OpenWrt-Lede-2021-2-is-ok
 
 on:
   repository_dispatch:
