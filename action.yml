@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: 'Use ophub script to package Armvirt as OpenWrt' 
 author: 'ophub'
 description: 'Package Armvirt as OpenWrt. Support Amlogic S9xxx STB.'

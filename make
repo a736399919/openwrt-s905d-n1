@@ -25,7 +25,7 @@ kernel_library="https://github.com/ophub/flippy-kernel/tree/main/library"
 
 # Set firmware size ( BOOT_MB size >= 128, ROOT_MB size >= 320 )
 BOOT_MB=64
-ROOT_MB=1500
+ROOT_MB=1200
 
 tag() {
     echo -e " [ \033[1;32m ${1} \033[0m ]"
@@ -165,7 +165,14 @@ refactor_files() {
             ANDROID_UBOOT=""
             AMLOGIC_SOC="s912"
             ;;
-        s905d | n1)
+        s905d)
+            FDTFILE="meson-gxbb-p201.dtb"
+            UBOOT_OVERLOAD="u-boot-n1.bin"
+            MAINLINE_UBOOT=""
+            ANDROID_UBOOT="/lib/u-boot/u-boot-2015-phicomm-n1.bin"
+            AMLOGIC_SOC="s905d"
+            ;;
+        n1)
             FDTFILE="meson-gxl-s905d-phicomm-n1.dtb"
             UBOOT_OVERLOAD="u-boot-n1.bin"
             MAINLINE_UBOOT=""
@@ -261,7 +268,7 @@ EOF
     if [ -d "${balethirq_file}" ];then
         cp -f ${balethirq_file}/balethirq.pl usr/sbin/balethirq.pl && chmod +x usr/sbin/balethirq.pl >/dev/null 2>&1
         sed -i "/exit/i\/usr/sbin/balethirq.pl" etc/rc.local >/dev/null 2>&1
-        cp -f ${balethirq_file}/balance_irq etc/config/balance_irq >/dev/null 2>&1
+        cp -f ${balethirq_file}/balance_irq etc/balance_irq >/dev/null 2>&1
     fi
     
     # Add firmware information to the etc/flippy-openwrt-release
