@@ -319,21 +319,18 @@ jobs:
         #token: ${{ secrets.RELEASES_TOKEN }}
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          有什么问题，可以加Telegram群讨论：[https://t.me/tt2048](https://t.me/tt2048)(安装Telegram后打开网址或者搜索tt2048)
+          有什么问题，可以加Telegram群组讨论：[https://t.me/tt2048](https://t.me/tt2048) (安装Telegram后打开网址或者搜索tt2048)
+          本固件网线接外网，自动拨号，提供猕猴桃挖矿流量分享，再提供Wifi局域网。
+          当前使用版本:编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录，此为**自用精简包**。
+          本版本建议**全新刷入**或者**不保留配置**进行升级。
           This is OpenWrt firmware for Amlogic S9xxx STB
           * Firmware information
-          Default IP: 192.168.1.1
+          Default IP: 192.168.3.254
           Default username: root
           Default password: password
           Default WIFI name: OpenWrt
           Default WIFI password: none
           Install to EMMC: Login to OpenWrt → System → Amlogic Service → Install OpenWrt
-          默认IP：192.168.1.1 默认密码：password (WiFi密码同）
-          当前使用版本:【编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录】
-          此为**自用精简包**，和F大本人集成的插件有**较大**差异。
-          因变动较大，从60及其以下版本升级到61或更高版本建议**全新刷入**或者**不保留配置**进行升级。
-          常见问题及注意事项请参考恩山F大➦[最新帖](https://www.right.com.cn/forum/thread-4076037-1-1.html)
-          需要**高大全**版请到 高大全➦[下载](https://github.com/breakings/OpenWrt/releases/tag/ARMv8)
           ${{ env.useVersionInfo }}
 
     - name: Delete workflow runs
