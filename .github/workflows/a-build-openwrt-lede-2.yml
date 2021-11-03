@@ -24,14 +24,15 @@ env:
   UPLOAD_BIN_DIR: true
   UPLOAD_ARMVIRT: true
   UPLOAD_FIRMWARE: true
+  UPLOAD_RELEASE: true
   UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: true
-  UPLOAD_RELEASE: true
   DELETE_RELEASE: true
   DELETE_ARTIFACTS: true
   RECENT_LASTEST: 3
-  KEEP_MININUM_RELEASE : 3
   TZ: Asia/Shanghai
+  
+  KEEP_MININUM_RELEASE : 3
   FILE_NAME: armv8_mini
   PRODUCT_NAME: ARMv8_mini
 
@@ -69,7 +70,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone -b $REPO_BRANCH --depth 1 $REPO_URL openwrt
+        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         # --depth 1 --branch（或者-b） main 克隆某个指定分支的最近一次commit
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         cd openwrt
@@ -77,18 +78,6 @@ jobs:
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
         echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
         echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
-
-    #- name: Clone source code
-      #working-directory: /workdir
-      #run: |
-        ##df -hT $PWD
-        ##git clone $REPO_URL -b $REPO_BRANCH openwrt
-        ##ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        #cd openwrt
-        #useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
-        #echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
-        #echo "DATE=$(date "+%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
-        #echo "DATE1=$(date "+%Y-%m-%d")" >> $GITHUB_ENV
 
     - name: Load custom feeds
       run: |
@@ -142,8 +131,8 @@ jobs:
       uses: kittaakos/upload-artifact-as-is@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       with:
-        path: ${PWD}/
-        #path: ${{ env.BIN_FILE_PATH }}/
+        #path: ${ GITHUB_WORKSPACE }/openwrt/bin/targets/
+        path: ${{PWD}}/
         #path: ${{ env.BIN_FILE_PATH }}/
 
     - name: Upload OpenWrt Firmware to cowtransfer
@@ -248,7 +237,7 @@ jobs:
         ##echo "https://github.com/${GITHUB_REPOSITORY}/releases/download/${DOWNLOAD_ARMVIRT}"
         ##https://github.com/vpei/amlogic-s9xxx-openwrt/releases/download/OpenWrt_s9xxx_lede_2021.10.24.0333/openwrt-armvirt-64-default-rootfs.tar.gz
         ##sudo ./make -d -b s905x3_s905x2_s905x_s905w_s905d_s922x_s912 -k 5.10.70_5.4.150
-        #sudo ./make -d -b s905d -k 5.10.70_5.4.156
+        #sudo ./make -d -b s905d -k 5.4.156
         #curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/releases" | grep -o "openwrt_s9xxx_lede.*/ipk.tar.gz" | head -n 1 > DOWNLOAD_IPK
         #[ -s DOWNLOAD_IPK ] && wget -q -P out https://github.com/${GITHUB_REPOSITORY}/releases/download/$(cat DOWNLOAD_IPK)
         #echo "PACKAGED_OUTPUTPATH=${PWD}/out" >> $GITHUB_ENV
