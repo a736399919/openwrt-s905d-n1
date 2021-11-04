@@ -294,8 +294,8 @@ jobs:
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
-        [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
-        [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
+        [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer-2](${{ steps.cowtransfer.outputs.url }})" >> release.txt
+        [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer-2](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release
@@ -372,7 +372,8 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && !cancelled()
       with:
-        name: bin-archive
+        #name: bin-archive
+        name: bin
         path: openwrt/bin
 
   Upload:
@@ -397,7 +398,8 @@ jobs:
         uses: actions/download-artifact@v2
         #if: env.GENERATE_STATUS == 'success'
         with:
-          name: bin-archive
+          name: bin
+          #name: bin-archive
           path: openwrt/bin
 
       - name: Deploy Packages-Server
@@ -446,15 +448,15 @@ jobs:
           echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean1"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
-          [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
-          [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
+          [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer-3](${{ steps.cowtransfer.outputs.url }})" >> release.txt
+          [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer-3](${{ steps.wetransfer.outputs.url }})" >> release.txt
           echo "::set-output name=status::success"
 
       - name: Upload firmware to release
         uses: softprops/action-gh-release@v1
         if: steps.tag-release.outputs.status == 'success' && !cancelled()
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: ${{ steps.tag-release.outputs.release_date }} NanoPi-R4S formal edition_Docker版_全插件
           tag_name: ${{ steps.tag-release.outputs.release_tag }}
@@ -489,7 +491,8 @@ jobs:
         uses: geekyeggo/delete-artifact@v1
         with:
           name: |
-            bin-archive
+            bin
+            #bin-archive
 
       - name: Send telegram message on push
         uses: appleboy/telegram-action@master

@@ -465,7 +465,6 @@ jobs:
 
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
-        if: steps.diff.outputs.status == 'success'
         with:
           retain_days: 8
           keep_minimum_runs: 5
