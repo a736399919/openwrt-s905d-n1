@@ -3,851 +3,243 @@ port: 7890
 socks-port: 7891
 allow-lan: true
 mode: rule
-log-level: silent
-external-controller: 0.0.0.0:9090
+log-level: info
+external-controller: :9090
 dns:
   enable: true
-  ipv6: true
-  listen: 0.0.0.0:7874
-  enhanced-mode: fake-ip
+  ipv6: false
+  listen: 127.0.0.1:5450
+  enhanced-mode: redir-host
   default-nameserver:
   - 119.29.29.29
   - 119.28.28.28
   - 1.0.0.1
   - 208.67.222.222
   - 1.2.4.8
-  - 192.168.5.254
-  - "[fe80::2276:93ff:fe3d:55e9]:53"
-  - 1.1.1.1
-  - 8.8.8.8
-  - 80.80.80.80
-  - 223.5.5.5
   nameserver:
-  - 192.168.5.254
-  - "[fe80::2276:93ff:fe3d:55e9]:53"
-  - dhcp://"eth0"
-  - 1.1.1.1
-  - 8.8.8.8
-  - 80.80.80.80
-  - 223.5.5.5
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - "*.lan"
-  - "*.localdomain"
-  - "*.example"
-  - "*.invalid"
-  - "*.localhost"
-  - "*.test"
-  - "*.local"
-  - "*.home.arpa"
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - "*.time.edu.cn"
-  - "*.ntp.org.cn"
-  - "+.pool.ntp.org"
-  - time1.cloud.tencent.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - "*.msftconnecttest.com"
-  - "*.msftncsi.com"
-  - msftconnecttest.com
-  - msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - "+.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.microsoft.com
-  - xnotify.xboxlive.com
-  - "+.battlenet.com.cn"
-  - "+.wotgame.cn"
-  - "+.wggames.cn"
-  - "+.wowsgame.cn"
-  - "+.wargaming.net"
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - "+.stun.*.*"
-  - "+.stun.*.*.*"
-  - "+.stun.*.*.*.*"
-  - heartbeat.belkin.com
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "*.router.asus.com"
-  - mesu.apple.com
-  - swscan.apple.com
-  - swquery.apple.com
-  - swdownload.apple.com
-  - swcdn.apple.com
-  - swdist.apple.com
-  - lens.l.google.com
-  - stun.l.google.com
+  - https://dns.alidns.com/dns-query
+  - https://1.1.1.1/dns-query
+  - tls://dns.adguard.com:853
 proxies:
-- name: "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  server: uusss1111.liuwei01.tk
-  port: 443
-  type: vmess
-  uuid: 0fab5928-9d70-4666-b351-5debff8a15de
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/liuwei"
-  ws-headers:
-    Host: uusss1111.liuwei01.tk
+- name: "[SS] 172.99.190.35"
+  type: ss
+  server: 172.99.190.35
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  server: 1.transit.t.qjnodeip.xyz
-  port: 29236
+- name: "[VMess] 四川-139.155.22.227"
   type: vmess
-  uuid: 1439886a-ecb5-3bbf-bc65-8bfb23d72ea0
-  alterId: 8
+  server: 139.155.22.227
+  port: 49110
+  uuid: f7675b7e-59bf-435c-ac03-dc2482f27e5d
+  alterId: 64
   cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/Jg012"
-  ws-headers:
-    Host: 1.transit.t.qjnodeip.xyz
   udp: true
-- name: "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
+  skip-cert-verify: true
+  tls: false
+- name: "[SS] 比利时-89.249.73.197"
+  type: ss
+  server: 89.249.73.197
+  port: 49396
+  cipher: aes-256-gcm
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  udp: true
+- name: "[SS] 瑞典-167.88.63.11"
+  type: ss
+  server: 167.88.63.11
+  port: 7307
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+  udp: true
+- name: "[SS] 瑞典-167.88.63.99"
+  type: ss
+  server: 167.88.63.99
+  port: 2376
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+  udp: true
+- name: "[SS] 葡萄牙-82.102.26.93"
+  type: ss
+  server: 82.102.26.93
+  port: 42185
+  cipher: aes-256-gcm
+  password: FaTG4zALZru72gxjgSHQ7Jdh
+  udp: true
+- name: "[SS] 葡萄牙-82.102.26.93 2"
+  type: ss
+  server: 82.102.26.93
+  port: 38620
+  cipher: aes-256-gcm
+  password: Kquv5UhvZXNMemAQy8DxZ7qn
+  udp: true
+- name: "[SS] 阿塞拜疆-62.212.239.53"
+  type: ss
+  server: 62.212.239.53
+  port: 50024
+  cipher: aes-256-gcm
+  password: b2jDPHUQxCNa2KmGHZjy7C4B
+  udp: true
+- name: "[SS] \U0001F1E6\U0001F1F9 奥地利-5.253.207.51"
+  type: ss
+  server: 5.253.207.51
+  port: 33992
+  cipher: aes-256-gcm
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  udp: true
+- name: "[SS] \U0001F1E6\U0001F1F9 奥地利-5.253.207.53"
+  type: ss
+  server: 5.253.207.53
+  port: 31944
+  cipher: aes-256-gcm
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  udp: true
+- name: "[SS] \U0001F1E7\U0001F1EA BE \U0001F1E7\U0001F1EA Antwerp 1"
+  type: ss
+  server: 188.95.55.115
+  port: 31572
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "[SS] \U0001F1E7\U0001F1EA BE \U0001F1E7\U0001F1EA Antwerp 2"
+  type: ss
+  server: 188.95.55.125
+  port: 31572
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "[SS] \U0001F1E7\U0001F1EA BE \U0001F1E7\U0001F1EA Antwerp 4"
+  type: ss
+  server: 188.95.55.108
+  port: 31572
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "[SS] \U0001F1E8\U0001F1E6 加拿大-72.140.224.197"
+  type: ss
+  server: 72.140.224.197
+  port: 802
+  cipher: chacha20-ietf-poly1305
+  password: G!yBwPWH3Vao
+  udp: true
+- name: "[VMess] \U0001F1E8\U0001F1F3 中国-1.transit.t.qjnodeip.xyz"
+  type: vmess
   server: 1.transit.t.qjnodeip.xyz
   port: 33779
-  type: vmess
   uuid: 1439886a-ecb5-3bbf-bc65-8bfb23d72ea0
   alterId: 5
   cipher: auto
-  tls: true
+  udp: true
   skip-cert-verify: true
+  tls: true
   network: ws
   ws-path: "/HkqibHk02b"
   ws-headers:
     Host: 1.transit.t.qjnodeip.xyz
-  udp: true
-- name: "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  server: gmegme.ga
-  port: 443
-  type: vmess
-  uuid: 160ce2c0-89d2-11eb-aef3-560003425baf
-  alterId: 12
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/zwWptVxh/"
-  ws-headers:
-    Host: gmegme.ga
-  udp: true
-- name: "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  server: ff5c0fb.rb.cloudflare.systems
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/ff5c0fb.fm.icloud.com:30513"
-  ws-headers:
-    Host: icloud.com
-  udp: true
-- name: "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  server: 60.249.3.226
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/ff5c0fb.fm.icloud.com:30513"
-  ws-headers:
-    Host: icloud.com
-  udp: true
-- name: "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  server: c27821f.rb.cloudflare.systems
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/c27821f.fm.icloud.com:16708"
-  ws-headers:
-    Host: c27821f.rb.cloudflare.systems
-  udp: true
-- name: "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  server: 128.14.157.112
-  port: 13723
-  type: vmess
-  uuid: a90597c1-bab3-4217-ad6f-0838675c8634
-  alterId: 10
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ray"
-  ws-headers:
-    Host: 128.14.157.112
-  udp: true
-- name: "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  server: www.gov.hk
-  port: 443
-  type: vmess
-  uuid: ef7b953f-09af-4ca9-a074-14665d235010
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/home"
-  ws-headers:
-    Host: cvm.365edu.cf
-  udp: true
-- name: "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  server: www.gov.hk
-  port: 8443
-  type: vmess
-  uuid: 813cb315-4ae8-44e1-e85d-ae90dd5233b6
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/html"
-  ws-headers:
-    Host: hax.cfyes.team
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  server: 146.70.27.12
-  port: 40093
+- name: "[SS] \U0001F1F7\U0001F1F4 罗马尼亚-193.29.107.123"
   type: ss
+  server: 193.29.107.123
+  port: 31944
   cipher: aes-256-gcm
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  server: 167.88.63.82
+- name: "[SS] \U0001F1F8\U0001F1EA SE \U0001F1F8\U0001F1EA Stockholm 3"
+  type: ss
+  server: 185.76.9.56
+  port: 31572
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "[SS] \U0001F1F9\U0001F1F7 TR \U0001F1F9\U0001F1F7 Istanbul 1"
+  type: ss
+  server: 107.150.94.14
+  port: 31572
+  cipher: aes-256-gcm
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  udp: true
+- name: "[SS] \U0001F1FA\U0001F1F2 北美地区-134.195.196.110"
+  type: ss
+  server: 134.195.196.110
   port: 8091
-  type: ss
   cipher: aes-256-gcm
   password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  server: 46.29.218.6
-  port: 2376
+- name: "[SS] \U0001F1FA\U0001F1F2 北美地区-134.195.198.250"
   type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  server: 172.99.190.35
-  port: 8090
-  type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  server: 167.88.63.119
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  server: 38.107.226.146
+  server: 134.195.198.250
   port: 7306
-  type: ss
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  server: 38.107.226.146
-  port: 8090
+- name: "[SS] \U0001F1FA\U0001F1F2 洛杉矶-172.99.190.158"
   type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  server: 167.88.63.60
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  server: 167.88.63.119
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  server: 198.57.27.225
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  server: 172.99.190.35
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  server: 46.29.218.6
-  port: 8090
-  type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__13"
   server: 172.99.190.158
-  port: 2375
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  server: 167.88.63.11
-  port: 2375
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  server: 167.88.63.82
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  server: 167.88.63.99
   port: 2376
-  type: ss
   cipher: aes-256-gcm
   password: faBAoD54k87UJG7
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  server: 198.57.27.225
-  port: 2375
+- name: "[VMess] \U0001F1FA\U0001F1F2 美国-104.16.252.108"
+  type: vmess
+  server: 104.16.252.108
+  port: 443
+  uuid: d7662dde-1d41-4c35-888b-033f1764b643
+  alterId: 0
+  cipher: auto
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: ws
+  ws-path: "/zeduvws?ed=2048"
+  ws-headers:
+    Host: 3.1808.cf
+- name: "[SS] \U0001F1FA\U0001F1F2 美国-172.99.190.35"
   type: ss
+  server: 172.99.190.35
+  port: 2376
   cipher: aes-256-gcm
   password: faBAoD54k87UJG7
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  server: 167.88.63.99
-  port: 7306
+- name: "[SS] \U0001F1FA\U0001F1F2 美国-172.99.190.35 2"
   type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  server: 167.88.63.82
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  server: 198.57.27.218
+  server: 172.99.190.35
   port: 8090
-  type: ss
   cipher: aes-256-gcm
   password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  server: 172.105.55.72
-  port: 2376
+- name: "[SS] \U0001F1FA\U0001F1F2 美国-38.107.226.146"
   type: ss
+  server: 38.107.226.146
+  port: 8090
   cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  server: 167.88.63.11
-  port: 7307
+- name: "[SS] \U0001F1FA\U0001F1F2 美国-38.39.192.74"
   type: ss
+  server: 38.39.192.74
+  port: 8090
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
+  udp: true
+- name: "[VMess] \U0001F1FA\U0001F1F2 美国-welcome.vultr.cyou"
+  type: vmess
+  server: welcome.vultr.cyou
+  port: 443
+  uuid: 60b55522-79c3-48d7-875e-95dc973506ab
+  alterId: 1
+  cipher: auto
+  udp: true
+  skip-cert-verify: true
+  tls: true
+  network: ws
+  ws-path: "/111/h7-hyr5"
+  ws-headers:
+    Host: uspub1.07942568.xyz
+- name: "[SS] \U0001F1FF\U0001F1E6 南非-172.107.233.234"
+  type: ss
+  server: 172.107.233.234
+  port: 7306
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  server: 45.62.231.180
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  server: 45.62.233.134
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  server: 45.62.246.171
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  server: 45.62.231.180
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  server: 45.62.233.134
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  server: 45.62.246.171
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  server: t9.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t9.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  server: t10.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t10.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  server: t9.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t9.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  server: t10.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t10.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  server: v9.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v9.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  server: v10.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v10.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  server: v9.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v9.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  server: v10.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v10.ssrsub.com
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  server: 45.89.229.223
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  server: 193.38.51.192
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  server: 2.59.214.204
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  server: 45.89.229.223
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  server: 193.38.51.192
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  server: 2.59.214.204
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  server: t3.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t3.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  server: t4.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t4.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  server: t5.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t5.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  server: t7.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t7.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  server: t3.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t3.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  server: t4.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t4.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  server: t5.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t5.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  server: t7.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t7.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  server: v3.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v3.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  server: v4.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v4.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  server: v5.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v5.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  server: v7.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v7.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  server: v3.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v3.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  server: v4.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v4.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  server: v5.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v5.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  server: v7.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v7.ssrsub.com
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  server: t1.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t1.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  server: t2.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t2.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  server: t2.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t2.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  server: t1.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t1.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  server: v1.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v1.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  server: v2.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v2.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  server: v2.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v2.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
-  server: v1.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v1.ssrsub.com
   udp: true
 proxy-groups:
 - name: "\U0001F530 节点选择"
@@ -855,245 +247,16 @@ proxy-groups:
   proxies:
   - "♻️ 自动选择"
   - "\U0001F3AF 全球直连"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "♻️ 自动选择"
   type: url-test
   url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies:
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+  interval: '300'
 - name: "\U0001F30D 国外媒体"
   type: select
   proxies:
   - "\U0001F530 节点选择"
   - "♻️ 自动选择"
   - "\U0001F3AF 全球直连"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F30F 国内媒体"
   type: select
   proxies:
@@ -1104,162 +267,10 @@ proxy-groups:
   proxies:
   - "\U0001F3AF 全球直连"
   - "\U0001F530 节点选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F4F2 电报信息"
   type: select
   proxies:
   - "\U0001F530 节点选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
   - "\U0001F3AF 全球直连"
 - name: "\U0001F34E 苹果服务"
   type: select
@@ -1267,82 +278,6 @@ proxy-groups:
   - "\U0001F3AF 全球直连"
   - "\U0001F530 节点选择"
   - "♻️ 自动选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F3AF 全球直连"
   type: select
   proxies:
@@ -1358,110 +293,7 @@ proxy-groups:
   - "\U0001F530 节点选择"
   - "\U0001F3AF 全球直连"
   - "♻️ 自动选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 rules:
-- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
-- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
-- DOMAIN-SUFFIX,chdbits.co,DIRECT
-- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
-- DOMAIN-SUFFIX,empornium.me,DIRECT
-- DOMAIN-SUFFIX,gazellegames.net,DIRECT
-- DOMAIN-SUFFIX,hdchina.org,DIRECT
-- DOMAIN-SUFFIX,hdsky.me,DIRECT
-- DOMAIN-SUFFIX,icetorrent.org,DIRECT
-- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
-- DOMAIN-SUFFIX,icetorrent.org,DIRECT
-- DOMAIN-SUFFIX,keepfrds.com,DIRECT
-- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
-- DOMAIN-SUFFIX,m-team.cc,DIRECT
-- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
-- DOMAIN-SUFFIX,ncore.cc,DIRECT
-- DOMAIN-SUFFIX,open.cd,DIRECT
-- DOMAIN-SUFFIX,ourbits.club,DIRECT
-- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
-- DOMAIN-SUFFIX,privatehd.to,DIRECT
-- DOMAIN-SUFFIX,redacted.ch,DIRECT
-- DOMAIN-SUFFIX,springsunday.net,DIRECT
-- DOMAIN-SUFFIX,tjupt.org,DIRECT
-- DOMAIN-SUFFIX,totheglory.im,DIRECT
-- DOMAIN-KEYWORD,announce,DIRECT
-- DOMAIN-KEYWORD,torrent,DIRECT
 - "DOMAIN-SUFFIX,local,\U0001F3AF 全球直连"
 - "IP-CIDR,192.168.0.0/16,\U0001F3AF 全球直连,no-resolve"
 - "IP-CIDR,10.0.0.0/8,\U0001F3AF 全球直连,no-resolve"
@@ -11904,17 +10736,4 @@ rules:
 - "DOMAIN-KEYWORD,Thunder,\U0001F3AF 全球直连"
 - "DOMAIN-KEYWORD,XLLiveUD,\U0001F3AF 全球直连"
 - "GEOIP,CN,\U0001F3AF 全球直连"
-- "DST-PORT,80,\U0001F41F 漏网之鱼"
-- "DST-PORT,443,\U0001F41F 漏网之鱼"
-- "DST-PORT,22,\U0001F41F 漏网之鱼"
-- MATCH,DIRECT
-redir-port: 7892
-tproxy-port: 7895
-mixed-port: 7893
-secret: '123456'
-bind-address: "*"
-external-ui: "/usr/share/openclash/dashboard"
-ipv6: false
-profile:
-  store-selected: true
-  store-fakeip: false
+- "MATCH,,\U0001F41F 漏网之鱼,dns-failed"
