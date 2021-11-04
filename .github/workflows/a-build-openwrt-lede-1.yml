@@ -398,7 +398,8 @@ jobs:
         uses: actions/download-artifact@v2
         #if: env.GENERATE_STATUS == 'success'
         with:
-          name: bin-archive
+          name: bin
+          #name: bin-archive
           path: openwrt/bin
 
       - name: Deploy Packages-Server
@@ -464,6 +465,7 @@ jobs:
 
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
+        if: steps.diff.outputs.status == 'success'
         with:
           retain_days: 8
           keep_minimum_runs: 5
@@ -490,7 +492,8 @@ jobs:
         uses: geekyeggo/delete-artifact@v1
         with:
           name: |
-            bin-archive
+            bin
+            #bin-archive
 
       - name: Send telegram message on push
         uses: appleboy/telegram-action@master
