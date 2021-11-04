@@ -132,8 +132,7 @@ jobs:
       uses: kittaakos/upload-artifact-as-is@master
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       with:
-        path: ${ GITHUB_WORKSPACE }/openwrt/bin/targets/
-        #path: ${{PWD}}/
+        path: ${ GITHUB_WORKSPACE }/openwrt/bin/targets/*
         #path: ${{ env.BIN_FILE_PATH }}/
 
     - name: Upload OpenWrt Firmware to cowtransfer
@@ -164,7 +163,7 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: steps.tag-build.outputs.status == 'success' && !cancelled()
       env:
-        GITHUB_TOKEN: XX_${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: openwrt_s9xxx_lede_${{ steps.tag-build.outputs.release_tag }}
         body_path: release.txt
@@ -371,7 +370,7 @@ jobs:
 
     - name: Upload Bin Folder
       uses: actions/upload-artifact@main
-      #if: steps.generate.outputs.GENERATE_STATUS == 'success'
+      if: steps.compile.outputs.status == 'success' && !cancelled()
       with:
         #name: bin-archive
         name: bin
@@ -456,7 +455,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: steps.tag-release.outputs.status == 'success' && !cancelled()
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASES_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: ${{ steps.tag-release.outputs.release_date }} NanoPi-R4S formal edition_Docker版_全插件
           tag_name: ${{ steps.tag-release.outputs.release_tag }}
