@@ -11315,8 +11315,9 @@ rules:
 socks-port: 7891
 dns:
   nameserver:
-  - 192.168.5.254
-  - dhcp://"eth0"
+  - 100.102.0.1
+  - "[fe80::727b:e8ff:fe84:1a8d]:53"
+  - dhcp://"pppoe-wan"
   - 1.1.1.1
   - 8.8.8.8
   - 80.80.80.80
@@ -11419,7 +11420,8 @@ dns:
   - lens.l.google.com
   - stun.l.google.com
   default-nameserver:
-  - 192.168.5.254
+  - 100.102.0.1
+  - "[fe80::727b:e8ff:fe84:1a8d]:53"
   - 1.1.1.1
   - 8.8.8.8
   - 80.80.80.80
