@@ -21,19 +21,19 @@ config config_subscribe
 	option sort 'true'
 	option node_type 'true'
 	option sub_convert '0'
-	option enabled '1'
+	option enabled '0'
 
 config config_subscribe
 	option name 'ssrsub'
 	option sub_convert '0'
 	option address 'https://github.com/ssrsub/ssr/raw/master/Clash.yml'
-	option enabled '1'
+	option enabled '0'
 
 config config_subscribe
 	option name 'crclash'
 	option address 'https://git.io/crclash1'
 	option sub_convert '0'
-	option enabled '1'
+	option enabled '0'
 
 config other_rules
 	option enable '1'
@@ -116,7 +116,6 @@ config openclash 'config'
 	option auto_update '1'
 	option config_auto_update_mode '1'
 	option config_update_interval '361'
-	option redirect_dns '1'
 	option ipv6_dns '1'
 	option disable_masq_cache '1'
 	option enable_rule_proxy '1'
@@ -125,9 +124,11 @@ config openclash 'config'
 	option store_fakeip '1'
 	option servers_if_update '0'
 	option servers_update '0'
-	option config_reload '1'
 	option config_path '/etc/openclash/config/config.yaml'
-	option enable '0'
+	option enable '1'
+	option core_type 'TUN'
+	option config_reload '1'
+	option redirect_dns '1'
 
 config dns_servers
 	option group 'nameserver'
