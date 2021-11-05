@@ -15,5 +15,5 @@ config wifi-iface 'default_radio0'
 	option encryption 'psk2'
 	option key '23456701'
 	option network 'lan'
-	option ssid 'H-WiFi'
+	option ssid 'HH-WiFi'
 
