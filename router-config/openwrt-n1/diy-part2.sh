@@ -27,9 +27,9 @@ sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package
 #
 # Add 晶晨宝盒 luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk package/vpei/luci-app-amlogic
-sed -i "s|https.*/amlogic-s9xxx-openwrt|https://github.com/breakings/OpenWrt|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|http.*/library|https://github.com/breakings/OpenWrt/opt/kernel|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|s9xxx_lede|ARMv8|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|https.*/amlogic-s9xxx-openwrt|https://github.com/breakings/OpenWrt|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|http.*/library|https://github.com/breakings/OpenWrt/opt/kernel|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|s9xxx_lede|ARMv8|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
 # sed -i "s|.img.gz|..OPENWRT_SUFFIX|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
 
 # 自定义miniupnpd miniupnpd-2.2.2-2
