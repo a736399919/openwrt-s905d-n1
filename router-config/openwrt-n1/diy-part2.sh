@@ -9,7 +9,7 @@
 # ------------------------------- Main source started -------------------------------
 #
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
-sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci/Makefile
+# sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci/Makefile
 
 # Add the default password for the 'root' user（Change the empty password to 'password'）
 sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' package/base-files/files/etc/shadow
@@ -26,21 +26,25 @@ sed -i "s|DISTRIB_REVISION='.*'|DISTRIB_REVISION='R$(date +%Y.%m.%d)'|g" package
 # ------------------------------- Other started -------------------------------
 #
 # Add 晶晨宝盒 luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk package/luci-app-amlogic
-sed -i "s|https.*/amlogic-s9xxx-openwrt|https://github.com/breakings/OpenWrt|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|http.*/library|https://github.com/breakings/OpenWrt/opt/kernel|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|s9xxx_lede|ARMv8|g" package/luci-app-amlogic/root/etc/config/amlogic
-# sed -i "s|.img.gz|..OPENWRT_SUFFIX|g" package/luci-app-amlogic/root/etc/config/amlogic
+svn co https://github.com/ophub/luci-app-amlogic/trunk package/vpei/luci-app-amlogic
+sed -i "s|https.*/amlogic-s9xxx-openwrt|https://github.com/breakings/OpenWrt|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+sed -i "s|http.*/library|https://github.com/breakings/OpenWrt/opt/kernel|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+sed -i "s|s9xxx_lede|ARMv8|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+# sed -i "s|.img.gz|..OPENWRT_SUFFIX|g" package/vpei/luci-app-amlogic/root/etc/config/amlogic
+
+# 自定义miniupnpd miniupnpd-2.2.2-2
+rm -rf feeds/packages/net/miniupnpd
+svn co https://github.com/vpei/openwrt-vpei/trunk/miniupnpd-2.2.2-2 feeds/packages/net/miniupnpd
 
 # Add autocore
-svn co https://github.com/ophub/amlogic-s9xxx-openwrt/trunk/amlogic-s9xxx/common-files/patches/autocore package/lean/autocore
+# svn co https://github.com/ophub/amlogic-s9xxx-openwrt/trunk/amlogic-s9xxx/common-files/patches/autocore package/lean/autocore
 
 # Add luci-app-cpufreq
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cpufreq package/lean/luci-app-cpufreq
-sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
+# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cpufreq package/lean/luci-app-cpufreq
+# sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
 
 # Add p7zip
-svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
+# svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
 
 # Add luci-app-zerotier
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-zerotier package/lean/luci-app-zerotier

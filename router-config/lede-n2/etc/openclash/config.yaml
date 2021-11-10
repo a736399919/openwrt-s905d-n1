@@ -1,853 +1,220 @@
 ---
+allow-lan: true
+external-controller: 0.0.0.0:9090
+log-level: silent
+mode: rule
 port: 7890
 socks-port: 7891
-allow-lan: true
-mode: rule
-log-level: silent
-external-controller: 0.0.0.0:9090
-dns:
-  enable: true
-  ipv6: true
-  listen: 0.0.0.0:7874
-  enhanced-mode: fake-ip
-  default-nameserver:
-  - 119.29.29.29
-  - 119.28.28.28
-  - 1.0.0.1
-  - 208.67.222.222
-  - 1.2.4.8
-  - 192.168.5.254
-  - "[fe80::2276:93ff:fe3d:55e9]:53"
-  - 1.1.1.1
-  - 8.8.8.8
-  - 80.80.80.80
-  - 223.5.5.5
-  nameserver:
-  - 192.168.5.254
-  - "[fe80::2276:93ff:fe3d:55e9]:53"
-  - dhcp://"eth0"
-  - 1.1.1.1
-  - 8.8.8.8
-  - 80.80.80.80
-  - 223.5.5.5
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-  - "*.lan"
-  - "*.localdomain"
-  - "*.example"
-  - "*.invalid"
-  - "*.localhost"
-  - "*.test"
-  - "*.local"
-  - "*.home.arpa"
-  - time.*.com
-  - time.*.gov
-  - time.*.edu.cn
-  - time.*.apple.com
-  - time1.*.com
-  - time2.*.com
-  - time3.*.com
-  - time4.*.com
-  - time5.*.com
-  - time6.*.com
-  - time7.*.com
-  - ntp.*.com
-  - ntp1.*.com
-  - ntp2.*.com
-  - ntp3.*.com
-  - ntp4.*.com
-  - ntp5.*.com
-  - ntp6.*.com
-  - ntp7.*.com
-  - "*.time.edu.cn"
-  - "*.ntp.org.cn"
-  - "+.pool.ntp.org"
-  - time1.cloud.tencent.com
-  - music.163.com
-  - "*.music.163.com"
-  - "*.126.net"
-  - musicapi.taihe.com
-  - music.taihe.com
-  - songsearch.kugou.com
-  - trackercdn.kugou.com
-  - "*.kuwo.cn"
-  - api-jooxtt.sanook.com
-  - api.joox.com
-  - joox.com
-  - y.qq.com
-  - "*.y.qq.com"
-  - streamoc.music.tc.qq.com
-  - mobileoc.music.tc.qq.com
-  - isure.stream.qqmusic.qq.com
-  - dl.stream.qqmusic.qq.com
-  - aqqmusic.tc.qq.com
-  - amobile.music.tc.qq.com
-  - "*.xiami.com"
-  - "*.music.migu.cn"
-  - music.migu.cn
-  - "*.msftconnecttest.com"
-  - "*.msftncsi.com"
-  - msftconnecttest.com
-  - msftncsi.com
-  - localhost.ptlogin2.qq.com
-  - localhost.sec.qq.com
-  - "+.srv.nintendo.net"
-  - "+.stun.playstation.net"
-  - xbox.*.microsoft.com
-  - xnotify.xboxlive.com
-  - "+.battlenet.com.cn"
-  - "+.wotgame.cn"
-  - "+.wggames.cn"
-  - "+.wowsgame.cn"
-  - "+.wargaming.net"
-  - proxy.golang.org
-  - stun.*.*
-  - stun.*.*.*
-  - "+.stun.*.*"
-  - "+.stun.*.*.*"
-  - "+.stun.*.*.*.*"
-  - heartbeat.belkin.com
-  - "*.linksys.com"
-  - "*.linksyssmartwifi.com"
-  - "*.router.asus.com"
-  - mesu.apple.com
-  - swscan.apple.com
-  - swquery.apple.com
-  - swdownload.apple.com
-  - swcdn.apple.com
-  - swdist.apple.com
-  - lens.l.google.com
-  - stun.l.google.com
 proxies:
-- name: "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  server: uusss1111.liuwei01.tk
-  port: 443
-  type: vmess
-  uuid: 0fab5928-9d70-4666-b351-5debff8a15de
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/liuwei"
-  ws-headers:
-    Host: uusss1111.liuwei01.tk
-  udp: true
-- name: "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  server: 1.transit.t.qjnodeip.xyz
-  port: 29236
-  type: vmess
-  uuid: 1439886a-ecb5-3bbf-bc65-8bfb23d72ea0
-  alterId: 8
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/Jg012"
-  ws-headers:
-    Host: 1.transit.t.qjnodeip.xyz
-  udp: true
-- name: "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  server: 1.transit.t.qjnodeip.xyz
-  port: 33779
-  type: vmess
-  uuid: 1439886a-ecb5-3bbf-bc65-8bfb23d72ea0
-  alterId: 5
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/HkqibHk02b"
-  ws-headers:
-    Host: 1.transit.t.qjnodeip.xyz
-  udp: true
-- name: "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  server: gmegme.ga
-  port: 443
-  type: vmess
-  uuid: 160ce2c0-89d2-11eb-aef3-560003425baf
-  alterId: 12
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/zwWptVxh/"
-  ws-headers:
-    Host: gmegme.ga
-  udp: true
-- name: "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  server: ff5c0fb.rb.cloudflare.systems
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/ff5c0fb.fm.icloud.com:30513"
-  ws-headers:
-    Host: icloud.com
-  udp: true
-- name: "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  server: 60.249.3.226
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/ff5c0fb.fm.icloud.com:30513"
-  ws-headers:
-    Host: icloud.com
-  udp: true
-- name: "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  server: c27821f.rb.cloudflare.systems
-  port: 80
-  type: vmess
-  uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/s/c27821f.fm.icloud.com:16708"
-  ws-headers:
-    Host: c27821f.rb.cloudflare.systems
-  udp: true
-- name: "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  server: 128.14.157.112
-  port: 13723
-  type: vmess
-  uuid: a90597c1-bab3-4217-ad6f-0838675c8634
-  alterId: 10
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ray"
-  ws-headers:
-    Host: 128.14.157.112
-  udp: true
-- name: "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  server: www.gov.hk
-  port: 443
-  type: vmess
-  uuid: ef7b953f-09af-4ca9-a074-14665d235010
-  alterId: 64
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/home"
-  ws-headers:
-    Host: cvm.365edu.cf
-  udp: true
-- name: "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  server: www.gov.hk
-  port: 8443
-  type: vmess
-  uuid: 813cb315-4ae8-44e1-e85d-ae90dd5233b6
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/html"
-  ws-headers:
-    Host: hax.cfyes.team
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  server: 146.70.27.12
-  port: 40093
+- name: "[006]-11-08-\U0001F1EE\U0001F1F9-意大利-82.102.26.94"
   type: ss
+  server: 82.102.26.94
+  port: 38742
   cipher: aes-256-gcm
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  password: DKXfWwc4ebscpXTKpbt85rSH
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  server: 167.88.63.82
-  port: 8091
+- name: "[010]-11-08-\U0001F1E8\U0001F1F3-中国-72.140.224.197"
   type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
+  server: 72.140.224.197
+  port: 802
+  cipher: chacha20-ietf-poly1305
+  password: G!yBwPWH3Vao
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__03"
+- name: "[011]-11-08-\U0001F1E8\U0001F1E6-加拿大-198.57.27.218"
+  type: ss
+  server: 198.57.27.218
+  port: 7307
+  cipher: aes-256-gcm
+  password: FoOiGlkAA9yPEGP
+  udp: true
+- name: "[012]-11-08-\U0001F1F3\U0001F1F4-挪威-46.29.218.6"
+  type: ss
   server: 46.29.218.6
   port: 2376
-  type: ss
   cipher: aes-256-gcm
   password: faBAoD54k87UJG7
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  server: 172.99.190.35
-  port: 8090
+- name: "[014]-11-08-\U0001F1F3\U0001F1F4-挪威-46.29.218.6"
   type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  server: 167.88.63.119
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  server: 38.107.226.146
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  server: 38.107.226.146
-  port: 8090
-  type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  server: 167.88.63.60
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  server: 167.88.63.119
-  port: 7306
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  server: 198.57.27.225
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  server: 172.99.190.35
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__12"
   server: 46.29.218.6
-  port: 8090
-  type: ss
-  cipher: aes-256-gcm
-  password: PCnnH6SQSnfoS27
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  server: 172.99.190.158
-  port: 2375
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  server: 167.88.63.11
-  port: 2375
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  server: 167.88.63.82
-  port: 7307
-  type: ss
-  cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  server: 167.88.63.99
-  port: 2376
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  server: 198.57.27.225
-  port: 2375
-  type: ss
-  cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
-  udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  server: 167.88.63.99
   port: 7306
-  type: ss
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  server: 167.88.63.82
-  port: 7306
+- name: "[015]-11-08-\U0001F1FA\U0001F1F8-美国-167.88.61.50"
   type: ss
+  server: 167.88.61.50
+  port: 8080
   cipher: aes-256-gcm
-  password: FoOiGlkAA9yPEGP
+  password: KixLvKzwjekG00rm
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__20"
+- name: "[024]-11-08-\U0001F1E8\U0001F1E6-加拿大-198.57.27.218"
+  type: ss
   server: 198.57.27.218
   port: 8090
-  type: ss
   cipher: aes-256-gcm
   password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  server: 172.105.55.72
-  port: 2376
+- name: "[027]-11-08-\U0001F1EC\U0001F1E7-英国-89.238.130.253"
   type: ss
+  server: 89.238.130.253
+  port: 43893
   cipher: aes-256-gcm
-  password: faBAoD54k87UJG7
+  password: YyCBeDdYX4cadHpCkkmdJLq8
   udp: true
-- name: "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  server: 167.88.63.11
-  port: 7307
+- name: "[034]-11-08-\U0001F1FA\U0001F1F8-美国-167.88.61.50"
   type: ss
+  server: 167.88.61.50
+  port: 8080
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
+  udp: true
+- name: "[035]-11-08-\U0001F1FA\U0001F1F8-美国-66.115.182.68"
+  type: ss
+  server: 66.115.182.68
+  port: 33992
+  cipher: aes-256-gcm
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  udp: true
+- name: "[036]-11-08-\U0001F1E8\U0001F1F3-中国-72.140.224.197"
+  type: ss
+  server: 72.140.224.197
+  port: 802
+  cipher: chacha20-ietf-poly1305
+  password: G!yBwPWH3Vao
+  udp: true
+- name: "[037]-11-08-\U0001F1E6\U0001F1FA-澳大利亚-118.107.244.110"
+  type: ss
+  server: 118.107.244.110
+  port: 5003
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+  udp: true
+- name: "[038]-11-08-\U0001F1F0\U0001F1F7-韩国-5.fbplay.net"
+  type: ss
+  server: 5.fbplay.net
+  port: 10100
+  cipher: aes-256-gcm
+  password: a78172b3
+  udp: true
+- name: "[039]-11-08-\U0001F1F0\U0001F1F7-韩国-108.fbplay.net"
+  type: ss
+  server: 108.fbplay.net
+  port: 10100
+  cipher: aes-256-gcm
+  password: a78172b3
+  udp: true
+- name: "[041]-11-08-\U0001F1EB\U0001F1F7-法国-185.108.106.74"
+  type: ss
+  server: 185.108.106.74
+  port: 39772
+  cipher: aes-256-gcm
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  udp: true
+- name: "[042]-11-08-\U0001F1F3\U0001F1F1-荷兰-89.46.223.214"
+  type: ss
+  server: 89.46.223.214
+  port: 33992
+  cipher: aes-256-gcm
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  udp: true
+- name: "[043]-11-08-\U0001F1EE\U0001F1F9-意大利-84.17.58.205"
+  type: ss
+  server: 84.17.58.205
+  port: 37473
+  cipher: aes-256-gcm
+  password: enctdKyJfSu76VqznKwTt6Ap
+  udp: true
+- name: "[210]-11-08-\U0001F1F0\U0001F1F7-韩国-102.fbplay.net"
+  type: ss
+  server: 102.fbplay.net
+  port: 10100
+  cipher: aes-256-gcm
+  password: a78172b3
+  udp: true
+- name: "[211]-11-08-\U0001F1FA\U0001F1F8-美国-172.252.64.56"
+  type: ss
+  server: 172.252.64.56
+  port: 18331
+  cipher: chacha20-ietf-poly1305
+  password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
+  udp: true
+- name: "[212]-11-08-\U0001F1FA\U0001F1F8-美国-172.252.64.55"
+  type: ss
+  server: 172.252.64.55
+  port: 18331
+  cipher: chacha20-ietf-poly1305
+  password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
+  udp: true
+- name: "[215]-11-08-\U0001F1EC\U0001F1E7-英国-172.99.190.149"
+  type: ss
+  server: 172.99.190.149
+  port: 7306
   cipher: aes-256-gcm
   password: FoOiGlkAA9yPEGP
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  server: 45.62.231.180
-  port: 153
+- name: "[216]-11-08-\U0001F1E9\U0001F1EA-德国-145.239.1.137"
   type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
+  server: 145.239.1.137
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  server: 45.62.233.134
-  port: 153
+- name: "[217]-11-08-\U0001F1FA\U0001F1F8-美国-167.88.61.50"
   type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
+  server: 167.88.61.50
+  port: 8080
+  cipher: aes-256-gcm
+  password: KixLvKzwjekG00rm
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  server: 45.62.246.171
-  port: 153
+- name: "[221]-11-08-\U0001F1F3\U0001F1F4-挪威-46.29.218.6"
   type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
+  server: 46.29.218.6
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  server: 45.62.231.180
-  port: 153
+- name: "[223]-11-08-\U0001F1FA\U0001F1F8-美国-49.51.188.31"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
+  server: 49.51.188.31
+  port: 32095
+  cipher: aes-256-cfb
+  password: lanluojing320
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  server: 45.62.233.134
-  port: 153
+- name: "[224]-11-08-\U0001F1EC\U0001F1E7-英国-172.99.190.149"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
+  server: 172.99.190.149
+  port: 8091
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  server: 45.62.246.171
-  port: 153
+- name: "[225]-11-08-\U0001F1F3\U0001F1F4-挪威-46.29.218.6"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
+  server: 46.29.218.6
+  port: 8090
+  cipher: aes-256-gcm
+  password: PCnnH6SQSnfoS27
   udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  server: t9.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t9.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  server: t10.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t10.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  server: t9.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t9.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  server: t10.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t10.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  server: v9.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v9.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  server: v10.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v10.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  server: v9.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v9.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  server: v10.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v10.ssrsub.com
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  server: 45.89.229.223
-  port: 153
+- name: "[226]-11-08-\U0001F1EE\U0001F1F9-意大利-82.102.26.94"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
+  server: 82.102.26.94
+  port: 38742
+  cipher: aes-256-gcm
+  password: DKXfWwc4ebscpXTKpbt85rSH
   udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  server: 193.38.51.192
-  port: 153
+- name: "[228]-11-08-\U0001F1F3\U0001F1F4-挪威-46.29.218.6"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
+  server: 46.29.218.6
+  port: 2376
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
   udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  server: 2.59.214.204
-  port: 153
+- name: "[233]-11-08-\U0001F1E9\U0001F1EA-德国-145.239.1.137"
   type: ss
-  cipher: aes-128-gcm
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  server: 45.89.229.223
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  server: 193.38.51.192
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  server: 2.59.214.204
-  port: 153
-  type: ss
-  cipher: aes-128-gcm
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  server: t3.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t3.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  server: t4.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t4.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  server: t5.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t5.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  server: t7.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t7.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  server: t3.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t3.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  server: t4.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t4.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  server: t5.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t5.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  server: t7.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t7.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  server: v3.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v3.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  server: v4.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v4.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  server: v5.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v5.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  server: v7.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v7.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  server: v3.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v3.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  server: v4.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v4.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  server: v5.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v5.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  server: v7.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v7.ssrsub.com
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  server: t1.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t1.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  server: t2.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t2.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  server: t2.ssrsub.com
-  port: 844
-  type: trojan
-  password: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  sni: t2.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  server: t1.ssrsub.com
-  port: 844
-  type: trojan
-  password: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  sni: t1.ssrsub.com
-  skip-cert-verify: true
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  server: v1.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v1.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  server: v2.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v2.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  server: v2.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: f5487ee3-aef5-436f-adf9-673b1afe2ff7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v2.ssrsub.com
-  udp: true
-- name: "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
-  server: v1.ssrsub.com
-  port: 159
-  type: vmess
-  uuid: 52f31fcb-f948-4f71-bca8-795fdcf7b754
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/ssrsub"
-  ws-headers:
-    Host: v1.ssrsub.com
+  server: 145.239.1.137
+  port: 2376
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
   udp: true
 proxy-groups:
 - name: "\U0001F530 节点选择"
@@ -855,245 +222,16 @@ proxy-groups:
   proxies:
   - "♻️ 自动选择"
   - "\U0001F3AF 全球直连"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "♻️ 自动选择"
   type: url-test
   url: http://www.gstatic.com/generate_204
-  interval: 300
-  proxies:
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
+  interval: '300'
 - name: "\U0001F30D 国外媒体"
   type: select
   proxies:
   - "\U0001F530 节点选择"
   - "♻️ 自动选择"
   - "\U0001F3AF 全球直连"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F30F 国内媒体"
   type: select
   proxies:
@@ -1101,248 +239,17 @@ proxy-groups:
   - "\U0001F530 节点选择"
 - name: Ⓜ️ 微软服务
   type: select
-  proxies:
-  - "\U0001F3AF 全球直连"
-  - "\U0001F530 节点选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F4F2 电报信息"
   type: select
   proxies:
   - "\U0001F530 节点选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
   - "\U0001F3AF 全球直连"
 - name: "\U0001F34E 苹果服务"
   type: select
   proxies:
-  - "\U0001F3AF 全球直连"
   - "\U0001F530 节点选择"
+  - "\U0001F3AF 全球直连"
   - "♻️ 自动选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 - name: "\U0001F3AF 全球直连"
   type: select
   proxies:
@@ -1358,82 +265,6 @@ proxy-groups:
   - "\U0001F530 节点选择"
   - "\U0001F3AF 全球直连"
   - "♻️ 自动选择"
-  - "[VMess] @SSRSUB-V01-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V02-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V03-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V04-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V05-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V06-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V07-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V08-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V09-付费推荐:suo.yt/ssrsub"
-  - "[VMess] @SSRSUB-V10-付费推荐:suo.yt/ssrsub"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__01"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__02"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__03"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__04"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__05"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__06"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__07"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__08"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__09"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__10"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__11"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__12"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__13"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__14"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__15"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__16"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__17"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__18"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__19"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__20"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__21"
-  - "[SS] 付费推荐:dlj.tf/ssrsub__22"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S10-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S11-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S12-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S4-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S5-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大S6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T15-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T16-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T7-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大T8-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V15-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V16-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V7-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1E8\U0001F1E6 @SSRSUB-加拿大V8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S1-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S2-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S3-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S7-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S8-付费推荐::suo.yt/ssrsub"
-  - "[SS] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯S9-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T11-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T12-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T13-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T14-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T3-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T4-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T5-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯T6-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V11-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V12-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V13-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V14-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V3-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V4-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V5-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1F7\U0001F1FA @SSRSUB-俄罗斯V6-付费推荐::suo.yt/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T1-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T10-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T2-付费推荐:dlj.tf/ssrsub"
-  - "[Trojan] \U0001F1FA\U0001F1F2 @SSRSUB-美国T9-付费推荐:dlj.tf/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V1-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V10-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V2-付费推荐::suo.yt/ssrsub"
-  - "[VMess] \U0001F1FA\U0001F1F2 @SSRSUB-美国V9-付费推荐::suo.yt/ssrsub"
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
@@ -1472,17 +303,6 @@ rules:
 - "IP-CIDR6,fc00::/7,\U0001F3AF 全球直连,no-resolve"
 - "IP-CIDR6,fe80::/10,\U0001F3AF 全球直连,no-resolve"
 - "IP-CIDR6,fd00::/8,\U0001F3AF 全球直连,no-resolve"
-- "PROCESS-NAME,v2ray,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,ss-local,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,aria2c,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,fdm,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,Folx,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,NetTransport,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,Thunder,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,Transmission,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,uTorrent,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,WebTorrent,\U0001F3AF 全球直连,DIRECT"
-- "PROCESS-NAME,WebTorrent Helper,\U0001F3AF 全球直连,DIRECT"
 - DOMAIN-KEYWORD,1drv,Ⓜ️ 微软服务
 - DOMAIN-KEYWORD,microsoft,Ⓜ️ 微软服务
 - DOMAIN-SUFFIX,aadrm.com,Ⓜ️ 微软服务
@@ -1562,32 +382,14 @@ rules:
 - "DOMAIN,bdtj.tagtic.cn,\U0001F3AF 全球直连"
 - "DOMAIN,log.mmstat.com,\U0001F3AF 全球直连"
 - "DOMAIN,sycm.mmstat.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,blog.google // Google Blog,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,googletraveladservices.com // Google Flights,\U0001F3AF 全球直连"
-- "DOMAIN,clientservices.googleapis.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,googletraveladservices.com,\U0001F3AF 全球直连"
 - "DOMAIN,dl.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,dl.l.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,update.googleapis.com,\U0001F3AF 全球直连"
-- "DOMAIN,translate.googleapis.com,\U0001F3AF 全球直连"
-- "DOMAIN,fonts.googleapis.com,\U0001F3AF 全球直连"
-- "DOMAIN,fonts.gstatic.com,\U0001F3AF 全球直连"
 - "DOMAIN,mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt1-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt2-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt3-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt4-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt5-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt6-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt7-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,alt8-mtalk.google.com,\U0001F3AF 全球直连"
-- "DOMAIN,pubads.g.doubleclick.net,\U0001F3AF 全球直连"
-- "DOMAIN,fairplay.l.qq.com,\U0001F3AF 全球直连"
 - "DOMAIN,livew.l.qq.com,\U0001F3AF 全球直连"
 - "DOMAIN,vd.l.qq.com,\U0001F3AF 全球直连"
 - "DOMAIN,analytics.strava.com,\U0001F3AF 全球直连"
 - "DOMAIN,msg.umeng.com,\U0001F3AF 全球直连"
 - "DOMAIN,msg.umengcloud.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mcupdate.gstarcad.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,adx.open-adx.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,adservice.sigmob.cn,\U0001F6D1 全球拦截"
@@ -2820,7 +1622,6 @@ rules:
 - "DOMAIN-SUFFIX,aerserv.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,aes01.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,aeventlog.beacon.qq.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,afd.l.google.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,aff.eteachergroup.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,aff.lmgtfy.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,aff.marathonbet.com,\U0001F6D1 全球拦截"
@@ -2845,7 +1646,6 @@ rules:
 - "DOMAIN-SUFFIX,afpimages.eastday.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,afpmm.alicdn.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,afptrack.csbew.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,afs.googlesyndication.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,ag.nukefans.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,agenda.complex.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,ag-gb.marketgid.com,\U0001F6D1 全球拦截"
@@ -3197,7 +1997,6 @@ rules:
 - "DOMAIN-SUFFIX,backup.lumion3d.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,backup.lumion3d.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bad1.51gxqm.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,badad.googleplex.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,badao37.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bai3.gushiwen.org,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,baiapk.com,\U0001F6D1 全球拦截"
@@ -3371,7 +2170,6 @@ rules:
 - "DOMAIN-SUFFIX,bkdg.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bl.wavecdn.de,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bla.gtimg.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,blaaaa12.googlecode.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,blb.winasdaq.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bllbaby.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,blogad01.myweb.hinet.net,\U0001F6D1 全球拦截"
@@ -3996,7 +2794,6 @@ rules:
 - "DOMAIN-SUFFIX,cs.twcczhu.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,csad.cc,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,csbew.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,csi.gstatic.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,csqiulong.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,cstoa.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,csxjys.com,\U0001F6D1 全球拦截"
@@ -4342,7 +3139,6 @@ rules:
 - "DOMAIN-SUFFIX,dot2.eporner.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,dotmore.com.tw,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,dou777.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,doubleclick.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,doubleclick.ctfile.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,doubleclick.tv002.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,doubleplay-conf-yql.media.yahoo.com,\U0001F6D1 全球拦截"
@@ -5144,7 +3940,6 @@ rules:
 - "DOMAIN-SUFFIX,gog9.qzdfc.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,go-mpulse.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,good.ta80.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googlecommerce.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,goolpter.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,gopig.io,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,gorgon.youdao.com,\U0001F6D1 全球拦截"
@@ -6815,7 +5610,6 @@ rules:
 - "DOMAIN-SUFFIX,mobadme.jp,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mobfox.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mobgi.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,mobileads.google.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mobileads.msn.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mobileapptracking.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,mobiledissector.com,\U0001F6D1 全球拦截"
@@ -7190,10 +5984,6 @@ rules:
 - "DOMAIN-SUFFIX,padsdel2.cdnads.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,page.acm.dzwww.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,page.xywy.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,pagead.google.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,pagead.l.google.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,pagead2.googlesyndication.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,pagead-tpc.l.google.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,pagechoice.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,pagechoice.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,pagechoicemotu.gentags.net,\U0001F6D1 全球拦截"
@@ -7968,6 +6758,7 @@ rules:
 - "DOMAIN-SUFFIX,searchswapper.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,seavideo-ak.espn.go.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,sebar.thand.info,\U0001F6D1 全球拦截"
+- "DOMAIN-SUFFIX,sec.resource.xiaomi.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,secpay.wostore.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,secretmedia.s3.amazonaws.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,secure.dsp.com,\U0001F6D1 全球拦截"
@@ -8513,7 +7304,6 @@ rules:
 - "DOMAIN-SUFFIX,toutiao.2haha.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,toutiao.jxnews.com.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tp.sgcn.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,tpc.googlesyndication.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tpe163.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tpush.html5.qq.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tqd.ntpddq.com,\U0001F6D1 全球拦截"
@@ -8799,7 +7589,6 @@ rules:
 - "DOMAIN-SUFFIX,video.cooguo.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,video.ureport.push.qq.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,video.wap.mpush.qq.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,video-ad-stats.googlesyndication.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,videondun.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,videopush.baidu.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,viglink.com,\U0001F6D1 全球拦截"
@@ -9712,12 +8501,6 @@ rules:
 - "DOMAIN-SUFFIX,adshows.21cn.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,atrace.chelaile.net.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,logs.chelaile.net.cn,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,doubleclick.net,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googleadservices.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googleadsserving.cn,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googlesyndication.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googletagmanager.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,googletagservices.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,da.mgtv.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,da.hunantv.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,log.hunantv.com,\U0001F6D1 全球拦截"
@@ -9954,8 +8737,6 @@ rules:
 - "DOMAIN-SUFFIX,4paradigm.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,catch.gift,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,pubnative.net,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,www.googleadservices.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,www.google-analytics.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,fusion.qq.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,ios.bugly.qq.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,wup.imtt.qq.com,\U0001F6D1 全球拦截"
@@ -10238,7 +9019,6 @@ rules:
 - "IP-CIDR,188.89.204.198/32,\U0001F6D1 全球拦截,no-resolve"
 - "DOMAIN-SUFFIX,17gouwuba.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,186078.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,189key.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,189zj.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,285680.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,3721zh.com,\U0001F6D1 全球拦截"
@@ -10330,7 +9110,6 @@ rules:
 - "DOMAIN-SUFFIX,tcxshop.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tjqonline.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,topitme.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,tt114.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tt3sm4.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tuia.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,tuipenguin.com,\U0001F6D1 全球拦截"
@@ -10392,7 +9171,6 @@ rules:
 - "IP-CIDR,124.14.21.151/32,\U0001F6D1 全球拦截,no-resolve"
 - "IP-CIDR,180.166.52.24/32,\U0001F6D1 全球拦截,no-resolve"
 - "IP-CIDR,211.161.101.106/32,\U0001F6D1 全球拦截,no-resolve"
-- "IP-CIDR,211.161.101.110/32,\U0001F6D1 全球拦截,no-resolve"
 - "IP-CIDR,220.115.251.25/32,\U0001F6D1 全球拦截,no-resolve"
 - "IP-CIDR,222.73.156.235/32,\U0001F6D1 全球拦截,no-resolve"
 - "IP-CIDR,114.119.160.0/21,\U0001F6D1 全球拦截,no-resolve"
@@ -10403,8 +9181,6 @@ rules:
 - "DOMAIN,geo2.adobe.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,4009997658.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,abbyychina.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,alienskins.cn,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,anydeskchina.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,bartender.cc,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,betterzip.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,betterzipcn.com,\U0001F6D1 全球拦截"
@@ -10421,15 +9197,11 @@ rules:
 - "DOMAIN-SUFFIX,easyrecoverychina.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,ediuschina.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,flstudiochina.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,folxchina.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,formysql.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,guitarpro.cc,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,huishenghuiying.com.cn,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,hypeapp.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,hypersnap.net,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,iconworkshop.cn,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,idmchina.net,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,imazingchina.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,imindmap.cc,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,jihehuaban.com.cn,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,keyshot.cc,\U0001F6D1 全球拦截"
@@ -10464,10 +9236,7 @@ rules:
 - "DOMAIN-SUFFIX,yuanchengxiezuo.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,zbrushcn.com,\U0001F6D1 全球拦截"
 - "DOMAIN-SUFFIX,zhzzx.com,\U0001F6D1 全球拦截"
-- "DOMAIN-SUFFIX,jtvnw.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,ttvnw.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,twitch.tv,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,twitchcdn.net,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,himalaya.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,deezer.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dzcdn.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,joox.com,\U0001F30D 国外媒体"
@@ -10486,8 +9255,6 @@ rules:
 - "DOMAIN-KEYWORD,spotify.com,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,-spotify-com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,tidal.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,himalaya.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,overcast.fm,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,abema.io,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,abema.tv,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,ameba.jp,\U0001F30D 国外媒体"
@@ -10499,18 +9266,16 @@ rules:
 - "DOMAIN-SUFFIX,aiv-delivery.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,amazonvideo.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,primevideo.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,media-amazon.com,\U0001F30D 国外媒体"
-- "DOMAIN,atv-ps.amazon.com,\U0001F30D 国外媒体"
-- "DOMAIN,fls-na.amazon.com,\U0001F30D 国外媒体"
 - "DOMAIN,avodmp4s3ww-a.akamaihd.net,\U0001F30D 国外媒体"
 - "DOMAIN,d25xi40x97liuc.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,dmqdd6hw24ucf.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,dmqdd6hw24ucf.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,d22qjgkvxw22r6.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,d1v5ir2lpwr8os.cloudfront.net,\U0001F30D 国外媒体"
-- "DOMAIN,d27xxe7juh1us6.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,avoddashs,\U0001F30D 国外媒体"
-- "DOMAIN,linear.tv.apple.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,tv.apple.com,\U0001F30D 国外媒体"
+- "DOMAIN,hls.itunes.apple.com,\U0001F30D 国外媒体"
+- "DOMAIN,hls-amt.itunes.apple.com,\U0001F30D 国外媒体"
 - "DOMAIN,play-edge.itunes.apple.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,bahamut.com.tw,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,gamer.com.tw,\U0001F30D 国外媒体"
@@ -10520,58 +9285,49 @@ rules:
 - "DOMAIN-SUFFIX,bbci.co.uk,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,bbcfmt,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,uk-live,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,biliintl.com,\U0001F30D 国外媒体"
-- "DOMAIN,apm-misaka.biliapi.net,\U0001F30D 国外媒体"
-- "DOMAIN,p.bstarstatic.com,\U0001F30D 国外媒体"
-- "DOMAIN,p-bstarstatic.akamaized.net,\U0001F30D 国外媒体"
-- "DOMAIN,upos-bstar-mirrorakam.akamaized.net,\U0001F30D 国外媒体"
-- "DOMAIN,upos-bstar1-mirrorakam.akamaized.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dazn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dazn-api.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,dazndn.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,indazn.com,\U0001F30D 国外媒体"
 - "DOMAIN,d151l6v8er5bdm.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,voddazn,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,disco-api.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,discoveryplus.co.uk,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,discoveryplus.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,discoveryplus.in,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,dnitv.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,bamgrid.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,disneyplus.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,disney-plus.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,disneystreaming.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,disneyplus.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dssott.com,\U0001F30D 国外媒体"
 - "DOMAIN,cdn.registerdisney.go.com,\U0001F30D 国外媒体"
+- "DOMAIN,global.edge.bamgrid.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dmm.co.jp,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dmm.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,dmm-extension.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,encoretvb.com,\U0001F30D 国外媒体"
 - "DOMAIN,edge.api.brightcove.com,\U0001F30D 国外媒体"
 - "DOMAIN,bcbolt446c5271-a.akamaihd.net,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,fox.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,foxdcg.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,theplatform.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,uplynk.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,foxplus.com,\U0001F30D 国外媒体"
+- "DOMAIN,cdn-fox-networks-group-green.akamaized.net,\U0001F30D 国外媒体"
+- "DOMAIN,d3cv4a9a9wh0bt.cloudfront.net,\U0001F30D 国外媒体"
+- "DOMAIN,foxsports01-i.akamaihd.net,\U0001F30D 国外媒体"
+- "DOMAIN,foxsports02-i.akamaihd.net,\U0001F30D 国外媒体"
+- "DOMAIN,foxsports03-i.akamaihd.net,\U0001F30D 国外媒体"
+- "DOMAIN,staticasiafox.akamaized.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbo.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbogo.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbonow.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbomax.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,hbomaxcdn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbogoasia.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hbogoasia.hk,\U0001F30D 国外媒体"
-- "DOMAIN-KEYWORD,.hbogoasia.,\U0001F30D 国外媒体"
-- "DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,\U0001F30D 国外媒体"
 - "DOMAIN,bcbolthboa-a.akamaihd.net,\U0001F30D 国外媒体"
-- "DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,\U0001F30D 国外媒体"
+- "DOMAIN,players.brightcove.net,\U0001F30D 国外媒体"
+- "DOMAIN,s3-ap-southeast-1.amazonaws.com,\U0001F30D 国外媒体"
 - "DOMAIN,dai3fd1oh325y.cloudfront.net,\U0001F30D 国外媒体"
+- "DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,\U0001F30D 国外媒体"
 - "DOMAIN,hboasia1-i.akamaihd.net,\U0001F30D 国外媒体"
 - "DOMAIN,hboasia2-i.akamaihd.net,\U0001F30D 国外媒体"
 - "DOMAIN,hboasia3-i.akamaihd.net,\U0001F30D 国外媒体"
 - "DOMAIN,hboasia4-i.akamaihd.net,\U0001F30D 国外媒体"
 - "DOMAIN,hboasia5-i.akamaihd.net,\U0001F30D 国外媒体"
-- "DOMAIN,hboasialive.akamaized.net,\U0001F30D 国外媒体"
-- "DOMAIN,hbogoprod-vod.akamaized.net,\U0001F30D 国外媒体"
-- "DOMAIN,hbolb.onwardsmg.com,\U0001F30D 国外媒体"
-- "DOMAIN,hbounify-prod.evergent.com,\U0001F30D 国外媒体"
-- "DOMAIN,players.brightcove.net,\U0001F30D 国外媒体"
-- "DOMAIN,s3-ap-southeast-1.amazonaws.com,\U0001F30D 国外媒体"
+- "DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,5itv.tv,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,ocnttv.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,hulu.com,\U0001F30D 国外媒体"
@@ -10583,25 +9339,6 @@ rules:
 - "DOMAIN-SUFFIX,itv.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,itvstatic.com,\U0001F30D 国外媒体"
 - "DOMAIN,itvpnpmobile-a.akamaihd.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,iq.com,\U0001F30D 国外媒体"
-- "DOMAIN,intl.iqiyi.com,\U0001F30D 国外媒体"
-- "DOMAIN,intl-rcd.iqiyi.com,\U0001F30D 国外媒体"
-- "DOMAIN,intl-subscription.iqiyi.com,\U0001F30D 国外媒体"
-- "IP-CIDR,23.53.32.88/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,23.211.15.99/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,103.5.34.153/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,104.109.129.153/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,110.238.107.47/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,118.26.32.178/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,203.74.95.131/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,203.74.95.139/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,203.74.95.153/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,203.211.4.169/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,203.211.4.193/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,210.71.227.200/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,210.71.227.202/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,210.201.32.8/32,\U0001F30D 国外媒体,no-resolve"
-- "IP-CIDR,210.201.32.11/32,\U0001F30D 国外媒体,no-resolve"
 - "DOMAIN-SUFFIX,kktv.com.tw,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,kktv.me,\U0001F30D 国外媒体"
 - "DOMAIN,kktv-theater.kk.stream,\U0001F30D 国外媒体"
@@ -10609,15 +9346,11 @@ rules:
 - "DOMAIN,d3c7rimkq79yfu.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,litv.tv,\U0001F30D 国外媒体"
 - "DOMAIN,litvfreemobile-hichannel.cdn.hinet.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,api.mgtv.com,\U0001F30D 国外媒体"
-- "DOMAIN,mobileso.bz.mgtv.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,channel5.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,my5.tv,\U0001F30D 国外媒体"
 - "DOMAIN,d349g9zuie06uo.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,mytvsuper.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,tvb.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,naver.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,smartmediarep.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,netflix.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,netflix.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,nflxext.com,\U0001F30D 国外媒体"
@@ -10635,8 +9368,6 @@ rules:
 - "DOMAIN-SUFFIX,netflixdnstest7.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,netflixdnstest8.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,netflixdnstest9.com,\U0001F30D 国外媒体"
-- "DOMAIN-KEYWORD,dualstack.apiproxy-,\U0001F30D 国外媒体"
-- "DOMAIN-KEYWORD,dualstack.ichnaea-web-,\U0001F30D 国外媒体"
 - "IP-CIDR,23.246.0.0/18,\U0001F30D 国外媒体,no-resolve"
 - "IP-CIDR,37.77.184.0/21,\U0001F30D 国外媒体,no-resolve"
 - "IP-CIDR,45.57.0.0/17,\U0001F30D 国外媒体,no-resolve"
@@ -10652,19 +9383,10 @@ rules:
 - "DOMAIN-SUFFIX,dmc.nico,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,nicovideo.jp,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,nimg.jp,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,socdm.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,nowe.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,nowestatic.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,cbsi.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,cbsaavideo.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,cbsivideo.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,paramountplus.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,pplusstatic.com,\U0001F30D 国外媒体"
-- "DOMAIN,cbsi.live.ott.irdeto.com,\U0001F30D 国外媒体"
-- "DOMAIN,cbsplaylistserver.aws.syncbak.com,\U0001F30D 国外媒体"
-- "DOMAIN,cbsservice.aws.syncbak.com,\U0001F30D 国外媒体"
-- "DOMAIN,link.theplatform.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,pbs.org,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,peacocktv.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,phncdn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,phprcdn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,pornhub.com,\U0001F30D 国外媒体"
@@ -10673,296 +9395,47 @@ rules:
 - "DOMAIN,hamifans.emome.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,byteoversea.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,ibytedtos.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,ipstatp.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,muscdn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,musical.ly,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,tiktok.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,tik-tokapi.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,tiktokcdn.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,tiktokv.com,\U0001F30D 国外媒体"
 - "DOMAIN-KEYWORD,-tiktokcdn-com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,tver.jp,\U0001F30D 国外媒体"
-- "DOMAIN,edge.api.brightcove.com,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,jtvnw.net,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,ttvnw.net,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,twitch.tv,\U0001F30D 国外媒体"
+- "DOMAIN-SUFFIX,twitchcdn.net,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,viu.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,viu.tv,\U0001F30D 国外媒体"
 - "DOMAIN,api.viu.now.com,\U0001F30D 国外媒体"
 - "DOMAIN,d1k2us671qcoau.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,d2anahhhmp1ffz.cloudfront.net,\U0001F30D 国外媒体"
 - "DOMAIN,dfp6rglgjqszk.cloudfront.net,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,wetv.vip,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,wetvinfo.com,\U0001F30D 国外媒体"
-- "IP-CIDR,150.109.28.51/32,\U0001F30D 国外媒体,no-resolve"
 - "DOMAIN-SUFFIX,googlevideo.com,\U0001F30D 国外媒体"
 - "DOMAIN-SUFFIX,youtube.com,\U0001F30D 国外媒体"
-- "DOMAIN-SUFFIX,ytimg.com,\U0001F30D 国外媒体"
 - "DOMAIN,youtubei.googleapis.com,\U0001F30D 国外媒体"
-- "DOMAIN,yt3.ggpht.com,\U0001F30D 国外媒体"
-- "DOMAIN-KEYWORD,beplay,\U0001F30F 国内媒体"
-- "DOMAIN,cdp.cloud.unity3d.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,battle.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,battlenet.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,blizzard.com,\U0001F30F 国内媒体"
-- "DOMAIN,client.amplifi.com,\U0001F30F 国内媒体"
-- "DOMAIN,ip.bjango.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,alphassl.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,edu.cn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,p4pfile.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zmzfile.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,playstation.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,playstation.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,playstationnetwork.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sony.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sonyentertainmentnetwork.com,\U0001F30F 国内媒体"
-- "IP-CIDR,185.188.32.0/24,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR,185.188.33.0/24,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR,185.188.34.0/24,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR,185.188.35.0/24,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR6,2a0b:b580::/48,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR6,2a0b:b581::/48,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR6,2a0b:b582::/48,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR6,2a0b:b583::/48,\U0001F30F 国内媒体,no-resolve"
-- "IP-CIDR,182.254.116.0/24,\U0001F30F 国内媒体,no-resolve"
-- "DOMAIN-SUFFIX,12306.cn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,12306.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,126.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,163.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,360.cn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,360.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,360buy.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,360buyimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,36kr.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,51ym.me,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,58.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,8686c.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,abercrombie.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,acfun.tv,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,adobesc.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,air-matters.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,air-matters.io,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,aixifan.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,akadns.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,alibabacloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,alicdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,alipay.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,alipayobjects.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,aliyun.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,aliyuncs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,amap.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,appshike.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,appstore.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,autonavi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,aweme.snssdk.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,bababian.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,baidu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,baidupcs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,bdimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,bdstatic.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,beatsbydre.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,bet365.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,broadcasthe.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,caiyunapp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ccgslb.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ccgslb.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,chinacache.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,chunbo.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,chunboimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,clashroyaleapp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,clouddn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cloudsigma.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cloudxns.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cmct.tv,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cmfu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cnbeta.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cnbetacdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,chdbits.co,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cnlang.org,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,cz88.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,dct-cloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,didialift.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,digicert.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,douban.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,doubanio.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,douyin.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,douyu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,douyu.tv,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,douyutv.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,duokan.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,duoshuo.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,dytt8.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,easou.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ecitic.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ecitic.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,eudic.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ewqcxz.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,feng.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,fir.im,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,firefox.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,frdic.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,fresh-ideas.cc,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,gameloft.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,geetest.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,godic.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,goodread.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,gtimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,haibian.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hao123.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,haosou.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hdchina.org,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hdcmct.org,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hkserversolution.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hollisterco.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hongxiu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,hxcdn.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,icedropper.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,iciba.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ifeng.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ifengimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,images-amazon.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,img4me.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ithome.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ixdzs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jd.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jd.hk,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jianshu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jianshu.io,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jianshuapi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jiathis.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jomodns.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,jsboxbbs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,knewone.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,kuaidi100.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,kugou.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,lecloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,lemicp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,letv.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,letvcloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,liyuans.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,lizhi.io,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,localizecdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,lucifr.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,luoo.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,lxdns.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,mai.tn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,meizu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,metatrader4.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,metatrader5.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,mi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,miaopai.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,miui.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,miwifi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,mob.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,moji.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,moke.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,mxhichina.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,myqcloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,myunlu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ngabbs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,netease.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,nfoservers.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,nssurge.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,nuomi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ourbits.club,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ourdvs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,passthepopcorn.me,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,pgyer.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,pniao.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,privatehd.to,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,pstatp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qbox.me,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qcloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qdaily.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qdmm.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qhimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qidian.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qihucdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qin.io,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qingmang.me,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qingmang.mobi,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qiniucdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qiniudn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qq.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,qqurl.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,rarbg.to,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,redacted.ch,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,rrmj.tv,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ruguoapp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sandai.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sf-express.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sinaapp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sinaimg.cn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sinaimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sm.ms,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,smzdm.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,snssdk.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,snwx.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,so.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sogou.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sogoucdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sohu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,soku.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,soso.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,sspai.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,startssl.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,store.steampowered.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,suning.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,symcd.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,taobao.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tawk.link,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tawk.to,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tenpay.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tietuku.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tmall.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tmzvps.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,trello.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,trellocdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,totheglory.im,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ttmeiju.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,tudou.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,udache.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,umengcloud.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,upaiyun.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,upyun.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,uxengine.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,wandoujia.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weather.bjango.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weather.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,webqxs.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weibo.cn,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weibo.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weico.cc,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weiphone.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,weiphone.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,wenku8.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,werewolf.53site.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,wkcdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xdrig.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xhostfire.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiami.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiami.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiaojukeji.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiaomi.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiaomi.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xiaomicp.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ximalaya.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xitek.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xmcdn.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,xslb.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yach.me,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yeepay.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yhd.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yinxiang.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yixia.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,ykimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,youdao.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,youku.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,yunjiasu-cdn.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zealer.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zgslb.net,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zhihu.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zhimg.com,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zimuzu.tv,\U0001F30F 国内媒体"
-- "DOMAIN-SUFFIX,zmz002.com,\U0001F30F 国内媒体"
-- "IP-CIDR,1.255.62.0/24,\U0001F30F 国内媒体,no-resolve"
-- "DOMAIN-SUFFIX,cn,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,acg.tv,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,acgvideo.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,b23.tv,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,biliapi.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,biliapi.net,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,bilibili.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,biligame.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,biligame.net,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,bilivideo.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,hdslb.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,im9.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,smtcdns.net,\U0001F30F 国内媒体"
+- "DOMAIN-KEYWORD,qiyi,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,qy.net,\U0001F30F 国内媒体"
+- "IP-CIDR,101.227.0.0/16,\U0001F30F 国内媒体"
+- "IP-CIDR,101.224.0.0/13,\U0001F30F 国内媒体"
+- "IP-CIDR,119.176.0.0/12,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,api.mob.app.letv.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,v.smtcdns.com,\U0001F30F 国内媒体"
+- "DOMAIN-SUFFIX,vv.video.qq.com,\U0001F30F 国内媒体"
+- "IP-CIDR,106.11.0.0/16,\U0001F30F 国内媒体,no-resolve"
 - "DOMAIN-SUFFIX,t.me,\U0001F4F2 电报信息"
 - "DOMAIN-SUFFIX,tdesktop.com,\U0001F4F2 电报信息"
 - "DOMAIN-SUFFIX,telegra.ph,\U0001F4F2 电报信息"
@@ -10973,16 +9446,524 @@ rules:
 - "IP-CIDR,91.108.8.0/22,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR,91.108.12.0/22,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR,91.108.16.0/22,\U0001F4F2 电报信息,no-resolve"
-- "IP-CIDR,91.108.20.0/22,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR,91.108.56.0/22,\U0001F4F2 电报信息,no-resolve"
-- "IP-CIDR,91.105.192.0/23,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR,149.154.160.0/20,\U0001F4F2 电报信息,no-resolve"
-- "IP-CIDR,185.76.151.0/24,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR6,2001:b28:f23d::/48,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR6,2001:b28:f23f::/48,\U0001F4F2 电报信息,no-resolve"
 - "IP-CIDR6,2001:67c:4e8::/48,\U0001F4F2 电报信息,no-resolve"
-- "IP-CIDR6,2001:b28:f23c::/48,\U0001F4F2 电报信息,no-resolve"
-- "IP-CIDR6,2a0a:f280::/32,\U0001F4F2 电报信息,no-resolve"
+- "DOMAIN,testflight.apple.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,appspot.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,blogger.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,getoutline.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gvt0.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gvt1.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gvt3.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,google,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,blogspot,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,onedrive.live.com,\U0001F530 节点选择"
+- "DOMAIN,az416426.vo.msecnd.net,\U0001F530 节点选择"
+- "DOMAIN,az668014.vo.msecnd.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cdninstagram.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fb.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fb.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fbaddins.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fbcdn.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fbsbx.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fbworkmail.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,instagram.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,m.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,messenger.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,oculus.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,oculuscdn.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rocksdb.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,whatsapp.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,whatsapp.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pscp.tv,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,periscope.tv,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,t.co,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,twimg.co,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,twimg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,twitpic.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,twitter.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,vine.co,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,telegra.ph,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,telegram.org,\U0001F530 节点选择"
+- "IP-CIDR,91.108.4.0/22,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,91.108.8.0/22,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,91.108.12.0/22,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,91.108.16.0/22,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,91.108.56.0/22,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,149.154.160.0/20,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR6,2001:b28:f23d::/48,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR6,2001:b28:f23f::/48,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR6,2001:67c:4e8::/48,\U0001F530 节点选择,no-resolve"
+- "DOMAIN-SUFFIX,line.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,line-apps.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,line-scdn.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,naver.jp,\U0001F530 节点选择"
+- "IP-CIDR,103.2.30.0/23,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,125.209.208.0/20,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,147.92.128.0/17,\U0001F530 节点选择,no-resolve"
+- "IP-CIDR,203.104.144.0/21,\U0001F530 节点选择,no-resolve"
+- "DOMAIN,a248.e.akamai.net,\U0001F530 节点选择"
+- "DOMAIN,a771.dscq.akamai.net,\U0001F530 节点选择"
+- "DOMAIN,d3c33hcgiwev3.cloudfront.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,4shared.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,9cache.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,9gag.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,abc.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,abc.net.au,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,abebooks.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,amazon.co.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ao3.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apigee.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apkcombo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apk-dl.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apkfind.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apkmirror.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apkmonk.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,apkpure.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,aptoide.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,archive.is,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,archive.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,archiveofourown.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,archiveofourown.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,arte.tv,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,artstation.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,arukas.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ask.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,avg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,avgle.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,badoo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bandwagonhost.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bangkokpost.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bbc.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,behance.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bibox.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,biggo.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,binance.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bit.ly,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bitcointalk.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bitfinex.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bitmex.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bit-z.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bloglovin.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bloomberg.cn,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bloomberg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,blubrry.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,book.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,booklive.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,books.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,boslife.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,box.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,brave.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,businessinsider.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,buzzfeed.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bwh1.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,castbox.fm,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cbc.ca,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cdw.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,change.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,channelnewsasia.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ck101.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,clarionproject.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cloudcone.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,clyp.it,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cna.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,comparitech.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,conoha.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,crucial.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cts.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cw.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cyberctm.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dailymotion.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dailyview.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,daum.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,daumcdn.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dcard.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,deadline.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,deepdiscount.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,depositphotos.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,deviantart.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,disconnect.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,discordapp.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,discordapp.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,disqus.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dlercloud.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dmhy.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dns2go.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dowjones.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dropbox.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dropboxapi.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dropboxusercontent.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,duckduckgo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,duyaoss.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dw.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dynu.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,earthcam.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ebookservice.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,economist.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,edgecastcdn.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,edu,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,edx-cdn.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,elpais.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,enanyang.my,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,encyclopedia.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,esoir.be,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,etherscan.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,euronews.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,evozi.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,exblog.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,feeder.co,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,feedly.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,feedx.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,firech.at,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,flickr.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,flipboard.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,flitto.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,foreignpolicy.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,fortawesome.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,freetls.fastly.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,friday.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ft.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ftchinese.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ftimg.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gate.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,getlantern.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,getsync.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,github.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,github.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,githubusercontent.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,globalvoices.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,goo.ne.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,goodreads.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gov,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gov.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,greatfire.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gumroad.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hbg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,heroku.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hightail.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hk01.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hkbf.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hkbookcity.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hkej.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hket.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hootsuite.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hudson.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,huffpost.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,hyread.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ibtimes.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,i-cable.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,icij.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,icoco.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,imgur.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,independent.co.uk,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,initiummall.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,inoreader.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,insecam.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ipfs.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,issuu.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,istockphoto.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,japantimes.co.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,jiji.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,jinx.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,jkforum.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,joinmastodon.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,justmysocks.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,justpaste.it,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kadokawa.co.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kakao.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kakaocorp.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kik.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kingkong.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,knowyourmeme.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kobo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kobobooks.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,kodingen.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,lemonde.fr,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,lepoint.fr,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,lihkg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,limbopro.xyz,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,listennotes.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,livestream.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,logimg.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,logmein.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mail.ru,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mailchimp.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,marc.info,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,matters.news,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,maying.co,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,medium.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mega.nz,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mergersandinquisitions.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mil,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mingpao.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mixi.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mobile01.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mubi.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,myspace.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,myspacecdn.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nanyang.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nationalinterest.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,naver.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nbcnews.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ndr.de,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,neowin.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,newstapa.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nexitally.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nhk.or.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nii.ac.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nikkei.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nitter.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nofile.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,notion.so,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,now.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nrk.no,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nuget.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nyaa.si,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nyt.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytchina.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytcn.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytco.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytimes.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytimg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytlog.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,nytstyle.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ok.ru,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,okex.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,on.cc,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,orientaldaily.com.my,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,overcast.fm,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,paltalk.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,parsevideo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pawoo.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pbxes.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pcdvd.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pchome.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pcloud.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,peing.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,picacomic.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pinimg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pixiv.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,player.fm,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,plurk.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,po18.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,potato.im,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,potatso.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,prism-break.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,proxifier.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pt.im,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pts.org.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pubu.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pubu.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,pureapk.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,quora.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,quoracdn.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,qz.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,radio.garden,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rakuten.co.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rarbgprx.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,reabble.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,readingtimes.com.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,readmoo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,redbubble.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,redd.it,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,reddit.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,redditmedia.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,resilio.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,reuters.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,reutersmedia.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rfi.fr,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rixcloud.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,roadshow.hk,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,rsshub.app,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,scmp.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,scribd.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,seatguru.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,shadowsocks.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,shindanmaker.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,shopee.tw,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,sina.com.hk,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,slideshare.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,softfamous.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,spiegel.de,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ssrcloud.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,startpage.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,steamcommunity.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,steemit.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,steemitwallet.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,straitstimes.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,streema.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,t66y.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tapatalk.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,teco-hk.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,teco-mo.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,teddysun.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,textnow.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,theguardian.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,theinitium.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,themoviedb.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,thetvdb.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,time.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tineye.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tiny.cc,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tinyurl.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,torproject.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tumblr.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,turbobit.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tutanota.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tvboxnow.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,udn.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,unseen.is,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,upmedia.mg,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,uptodown.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,urbandictionary.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ustream.tv,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,uwants.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,v2fly.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,v2ray.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,viber.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,videopress.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,vimeo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,voachinese.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,voanews.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,voxer.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,vzw.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,w3schools.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,washingtonpost.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wattpad.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,whoer.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikileaks.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikimapia.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikimedia.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikinews.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikipedia.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikiquote.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wikiwand.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,winudf.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wire.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wn.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wordpress.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,workflow.is,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,worldcat.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wsj.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,wsj.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xhamster.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xn--90wwvt03e.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xn--i2ru8q2qg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xnxx.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,xvideos.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yahoo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yandex.ru,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ycombinator.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yesasia.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yes-news.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yomiuri.co.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,you-get.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zaobao.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zb.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zello.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zeronet.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zoom.us,\U0001F530 节点选择"
+- "DOMAIN,cc.tvbs.com.tw,\U0001F530 节点选择"
+- "DOMAIN,ocsp.int-x3.letsencrypt.org,\U0001F530 节点选择"
+- "DOMAIN,payments-jp.amazon.com,\U0001F530 节点选择"
+- "DOMAIN,s3-ap-northeast-1.amazonaws.com,\U0001F530 节点选择"
+- "DOMAIN,s3-ap-southeast-2.amazonaws.com,\U0001F530 节点选择"
+- "DOMAIN,search.avira.com,\U0001F530 节点选择"
+- "DOMAIN,us.weibo.com,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,jav,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,pinterest,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,porn,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,abc.xyz,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,advertisercommunity.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ampproject.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,android.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,androidify.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dialogflow.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,autodraw.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,capitalg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,certificate-transparency.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,chrome.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,chromeexperiments.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,chromestatus.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,chromium.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,creativelab5.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,debug.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,deepmind.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,firebaseio.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,getmdl.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ggpht.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gmail.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gmodules.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,godoc.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,golang.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gstatic.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gv.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,gwtproject.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,itasoftware.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,madewithcode.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,material.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,page.link,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,polymer-project.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,admin.recaptcha.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,recaptcha.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,shattered.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,synergyse.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,telephony.goog,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tensorflow.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tfhub.dev,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tiltbrush.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,waveprotocol.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,waymo.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,webmproject.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,webrtc.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,whatbrowser.org,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,widevine.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,x.company,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,youtu.be,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,yt.be,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ytimg.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,t.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,tdesktop.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,telegram.me,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,telesco.pe,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.br,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.design,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.hu,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.in,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.nl,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebook.se,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,facebookmail.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,noxinfluencer.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,smartmailcloud.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,weebly.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,twitter.jp,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,appsto.re,\U0001F530 节点选择"
+- "DOMAIN,books.itunes.apple.com,\U0001F530 节点选择"
+- "DOMAIN,apps.apple.com,\U0001F530 节点选择"
+- "DOMAIN,itunes.apple.com,\U0001F530 节点选择"
+- "DOMAIN,api-glb-sea.smoot.apple.com,\U0001F530 节点选择"
+- "DOMAIN,lookup-api.apple.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,smoot.apple.com,\U0001F530 节点选择"
+- "DOMAIN,beta.music.apple.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,bing.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cccat.io,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,dubox.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,duboxcdn.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,ifixit.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,mangakakalot.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,shopeemobile.com,\U0001F530 节点选择"
+- "DOMAIN-KEYWORD,buy.itunes.apple.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,cloudcone.com.cn,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,inkbunny.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,metapix.net,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,s3.amazonaws.com,\U0001F530 节点选择"
+- "DOMAIN-SUFFIX,zaobao.com.sg,\U0001F530 节点选择"
 - "DOMAIN-SUFFIX,aaplimg.com,\U0001F34E 苹果服务"
 - "DOMAIN-SUFFIX,apple.co,\U0001F34E 苹果服务"
 - "DOMAIN-SUFFIX,apple.com,\U0001F34E 苹果服务"
@@ -11042,6 +10023,8 @@ rules:
 - "DOMAIN-SUFFIX,icloud-content.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,me.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mzstatic.com,\U0001F3AF 全球直连"
+- "DOMAIN-KEYWORD,apple.com.akadns.net,\U0001F3AF 全球直连"
+- "DOMAIN-KEYWORD,icloud.com.akadns.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,baidu.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,baidubcr.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,baidupan.com,\U0001F3AF 全球直连"
@@ -11065,10 +10048,10 @@ rules:
 - "DOMAIN-SUFFIX,cctv.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,cctvpic.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,livechina.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,21cn.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,didialift.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,didiglobal.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,udache.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,21cn.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,hitv.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mgtv.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,iqiyi.com,\U0001F3AF 全球直连"
@@ -11084,10 +10067,6 @@ rules:
 - "DOMAIN-SUFFIX,meitudata.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,meitustat.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,meipai.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,dianping.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,dpfile.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,meituan.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,meituan.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,duokan.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mi.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mi-img.com,\U0001F3AF 全球直连"
@@ -11095,18 +10074,15 @@ rules:
 - "DOMAIN-SUFFIX,miwifi.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,xiaomi.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,xiaomi.net,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,visualstudio.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,hotmail.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,microsoft.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,msecnd.net,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,office365.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,outlook.com,\U0001F3AF 全球直连"
-- "DOMAIN,outlook.office365.com,\U0001F3AF 全球直连"
-- "DOMAIN,smtp.office365.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,update.microsoft.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,s-microsoft.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,visualstudio.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,windows.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,windowsupdate.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,windowsupdate.microsoft.com,\U0001F3AF 全球直连"
-- "DOMAIN,download.microsoft.com,\U0001F3AF 全球直连"
-- "DOMAIN,wustat.windows.com,\U0001F3AF 全球直连"
-- "DOMAIN,ntservicepack.microsoft.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,163.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,126.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,126.net,\U0001F3AF 全球直连"
@@ -11115,7 +10091,6 @@ rules:
 - "DOMAIN-SUFFIX,lofter.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,netease.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,ydstatic.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,youdao.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,paypal.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,paypal.me,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,paypalobjects.com,\U0001F3AF 全球直连"
@@ -11141,22 +10116,10 @@ rules:
 - "DOMAIN-SUFFIX,qqmail.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,servicewechat.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tencent.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,tencent-cloud.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tencent-cloud.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tenpay.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,wechat.com,\U0001F3AF 全球直连"
 - "DOMAIN,file-igamecj.akamaized.net,\U0001F3AF 全球直连"
-- "IP-CIDR,101.32.104.4/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.104.41/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.104.56/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.118.25/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.133.16/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.133.53/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,101.32.133.209/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,129.226.3.47/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,129.226.107.244/32,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,182.254.116.0/24,\U0001F3AF 全球直连,no-resolve"
-- "IP-CIDR,203.205.254.0/23,\U0001F3AF 全球直连,no-resolve"
 - "DOMAIN-SUFFIX,ccgslb.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,ccgslb.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,chinanetcenter.com,\U0001F3AF 全球直连"
@@ -11169,11 +10132,9 @@ rules:
 - "DOMAIN-SUFFIX,ip.sb,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,ip-cdn.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,ipv6-test.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,myip.la,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,test-ipv6.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,whatismyip.com,\U0001F3AF 全球直连"
 - "DOMAIN,ip.istatmenus.app,\U0001F3AF 全球直连"
-- "DOMAIN,sms.imagetasks.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,netspeedtestmaster.com,\U0001F3AF 全球直连"
 - "DOMAIN,speedtest.macpaw.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,acg.rip,\U0001F3AF 全球直连"
@@ -11208,6 +10169,20 @@ rules:
 - "DOMAIN-SUFFIX,springsunday.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tjupt.org,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,totheglory.im,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,343480.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,agefans.tv,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,baduziyuan.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,cdn9-okzy.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,com-hs-hkdy.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,czybjz.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,dandanzan.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,fjhps.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,kuyunbo.club,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,nfmovies.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,okokbo.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,sd-dykj.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,yhdm.tv,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,youkutv.cc,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,cn,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,115.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,360in.com,\U0001F3AF 全球直连"
@@ -11216,7 +10191,6 @@ rules:
 - "DOMAIN-SUFFIX,99.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,abchina.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,accuweather.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,agora.io,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,aicoinstorge.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,air-matters.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,air-matters.io,\U0001F3AF 全球直连"
@@ -11225,6 +10199,7 @@ rules:
 - "DOMAIN-SUFFIX,b612.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,bdatu.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,beitaichufang.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,bjango.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,booking.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,bstatic.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,cailianpress.com,\U0001F3AF 全球直连"
@@ -11236,10 +10211,8 @@ rules:
 - "DOMAIN-SUFFIX,chunyu.mobi,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,cmbchina.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,cmbimg.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,coolapk.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,ctrip.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,dfcfw.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,dji.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,docschina.org,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,douban.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,doubanio.com,\U0001F3AF 全球直连"
@@ -11259,7 +10232,6 @@ rules:
 - "DOMAIN-SUFFIX,getpricetag.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,gifshow.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,godic.net,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,heweather.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,hicloud.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,hongxiu.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,hostbuf.com,\U0001F3AF 全球直连"
@@ -11280,21 +10252,23 @@ rules:
 - "DOMAIN-SUFFIX,lanzous.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,licdn.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,linkedin.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,loli.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,luojilab.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,maoyan.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,maoyun.tv,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,meituan.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,meituan.net,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mls-cdn.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mobike.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,moke.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,mubu.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,myzaker.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,nim-lang-cn.org,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,ntp.org,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,nvidia.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,oracle.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,plex.tv,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,qdaily.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,qidian.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,qweather.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,qyer.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,qyerstatic.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,raychase.net,\U0001F3AF 全球直连"
@@ -11302,6 +10276,7 @@ rules:
 - "DOMAIN-SUFFIX,ruguoapp.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,sankuai.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,scomper.me,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,seafile.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,sm.ms,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,smzdm.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,snapdrop.net,\U0001F3AF 全球直连"
@@ -11313,6 +10288,7 @@ rules:
 - "DOMAIN-SUFFIX,teamviewer.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tianyancha.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,tophub.today,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,udacity.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,uning.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,weather.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,weico.cc,\U0001F3AF 全球直连"
@@ -11331,562 +10307,8 @@ rules:
 - "DOMAIN-SUFFIX,zhuihd.com,\U0001F3AF 全球直连"
 - "DOMAIN,download.jetbrains.com,\U0001F3AF 全球直连"
 - "DOMAIN,images-cn.ssl-images-amazon.com,\U0001F3AF 全球直连"
-- "DOMAIN-SUFFIX,amazon.co.jp,\U0001F530 节点选择"
-- "DOMAIN,d3c33hcgiwev3.cloudfront.net,\U0001F530 节点选择"
-- "DOMAIN,payments-jp.amazon.com,\U0001F530 节点选择"
-- "DOMAIN,s3-ap-northeast-1.amazonaws.com,\U0001F530 节点选择"
-- "DOMAIN,s3-ap-southeast-2.amazonaws.com,\U0001F530 节点选择"
-- "DOMAIN,a248.e.akamai.net,\U0001F530 节点选择"
-- "DOMAIN,a771.dscq.akamai.net,\U0001F530 节点选择"
-- "DOMAIN,testflight.apple.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,aex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bibox.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,binance.cc,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,binance.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bitcointalk.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bitfinex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bitmex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,coingecko.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,coinmarketcap.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gate.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,huobi.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,okex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,poloniex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,uniswap.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zb.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,discord.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,discordapp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,discordapp.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dropbox.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dropboxapi.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dropboxusercontent.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cdninstagram.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,facebook.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,facebook.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fb.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fb.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fbaddins.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fbcdn.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fbsbx.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fbworkmail.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,instagram.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,m.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,messenger.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,oculus.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,oculuscdn.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,rocksdb.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,whatsapp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,whatsapp.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,github.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,github.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,githubusercontent.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,appspot.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,blogger.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,getoutline.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gvt0.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gvt3.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ytimg.com,\U0001F530 节点选择"
-- "DOMAIN-KEYWORD,google,\U0001F530 节点选择"
-- "DOMAIN-KEYWORD,.blogspot.,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,line.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,line-apps.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,line-scdn.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,naver.jp,\U0001F530 节点选择"
-- "IP-CIDR,103.2.30.0/23,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,125.209.208.0/20,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,147.92.128.0/17,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,203.104.144.0/21,\U0001F530 节点选择,no-resolve"
-- "DOMAIN-SUFFIX,aka.ms,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,onedrive.live.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,streaming.mediaservices.windows.net,\U0001F530 节点选择"
-- "DOMAIN,assets1.xboxlive.com,\U0001F530 节点选择"
-- "DOMAIN,assets2.xboxlive.com,\U0001F530 节点选择"
-- "DOMAIN,az416426.vo.msecnd.net,\U0001F530 节点选择"
-- "DOMAIN,az668014.vo.msecnd.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nyt.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytchina.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytcn.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytco.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytimes.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytimg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytlog.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nytstyle.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.at,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.ca,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.co.uk,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.de,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.fr,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinterest.se,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pixiv.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pixiv.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pximg.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,redd.it,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,reddit.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,redditmedia.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,telegra.ph,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,telegram.org,\U0001F530 节点选择"
-- "IP-CIDR,91.108.4.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.108.8.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.108.12.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.108.16.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.108.20.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.108.56.0/22,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,91.105.192.0/23,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,149.154.160.0/20,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR,185.76.151.0/24,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR6,2001:b28:f23d::/48,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR6,2001:b28:f23f::/48,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR6,2001:67c:4e8::/48,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR6,2001:b28:f23c::/48,\U0001F530 节点选择,no-resolve"
-- "IP-CIDR6,2a0a:f280::/32,\U0001F530 节点选择,no-resolve"
-- "DOMAIN-SUFFIX,pscp.tv,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,periscope.tv,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,t.co,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,twimg.co,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,twimg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,twitpic.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,twitter.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,vine.co,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikileaks.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikimapia.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikimedia.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikinews.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikipedia.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikiquote.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,4shared.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,9cache.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,9gag.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,abc.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,abc.net.au,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,abebooks.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ao3.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apigee.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apkcombo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apk-dl.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apkfind.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apkmirror.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apkmonk.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,apkpure.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,aptoide.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,archive.is,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,archive.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,archiveofourown.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,archiveofourown.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,arte.tv,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,artstation.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,arukas.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ask.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,avg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,avgle.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,badoo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bandcamp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bandwagonhost.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bangkokpost.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bbc.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,behance.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,biggo.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bit.ly,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bloglovin.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bloomberg.cn,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bloomberg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,blubrry.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,book.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,booklive.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,books.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,boslife.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,box.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,brave.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,businessinsider.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,buzzfeed.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bwh1.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,castbox.fm,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cbc.ca,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cdw.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,change.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,channelnewsasia.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ck101.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,clarionproject.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cloudcone.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,clubhouseapi.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,clyp.it,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cna.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,comparitech.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,conoha.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,crucial.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cts.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cw.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cyberctm.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cyclingnews.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dailymotion.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dailyview.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dandanzan.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,daum.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,daumcdn.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dcard.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,deadline.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,deepdiscount.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,depositphotos.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,deviantart.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,disconnect.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,disqus.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dlercloud.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dmhy.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dns2go.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dowjones.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,duckduckgo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,duyaoss.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dw.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dynu.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,earthcam.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ebookservice.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,economist.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,edgecastcdn.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,edx-cdn.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,elpais.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,enanyang.my,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,encyclopedia.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,esoir.be,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,etherscan.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,euronews.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,evozi.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,exblog.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,feeder.co,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,feedly.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,feedx.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,firech.at,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,flickr.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,flipboard.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,flitto.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,foreignpolicy.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,fortawesome.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,freetls.fastly.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,friday.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ft.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ftchinese.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ftimg.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,genius.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,getlantern.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,getsync.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,globalvoices.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,goo.ne.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,goodreads.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gov.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gravatar.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,greatfire.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gumroad.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,heroku.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hightail.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hk01.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hkbf.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hkbookcity.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hkej.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hket.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hootsuite.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hudson.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,huffpost.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,hyread.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ibtimes.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,i-cable.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,icij.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,icoco.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,imgur.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,independent.co.uk,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,initiummall.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,inoreader.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,insecam.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ipfs.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,issuu.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,istockphoto.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,japantimes.co.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,jiji.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,jinx.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,jkforum.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,joinclubhouse.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,joinmastodon.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,justmysocks.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,justpaste.it,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kadokawa.co.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kakao.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kakaocorp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kik.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kingkong.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,knowyourmeme.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kobo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kobobooks.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,kodingen.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,lemonde.fr,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,lepoint.fr,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,lihkg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,limbopro.xyz,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,listennotes.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,livestream.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,logimg.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,logmein.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mail.ru,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mailchimp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,marc.info,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,matters.news,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,maying.co,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,medium.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mega.nz,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mergersandinquisitions.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mingpao.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mixi.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mixlr.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mobile01.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mubi.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,myspace.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,myspacecdn.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nanyang.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nationalinterest.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,naver.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nbcnews.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ndr.de,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,neowin.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,newstapa.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nexitally.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nhk.or.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nii.ac.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nikkei.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nitter.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nofile.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,notion.so,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,now.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nrk.no,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nuget.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,nyaa.si,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ok.ru,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,on.cc,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,orientaldaily.com.my,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,overcast.fm,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,paltalk.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,parsevideo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pawoo.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pbxes.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pcdvd.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pchome.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pcloud.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,peing.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,picacomic.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pinimg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,player.fm,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,plurk.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,po18.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,potato.im,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,potatso.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,prism-break.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,proxifier.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pt.im,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pts.org.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pubu.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pubu.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,pureapk.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,quora.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,quoracdn.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,qz.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,radio.garden,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,rakuten.co.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,rarbgprx.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,reabble.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,readingtimes.com.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,readmoo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,redbubble.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,resilio.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,reuters.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,reutersmedia.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,rfi.fr,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,roadshow.hk,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,rsshub.app,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,scmp.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,scribd.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,seatguru.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,shadowsocks.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,shindanmaker.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,shopee.tw,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,signal.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,sina.com.hk,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,slideshare.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,softfamous.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,spiegel.de,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,startpage.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,steamcommunity.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,steemit.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,steemitwallet.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,straitstimes.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,streamable.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,streema.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,substack.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,t66y.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tapatalk.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,teco-hk.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,teco-mo.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,teddysun.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,textnow.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,theguardian.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,theinitium.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,themoviedb.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,thetvdb.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,time.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tineye.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tiny.cc,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tinyurl.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,torproject.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tradingview.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tumblr.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,turbobit.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tutanota.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tvboxnow.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,udn.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,unseen.is,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,upmedia.mg,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,uptodown.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,urbandictionary.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ustream.tv,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,uwants.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,v2ex.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,v2fly.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,v2ray.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,viber.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,videopress.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,vimeo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,voachinese.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,voanews.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,voxer.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,vzw.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,w3schools.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,washingtonpost.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wattpad.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,whoer.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wikiwand.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,winudf.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wire.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wn.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wordpress.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,worldcat.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wsj.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,wsj.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xhamster.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xn--90wwvt03e.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xn--i2ru8q2qg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xnxx.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,xvideos.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yadi.sk,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yahoo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yandex.ru,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ycombinator.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yesasia.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yes-news.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yomiuri.co.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,you-get.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zaobao.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zello.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zeronet.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,z-lib.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zoom.us,\U0001F530 节点选择"
-- "DOMAIN,cc.tvbs.com.tw,\U0001F530 节点选择"
-- "DOMAIN,clubhouse.pubnubapi.com,\U0001F530 节点选择"
-- "DOMAIN,ocsp.int-x3.letsencrypt.org,\U0001F530 节点选择"
-- "DOMAIN,us.weibo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,edu,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gov,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mil,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,abc.xyz,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,advertisercommunity.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ampproject.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,android.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,androidify.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,autodraw.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,capitalg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,certificate-transparency.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,chrome.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,chromeexperiments.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,chromestatus.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,chromium.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,creativelab5.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,debug.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,deepmind.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dialogflow.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,firebaseio.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,getmdl.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ggpht.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gmail.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gmodules.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,godoc.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gstatic.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gv.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,gwtproject.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,itasoftware.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,madewithcode.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,material.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,page.link,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,polymer-project.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,recaptcha.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,shattered.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,synergyse.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,telephony.goog,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tensorflow.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tfhub.dev,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tiltbrush.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,waveprotocol.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,waymo.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,webmproject.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,webrtc.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,whatbrowser.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,widevine.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,x.company,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,youtu.be,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,yt.be,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ytimg.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,t.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,tdesktop.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,telegram.me,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,telesco.pe,\U0001F530 节点选择"
-- "DOMAIN-KEYWORD,.facebook.,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,facebookmail.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,noxinfluencer.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,smartmailcloud.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,weebly.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,twitter.jp,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,appsto.re // Apple URL Shortener,\U0001F530 节点选择"
-- "DOMAIN,books.itunes.apple.com // iBooks Store download,\U0001F530 节点选择"
-- "DOMAIN,api-glb-sea.smoot.apple.com // Spotlight,\U0001F530 节点选择"
-- "DOMAIN,beta.music.apple.com // Apple Music Web,\U0001F530 节点选择"
-- "DOMAIN,tv.apple.com // Apple TV Web Preview,\U0001F530 节点选择"
-- "DOMAIN,uts-api.itunes.apple.com,\U0001F530 节点选择"
-- "DOMAIN,apps.apple.com,\U0001F530 节点选择"
-- "DOMAIN,itunes.apple.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,smoot.apple.com,\U0001F530 节点选择"
-- "DOMAIN,lookup-api.apple.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,go.dev,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,golang.org,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,aicoin.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,aimoon.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,bing.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cccat.io,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,dubox.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,duboxcdn.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,ifixit.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,mangakakalot.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,shopeemobile.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,sushi.com,\U0001F530 节点选择"
-- "DOMAIN,appleid.apple.com,\U0001F530 节点选择"
-- "DOMAIN,developer.apple.com,\U0001F530 节点选择"
-- "DOMAIN,www.icloud.com,\U0001F530 节点选择"
-- "DOMAIN,ocsp.apple.com,\U0001F530 节点选择"
-- "DOMAIN,xp.apple.com,\U0001F530 节点选择"
-- "DOMAIN,cacerts.digicert.com,\U0001F530 节点选择"
-- "DOMAIN,crl3.digicert.com,\U0001F530 节点选择"
-- "DOMAIN,crl4.digicert.com,\U0001F530 节点选择"
-- "DOMAIN,ocsp.digicert.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,cloudcone.com.cn,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,inkbunny.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,metapix.net,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,s3.amazonaws.com,\U0001F530 节点选择"
-- "DOMAIN-SUFFIX,zaobao.com.sg,\U0001F530 节点选择"
-- "DOMAIN,international-gfe.download.nvidia.com,\U0001F530 节点选择"
+- "IP-CIDR,119.28.28.28/32,\U0001F3AF 全球直连,no-resolve"
+- "IP-CIDR,182.254.116.0/24,\U0001F3AF 全球直连,no-resolve"
 - "PROCESS-NAME,aria2c,\U0001F3AF 全球直连"
 - "PROCESS-NAME,fdm,\U0001F3AF 全球直连"
 - "PROCESS-NAME,Folx,\U0001F3AF 全球直连"
@@ -11908,6 +10330,121 @@ rules:
 - "DST-PORT,443,\U0001F41F 漏网之鱼"
 - "DST-PORT,22,\U0001F41F 漏网之鱼"
 - MATCH,DIRECT
+- "DOMAIN-SUFFIX,dyndns.com,\U0001F3AF 全球直连"
+- "DOMAIN-SUFFIX,dyndns.org,\U0001F3AF 全球直连"
+dns:
+  nameserver:
+  - 100.102.0.1
+  - "[fe80::727b:e8ff:fe84:1a8d]:53"
+  - dhcp://"pppoe-wan"
+  - 1.1.1.1
+  - 8.8.8.8
+  - 80.80.80.80
+  - 223.5.5.5
+  fallback:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - https://cloudflare-dns.com/dns-query
+  - https://dns.rubyfish.cn/dns-query
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "*.msftconnecttest.com"
+  - "*.msftncsi.com"
+  - msftconnecttest.com
+  - msftncsi.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.srv.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  default-nameserver:
+  - 100.102.0.1
+  - "[fe80::727b:e8ff:fe84:1a8d]:53"
+  - 1.1.1.1
+  - 8.8.8.8
+  - 80.80.80.80
+  - 223.5.5.5
 redir-port: 7892
 tproxy-port: 7895
 mixed-port: 7893
@@ -11917,4 +10454,4 @@ external-ui: "/usr/share/openclash/dashboard"
 ipv6: false
 profile:
   store-selected: true
-  store-fakeip: false
+  store-fakeip: true
