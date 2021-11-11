@@ -14,5 +14,5 @@ config wifi-iface 'default_radio0'
 	option mode 'ap'
 	option ssid 'H-WiFi'
 	option encryption 'psk2'
-	option key '23456701'
+	option key 'password'
 

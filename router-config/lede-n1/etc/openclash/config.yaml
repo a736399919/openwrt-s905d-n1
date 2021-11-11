@@ -451,6 +451,32 @@ rules:
 - DOMAIN-SUFFIX,totheglory.im,DIRECT
 - DOMAIN-KEYWORD,announce,DIRECT
 - DOMAIN-KEYWORD,torrent,DIRECT
+- DOMAIN-SUFFIX,awesome-hd.me,DIRECT
+- DOMAIN-SUFFIX,broadcasthe.net,DIRECT
+- DOMAIN-SUFFIX,chdbits.co,DIRECT
+- DOMAIN-SUFFIX,classix-unlimited.co.uk,DIRECT
+- DOMAIN-SUFFIX,empornium.me,DIRECT
+- DOMAIN-SUFFIX,gazellegames.net,DIRECT
+- DOMAIN-SUFFIX,hdchina.org,DIRECT
+- DOMAIN-SUFFIX,hdsky.me,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,icetorrent.org,DIRECT
+- DOMAIN-SUFFIX,keepfrds.com,DIRECT
+- DOMAIN-SUFFIX,madsrevolution.net,DIRECT
+- DOMAIN-SUFFIX,m-team.cc,DIRECT
+- DOMAIN-SUFFIX,nanyangpt.com,DIRECT
+- DOMAIN-SUFFIX,ncore.cc,DIRECT
+- DOMAIN-SUFFIX,open.cd,DIRECT
+- DOMAIN-SUFFIX,ourbits.club,DIRECT
+- DOMAIN-SUFFIX,passthepopcorn.me,DIRECT
+- DOMAIN-SUFFIX,privatehd.to,DIRECT
+- DOMAIN-SUFFIX,redacted.ch,DIRECT
+- DOMAIN-SUFFIX,springsunday.net,DIRECT
+- DOMAIN-SUFFIX,tjupt.org,DIRECT
+- DOMAIN-SUFFIX,totheglory.im,DIRECT
+- DOMAIN-KEYWORD,announce,DIRECT
+- DOMAIN-KEYWORD,torrent,DIRECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
 - DOMAIN-SUFFIX,broadcasthe.net,DIRECT
@@ -10506,13 +10532,16 @@ rules:
 - DST-PORT,80,DIRECT
 - DST-PORT,443,DIRECT
 - DST-PORT,22,DIRECT
+- DST-PORT,80,DIRECT
+- DST-PORT,443,DIRECT
+- DST-PORT,22,DIRECT
 - MATCH,DIRECT
 - "DOMAIN-SUFFIX,dyndns.com,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,dyndns.org,\U0001F3AF 全球直连"
 - "DOMAIN-SUFFIX,26ks.cc,\U0001F3AF 全球直连"
 dns:
   nameserver:
-  - 100.102.0.1
+  - 100.81.0.1
   - "[fe80::727b:e8ff:fe84:1a8d]:53"
   - dhcp://"pppoe-wan"
   - 1.1.1.1
@@ -10623,6 +10652,7 @@ dns:
   - 8.8.8.8
   - 80.80.80.80
   - 223.5.5.5
+  - 100.81.0.1
 redir-port: 7892
 tproxy-port: 7895
 mixed-port: 7893
