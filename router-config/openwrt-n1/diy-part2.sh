@@ -37,17 +37,17 @@ rm -rf feeds/packages/net/miniupnpd
 svn co https://github.com/vpei/openwrt-vpei/trunk/miniupnpd-2.2.2-2 feeds/packages/net/miniupnpd
 
 # Add autocore
-# svn co https://github.com/ophub/amlogic-s9xxx-openwrt/trunk/amlogic-s9xxx/common-files/patches/autocore package/lean/autocore
+# svn co https://github.com/ophub/amlogic-s9xxx-openwrt/trunk/amlogic-s9xxx/common-files/patches/autocore package/vpei/autocore
 
 # Add luci-app-cpufreq
-# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cpufreq package/lean/luci-app-cpufreq
-# sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
+# svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-cpufreq package/vpei/luci-app-cpufreq
+# sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/vpei/luci-app-cpufreq/Makefile
 
 # Add p7zip
-# svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
+svn co https://github.com/hubutui/p7zip-lede/trunk package/vpei/p7zip
 
 # Add luci-app-zerotier
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-zerotier package/lean/luci-app-zerotier
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-zerotier package/vpei/luci-app-zerotier
 
 
 # coolsnowwolf default software package replaced with Lienol related software package
